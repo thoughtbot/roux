@@ -1,0 +1,145 @@
+:is(
+  button,
+  input[type="checkbox"],
+  input[type="radio"],
+  select
+) {
+  cursor: pointer;
+}
+
+:is(
+  input,
+  label,
+  select
+) {
+  display: block;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space--large);
+}
+
+fieldset > *:not(:last-child) {
+ margin-bottom: var(--space--base);
+}
+
+:is(
+  input,
+  textarea,
+  select
+) {
+  accent-color: var(--color--primary-base);
+  border: var(--border--light);
+  
+  &:focus {
+    outline: var(--border-width--base) solid var(--color--primary-base);
+  }
+
+  &[readonly] {
+    border-color: transparent;
+    padding-left: 0;
+    padding-top: 0;
+
+    &:focus {
+      padding-left: var(--space--small);
+      padding-top: var(--space--small);
+    }
+  }
+}
+
+:where(
+  input:not([type]),
+  select,
+  textarea,
+  [type="color"],
+  [type="date"],
+  [type="datetime"],
+  [type="datetime-local"],
+  [type="email"],
+  [type="month"],
+  [type="month"],
+  [type="number"],
+  [type="password"],
+  [type="search"],
+  [type="tel"],
+  [type="text"],
+  [type="time"],
+  [type="url"],
+  [type="week"]
+) {
+  background-color: var(--color--background-base);
+  border-radius: var(--border-radius--base);
+  color: var(--color--text);
+  padding: var(--space--small);
+}
+
+label:has(
+    input:not([type]),
+    select,
+    textarea,
+    [type="color"],
+    [type="date"],
+    [type="datetime"],
+    [type="datetime-local"],
+    [type="email"],
+    [type="month"],
+    [type="number"],
+    [type="password"],
+    [type="search"],
+    [type="tel"],
+    [type="text"],
+    [type="time"],
+    [type="url"],
+    [type="week"]
+  ) {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space--x-small);
+}
+
+label:has([type="radio"], [type="checkbox"]) {
+  align-items: center;
+  display: flex;
+  gap: var(--space--x-small);
+  justify-self: start;
+}
+
+label:has(
+  input[required],
+  select[required],
+  textarea[required]
+) > span::after,
+.fieldset-required > legend::after {
+  content: "*";
+  margin-left: var(--space--xx-small);
+}
+
+textarea {
+  resize: vertical;
+}
+
+:where(select) {
+  appearance: none;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" fill="none"><path fill="%2332314C" fill-rule="evenodd" d="M.65.63A.875.875 0 0 1 1.885.602L4.828 3.42 7.77.603a.875.875 0 1 1 1.21 1.264l-3.374 3.23a1.125 1.125 0 0 1-1.556 0L.676 1.868A.875.875 0 0 1 .649.629Z" clip-rule="evenodd"/></svg>');
+  background-position: calc(100% - var(--space--small)) center;
+  background-repeat: no-repeat;
+  background-size: var(--space--small);
+}
+
+:where([type="search"])::-webkit-search-cancel-button {
+  appearance: none;
+  background-image: url('data:image/svg+xml,<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.01629 5.99568L9.79098 2.22099C9.86057 2.15553 9.9163 2.07677 9.95487 1.98937C9.99345 1.90197 10.0141 1.80772 10.0155 1.71219C10.017 1.61667 9.99927 1.52183 9.96338 1.43329C9.9275 1.34475 9.8742 1.26432 9.80665 1.19677C9.7391 1.12922 9.65867 1.07592 9.57013 1.04003C9.48159 1.00415 9.38675 0.986415 9.29122 0.987876C9.1957 0.989338 9.10144 1.00997 9.01405 1.04854C8.92665 1.08712 8.84788 1.14285 8.78243 1.21244L5.00774 4.98713L1.23305 1.21244C1.09931 1.0787 0.917915 1.00356 0.728776 1.00356C0.539636 1.00356 0.358244 1.0787 0.224502 1.21244C0.0907603 1.34618 0.015625 1.52758 0.015625 1.71671C0.015625 1.90585 0.0907603 2.08725 0.224502 2.22099L3.99919 5.99568L0.224502 9.77037C0.0907603 9.90411 0.015625 10.0855 0.015625 10.2746C0.015625 10.4638 0.0907603 10.6452 0.224502 10.7789C0.358244 10.9127 0.539636 10.9878 0.728776 10.9878C0.917915 10.9878 1.09931 10.9127 1.23305 10.7789L5.00774 7.00423L8.78243 10.7789C8.91617 10.9127 9.09756 10.9878 9.2867 10.9878C9.47584 10.9878 9.65724 10.9127 9.79098 10.7789C9.92472 10.6452 9.99985 10.4638 9.99985 10.2746C9.99985 10.0855 9.92472 9.90411 9.79098 9.77037L6.01629 5.99568Z" fill="%2332314C"/></svg>');
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  height: var(--space--small);
+  width: var(--space--small);
+}

@@ -1,0 +1,40 @@
+html {
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  color: var(--color--text);
+  font-family: var(--font-family--body);
+  font-size: var(--font-size--body);
+  font-weight: var(--font-weight--medium);
+  line-height: var(--line-height--base);
+}
+
+h1,
+h2,
+h3,
+h4,
+strong {
+  font-weight: var(--font-weight--bold);
+}
+
+label {
+  font-size: var(--font-size--ui);
+  font-weight: var(--font-weight--bold);
+  text-align: left;
+}
+
+input {
+  font-size: var(--font-size--body);
+}
+
+legend {
+  font-size: var(--font-size--body);
+  font-weight: var(--font-weight--bold);
+}
+
+hr {
+  border: var(--border--light);
+  width: 100%;
+}
