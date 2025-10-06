@@ -19,6 +19,11 @@ strong {
   font-weight: var(--font-weight--bold);
 }
 
+h1 {
+  text-wrap: balance;
+  text-wrap: pretty;
+}
+
 label {
   font-size: var(--font-size--ui);
   font-weight: var(--font-weight--bold);
