@@ -2,6 +2,7 @@
   button,
   input[type="checkbox"],
   input[type="radio"],
+  input[type="range"],
   select
 ) {
   cursor: pointer;
