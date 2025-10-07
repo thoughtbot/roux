@@ -7,17 +7,17 @@
   padding: 0;
   position: absolute;
   width: 1px;
-  
-  &:focus {
-    clip: auto;
-    clip-path: none;
-    height: auto;
-    overflow: visible;
-    white-space: inherit;
-    width: auto;
-    padding: var(--space--small) var(--space--medium);
-    position: absolute;
-    text-align: center;
-    z-index: calc(var(--z-index--layout) + 1);
-  }
+}
+
+.u-hide-visually--focus-unhide:focus {
+  clip: auto;
+  clip-path: none;
+  height: auto;
+  overflow: visible;
+  white-space: inherit;
+  width: auto;
+  padding: var(--space--small) var(--space--medium);
+  position: absolute;
+  text-align: center;
+  z-index: calc(var(--z-index--layout) + 1);
 }
