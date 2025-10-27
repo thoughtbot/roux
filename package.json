@@ -2,6 +2,8 @@
   "name": "roux",
   "version": "1.0.0",
   "description": "A boilerplate of pre-defined native CSS styling",
+  "homepage": "https://github.com/thoughtbot/roux",
+  "license": "MIT",
   "main": "index.js",
   "scripts": {
     "build": "lightningcss --minify --bundle --targets \">= 0.25%\" src/css/app.css -o dist/app.css"
