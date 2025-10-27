@@ -47,6 +47,7 @@
   --color--text: var(--color--black-500);
   --color--text-inverse: var(--color--white-500);
   --color--link: var(--color--primary-base);
+  --color--link-hover: var(--color--primary-dark);
   
   --font-size--50: 0.875rem;
   --font-size--100: 1rem;
