@@ -40,9 +40,36 @@ This project uses [lightning CSS] to minify and compile the CSS into one file. [
 
 Base styles are meant to be more globally applied in your project. Generally (with a few exceptions like buttons), the styles target HTML elements and not class names.
 
-#### Form styling
+#### Animation
 
-Most form styling relies on how you structure the HTML. In Roux's styling, you should be nesting an input within a label. See the demo codepen for structuring. For example:
+Any global animations can go here. Roux's only animation defines smooth scrolling behavior, only if a user hasn't set their motion preference. If a user has reduced motion set on their machine, they should not experience smooth scrolling.
+
+#### Buttons
+
+Roux uses a classname for a "button" style since it can be applied to both `button` elements and `a` elements that want to appear as a button. We've defined a few variants (primary and secondary) to work from. When applying it to an element, use both `button` and `button--{variant}`. [See the demo codepen][codepen] for structuring. For example:
+
+```html
+<button
+  type="button"
+  class="button button--primary"
+ >
+  A primary button
+</button>
+<a
+  href="#"
+  class="button button--secondary"
+>
+  A secondary button link
+</a>
+```
+
+#### Disclosures
+
+Basic styling for the `details` and `summary` elements with a custom details marker caret.
+
+#### Forms
+
+Most form styling relies on how you structure the HTML. In Roux's styling, you should be nesting an input within a label. [See the demo codepen][codepen] for structuring. For example:
 
 ```html
 <label for="email">
@@ -113,6 +140,30 @@ label + :where(
   gap: var(--space--x-small);
 }
 ```
+
+#### Lists
+
+Removes list styling (margin, padding, list style) from ordered and unordered lists if there is a class applied. If no class is applied, `ol`s and `ul`s will take on the default browser style. Oftentimes you may find yourself creating a list of components that are highly styled. Semantically, it might make sense to put them in an ordered or unordered list, but you'd have to remove those default styles -- thus this opinion.
+
+This also includes some typographic and spacing opinions for definition lists.
+
+#### Media
+
+Defines pictures, videos, etc. as block elements that should size responsively with your container. Uses `:where` so you can override specific instances later if needed.
+
+#### Modal
+
+Default setup and some base styles for `dialog` elements. This includes some transition declarations as well as `::backdrop` styling.
+
+The `.slide-in` class can be added for a smooth slide-from-bottom transition when opening a modal (and a slide out on close). [See the codepen demo][codepen] for setup in HTML and Javascript.
+
+#### Tables
+
+Rounded border and striped row styling for tables. This also includes classes to make an overflow scroll table for data sets that are wider than the viewport. [See the codepen demo for structure][codepen].
+
+#### Typography
+
+A fairly unopinionated typographical setup. This isn't a type scale, but some basic defaults such as ensuring headings are bolded and using a pretty text wrap on `h1`s. This also leverages the base typographic custom properties in `body`. You can use the `--font-size--[variant]` custom properties in `_variables.css` to be more specific about type size.
 
 ### Variables
 
