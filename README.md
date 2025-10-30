@@ -14,6 +14,8 @@ You can cherry pick styles and pull them into your project, just use it for setu
 
 Installation is very hands-off:
 
+* `npx github:thoughtbot/roux init`
+  * This will copy all files from [src/css](src/css) into a `css` folder at the root of your project (feel free to move or rename depending on your needs).
 * Copy and paste [from the source code](src/css), OR
 * Clone this project: `https://github.com/thoughtbot/roux`.
 
