@@ -14,5 +14,8 @@
 @import "base/_tables.css";
 @import "base/_typography.css";
 
+/* Components */
+/* Import components here in ABC order */
+
 /* Utilities */
 @import "utilities/_hide-visually.css";
