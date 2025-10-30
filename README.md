@@ -38,23 +38,15 @@ Roux is a guidance tool so you feel more confident about setting up your own CSS
 
 Everything is imported into [`app.css`](src/css/app.css). Which should be [compiled into one CSS file with whatever compilation method you choose](#to-compile).
 
-1. `reset/_normalize.css` comes first in our imports as that overrides some of our browser defaults. We're working on top of the reset. You can add in any more browser resets into that folder and import it.
+1. `reset/_normalize.css` comes first in our imports as that overrides some of our browser defaults. We're working on top of the reset. You can add in any more browser resets into that folder and import it. **[More on reset](#reset)**
 
-[More on reset](#reset)
+2. `base/_variables.css` is the outlier of our base files as it stores all of our [custom properties]. This comes before all of the other base files since it's a dependency. You don't have to change any of these values if you don't want to. However, you'll likely want to at least adjust the colors. **[More on variables](#variables)**
 
-2. `base/_variables.css` is the outlier of our base files as it stores all of our [custom properties]. This comes before all of the other base files since it's a dependency. You don't have to change any of these values if you don't want to. However, you'll likely want to at least adjust the colors.
-
-[More on variables](#variables)
-
-3. The rest of the base files make use of many of the custom properties and are not dependent on each other. They're currently in ABC order.
-
-[More on base files](#base)
+3. The rest of the base files make use of many of the custom properties and are not dependent on each other. They're currently in ABC order. **[More on base files](#base)**
 
 4. The `components` folder is empty. This is where you'll put your component-based styles (e.g. `components/_card.css`). Ensure the import list is in ABC order for readability.
 
-5. Utilities are last! Right now there's only one utility. Add in any other global utilities you might have that can be applied as a class. You can prepend them with `.u-[utility-name]` and give them their own CSS file.
-
-[More on utilities](#utilities)
+5. Utilities are last! Right now there's only one utility. Add in any other global utilities you might have that can be applied as a class. You can prepend them with `.u-[utility-name]` and give them their own CSS file. **[More on utilities](#utilities)**
 
 ### Base
 
