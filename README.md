@@ -165,13 +165,21 @@ Rounded border and striped row styling for tables. This also includes classes to
 
 A fairly unopinionated typographical setup. This isn't a type scale, but some basic defaults such as ensuring headings are bolded and using a pretty text wrap on `h1`s. This also leverages the base typographic custom properties in `body`. You can use the `--font-size--[variant]` custom properties in `_variables.css` to be more specific about type size.
 
-### Variables
+#### Variables
 
 This is where your custom properties live. There's some basic setup for colors, spacing, type size, etc. Go in and edit this for your project's needs. Colors may be the only one you need to edit since the other properties are fairly agnostic, but you can use the same kind of structure with "primitives" like `--color--green-100` and semantic naming like `--color--primary-base`.
+
+### Components
+
+This folder is empty! But this is where you'd put any component-based CSS files.
 
 ### Reset
 
 The [reset](src/css/reset) in this uses [Normalize].
+
+### Utilities
+
+This holds an utility-based helpers that can be used globally. The only utility present is `.hide-visually` which will hide an element visually but still be accessible to a screen reader. It comes with a companion class, `.u-hide-visually--focus-unhide` which will show an element if focused (by a keyboard for example).
 
 
 [bitters]: https://github.com/thoughtbot/bitters
