@@ -15,7 +15,8 @@
 @import "base/_typography.css";
 
 /* Components */
-/* Import components here in ABC order */
+/* Import components from the component folder here in ABC order */
+/* For example: @import "components/_card.css" */
 
 /* Utilities */
 @import "utilities/_hide-visually.css";
