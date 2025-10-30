@@ -44,13 +44,15 @@ Everything is imported into [`app.css`](src/css/app.css). Which should be [compi
 
 1. `reset/_normalize.css` comes first in our imports as that overrides some of our browser defaults. We're working on top of the reset. You can add in any more browser resets into that folder and import it. **[More on reset](#reset)**
 
-2. `base/_variables.css` is the outlier of our base files as it stores all of our [custom properties]. This comes before all of the other base files since it's a dependency. You don't have to change any of these values if you don't want to. However, you'll likely want to at least adjust the colors. **[More on variables](#variables)**
+2. `base/_variables.css` is one of the outliers of our base files as it stores all of our [custom properties]. This comes before all of the other base files since it's a dependency. You don't have to change any of these values if you don't want to. However, you'll likely want to at least adjust the colors. **[More on variables](#variables)**
 
-3. The rest of the base files make use of many of the custom properties and are not dependent on each other. They're currently in ABC order. **[More on base files](#base)**
+3. `base/_fonts.css` is the other outlier as files like `_typography.css` may rely on it. It's commented out for now since it needs an actual font file to work and you may want to remove it if importing a font in a different way. **[More on fonts](#fonts)**
 
-4. The `components` folder is empty. This is where you'll put your component-based styles (e.g. `components/_card.css`). Ensure the import list is in ABC order for readability.
+4. The rest of the base files make use of many of the custom properties and are not dependent on each other. They're currently in ABC order. **[More on base files](#base)**
 
-5. Utilities are last! Right now there's only one utility. Add in any other global utilities you might have that can be applied as a class. You can prepend them with `.u-[utility-name]` and give them their own CSS file. **[More on utilities](#utilities)**
+5. The `components` folder is empty. This is where you'll put your component-based styles (e.g. `components/_card.css`). Ensure the import list is in ABC order for readability.
+
+6. Utilities are last! Right now there's only one utility. Add in any other global utilities you might have that can be applied as a class. You can prepend them with `.u-[utility-name]` and give them their own CSS file. **[More on utilities](#utilities)**
 
 ### Base
 
@@ -82,6 +84,59 @@ Roux uses a classname for a "button" style since it can be applied to both `butt
 #### Disclosures
 
 Basic styling for the `details` and `summary` elements with a custom details marker caret.
+
+#### Fonts
+
+If you have custom fonts you're using, you'll need to import them in some manner. This is a dependency file since other base files may need it to render a font. Currently it's commented out since it's all based on your font files you want to use, but the structure is there. You may declare multiple font files in here. The example in there shows a variable font file with a range of weights so you don't have to define each individual weight.
+
+Generally, `font-display: swap` is a solid default for most fonts so you always fallback to the other fonts defined in your stack while your custom font is loading.
+
+When you define a font in this file, you'll want to add it to a custom property with a stack in your `_variables.css` file. For example:
+
+```css
+/* base/_fonts.css */
+
+@font-face {
+  font-display: swap;
+  font-family: "WorkSans";
+  font-style: normal;
+  font-weight: 100 900;
+  src: url("./fonts/work-sans.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Quincy";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./fonts/quincy.woff2") format("woff2");
+}
+```
+
+```css
+/* base/_variables.css */
+
+:root {
+  --font-family--body: "WorkSans", system-ui, Arial, sans-serif;
+  --font-family--display: "Quincy", Times, serif;
+}
+```
+
+```css
+/* base/_typography.css */
+
+body {
+  font-family: var(--font-family--body);
+  font-weight: var(--font-weight--normal);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-family--display);
+  font-weight: var(--font-weight--bold);
+}
+```
 
 #### Forms
 

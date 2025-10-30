@@ -66,6 +66,8 @@
   
   --font-weight--normal: 400;
   --font-weight--bold: 700;
+
+  --font-family--body: system-ui, "Arial", "Helvetica", sans-serif;
   
   --line-height--base: 1.5;
   --line-height--tight: 1.2;

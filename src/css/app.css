@@ -1,8 +1,9 @@
 /* Reset */
 @import "reset/_normalize.css";
 
-/* Variables */
+/* Dependencies */
 @import "base/_variables.css";
+@import "base/_fonts.css";
 
 /* Base */
 @import "base/_animation.css";

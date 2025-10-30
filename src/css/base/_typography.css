@@ -7,7 +7,7 @@ body {
   color: var(--color--text);
   font-family: var(--font-family--body);
   font-size: var(--font-size--body);
-  font-weight: var(--font-weight--medium);
+  font-weight: var(--font-weight--normal);
   line-height: var(--line-height--base);
 }
 
