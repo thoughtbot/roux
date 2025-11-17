@@ -31,7 +31,7 @@ a {
   transition: var(--transition-duration--base) color var(--transition-timing--base);
   
   &:hover {
-    color: color: var(--color--link-hover);
+    color: var(--color--link-hover);
   }
 }
 
