@@ -523,6 +523,41 @@ This holds an utility-based helpers that can be used globally. The only utility 
 
 * Add your own utilities following the `.u-[name]` pattern.
 
+## Contributing
+
+[Bug reports](https://github.com/thoughtbot/roux/issues/new?template=bug_report.md) and [pull requests](https://github.com/thoughtbot/roux/pulls) are welcome on GitHub at [https://github.com/thoughtbot/roux](https://github.com/thoughtbot/roux).
+
+Please create a [new discussion](https://github.com/thoughtbot/roux/discussions/new?category=ideas) if you want to share ideas for new features.
+
+This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/thoughtbot/roux/blob/main/CODE_OF_CONDUCT.md).
+
+## License
+
+Open source templates are Copyright (c) thoughtbot, inc.
+It contains free software that may be redistributed under the terms specified in the [LICENSE](https://github.com/thoughtbot/roux/blob/main/LICENSE) file.
+
+## Code of Conduct
+
+Everyone interacting in Roux's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/thoughtbot/roux/blob/main/CODE_OF_CONDUCT.md).
+
+<!-- START /templates/footer.md -->
+
+## About thoughtbot
+
+![thoughtbot](https://thoughtbot.com/thoughtbot-logo-for-readmes.svg)
+
+This repo is maintained and funded by thoughtbot, inc.
+The names and logos for thoughtbot are trademarks of thoughtbot, inc.
+
+We love open source software!
+See [our other projects][community].
+We are [available for hire][hire].
+
+[community]: https://thoughtbot.com/community?utm_source=github
+[hire]: https://thoughtbot.com/hire-us?utm_source=github
+
+<!-- END /templates/footer.md -->
+
 [bitters]: https://github.com/thoughtbot/bitters
 [codepen]: https://codepen.io/enatario/pen/LEppZLZ
 [custom properties]: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
