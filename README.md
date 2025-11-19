@@ -4,7 +4,7 @@ A boilerplate of pre-defined native CSS architecture and styling to kickstart yo
 
 ## What is Roux?
 
-Roux gives you an organized foundation of CSS files, variables, and base styles so you can start building immediately instead of setting everything up from scratch. It's a structured starting point for writing your own CSS—not a framework like Tailwind or a UI library with pre-built components. Think of it like a GitHub template repo, but for your stylesheets.
+Roux gives you an organized foundation of CSS files, variables, and base styles so you can start building immediately instead of setting everything up from scratch. It's **a structured starting point for writing your own CSS**—not a framework like Tailwind or a UI library with pre-built components. Think of it like a GitHub template repo, but for your stylesheets.
 
 You can cherry-pick what you need, use it for inspiration, or adopt the whole system—whatever works for your project.
 
