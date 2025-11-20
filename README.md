@@ -65,8 +65,8 @@ After installation:
 2. **Link the main CSS file:** Import or link to `css/app.css` in your HTML.
 3. **Start building:** Add your component styles in `css/components/`.
 4. **Compile (optional):** Use your preferred CSS compiler to bundle everything into one file
-  * This project uses [lightning CSS] to minify and compile the CSS into one file. [There are lots of options for CSS compiliation](https://www.alwaystwisted.com/articles/UnSassing-my-CSS-CSS-imports), depending on your project setup and your own preferences. If you're using [Dart Sass](https://sass-lang.com/dart-sass/), you'll need to use `@use` instead of `@import` in your main `app.css` file (you'll also need to switch your file types from `css` to `scss`).
-  * To compile in this repo, run `npm i` then `npm run build` (will output into a `dist` folder).
+    * This project uses [lightning CSS] to minify and compile the CSS into one file. [There are lots of options for CSS compiliation](https://www.alwaystwisted.com/articles/UnSassing-my-CSS-CSS-imports), depending on your project setup and your own preferences. If you're using [Dart Sass](https://sass-lang.com/dart-sass/), you'll need to use `@use` instead of `@import` in your main `app.css` file (you'll also need to switch your file types from `css` to `scss`).
+    * To compile in this repo, run `npm i` then `npm run build` (will output into a `dist` folder).
 
 That's it! You now have an organized CSS foundation to build on.
 
