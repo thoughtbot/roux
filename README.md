@@ -1,6 +1,6 @@
 # Roux
 
-A boilerplate of pre-defined native CSS architecture and styling to kickstart your project. You may have used [Bitters] in the past -- move on over to a fully native setup with Roux.
+A boilerplate of pre-defined native CSS architecture and styling to kickstart your project. You may have used [Bitters] in the past—move on over to a fully native setup with Roux.
 
 ## What is Roux?
 
@@ -320,7 +320,7 @@ Basic styling for the `details` and `summary` elements with a custom details mar
 
 `base/css/_lists.css`
 
-Removes list styling (margin, padding, list style) from ordered and unordered lists if there is a class applied. If no class is applied, `ol`s and `ul`s will take on the default browser style. Oftentimes you may find yourself creating a list of components that are highly styled. Semantically, it might make sense to put them in an ordered or unordered list, but you'd have to remove those default styles -- thus this opinion.
+Removes list styling (margin, padding, list style) from ordered and unordered lists if there is a class applied. If no class is applied, `ol`s and `ul`s will take on the default browser style. Oftentimes you may find yourself creating a list of components that are highly styled. Semantically, it might make sense to put them in an ordered or unordered list, but you'd have to remove those default styles—thus this opinion.
 
 This also includes some typographic and spacing opinions for definition lists.
 
