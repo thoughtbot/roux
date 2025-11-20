@@ -14,7 +14,7 @@ When you start a new web project, you face a blank CSS file and dozens of decisi
 
 * How should I organize my styles as the project grows?
 * Should I define colors and spacing as variables, or hardcode them?
-* Do I  need to reset browser defaults?
+* Do I need to reset browser defaults?
 * How do I structure forms, buttons, and typography consistently?
 
 Without a plan, you may end up with unmaintainable and disorganized CSS files that are not approachable to you or your team. Roux solves this by providing thoughtful defaults and organization patterns that scale with your project.
@@ -35,14 +35,14 @@ Without a plan, you may end up with unmaintainable and disorganized CSS files th
 * Need pre-built UI components (use a component library instead)
 * Already have an established CSS system you're happy with
 
-## What You Get
+## What you get
 
 * **Organized file structure:** Separate files for forms, typography, buttons, tables, etc.
 * **CSS custom properties:** Colors, spacing, font sizes defined as variables in one place
 * **Base element styling:** Sensible defaults for buttons, forms, tables, and more
 * **A system to build on:** Not a finished product, but a solid foundation you customize
 
-## See It in Action
+## See it in action
 
 [View the demo on CodePen][codepen] to see Roux's base styling for forms, buttons, tables, and typography.
 
@@ -65,12 +65,12 @@ After installation:
 2. **Link the main CSS file:** Import or link to `css/app.css` in your HTML.
 3. **Start building:** Add your component styles in `css/components/`.
 4. **Compile (optional):** Use your preferred CSS compiler to bundle everything into one file
-  * This project uses [lightning CSS] to minify and compile the CSS into one file. [There are lots of options for CSS compiliation](https://www.alwaystwisted.com/articles/UnSassing-my-CSS-CSS-imports), depending on your project setup and your own preferences. Use whatever you like to compile all the CSS into one file. If you're using [Dart Sass](https://sass-lang.com/dart-sass/), you'll need to use `@use` instead of `@import` in your main `app.css` file (you'll also need to switch your file types from `css` to `scss`).
+  * This project uses [lightning CSS] to minify and compile the CSS into one file. [There are lots of options for CSS compiliation](https://www.alwaystwisted.com/articles/UnSassing-my-CSS-CSS-imports), depending on your project setup and your own preferences. If you're using [Dart Sass](https://sass-lang.com/dart-sass/), you'll need to use `@use` instead of `@import` in your main `app.css` file (you'll also need to switch your file types from `css` to `scss`).
   * To compile in this repo, run `npm i` then `npm run build` (will output into a `dist` folder).
 
 That's it! You now have an organized CSS foundation to build on.
 
-## How It Works
+## How it works
 
 Everything is imported into `app.css`, which you'll compile into one CSS file (or import directly).
 
@@ -90,7 +90,7 @@ css/
 │   ├── _media.css              # Images, videos
 │   ├── _modal.css              # Dialog elements
 │   ├── _tables.css             # Table styling
-│   ├── _typography.css         # Type defaults
+│   ├── _typography.css         # Typography defaults
 │   └── _variables.css          # CSS custom properties (colors, spacing, fonts)
 ├── components/
 │   └── (your components here)  # Add your own component styles
@@ -517,7 +517,7 @@ components/
 
 ### Utilities
 
-This holds an utility-based helpers that can be used globally. The only utility present is `.hide-visually` which will hide an element visually but still be accessible to a screen reader. It comes with a companion class, `.u-hide-visually--focus-unhide` which will show an element if focused (by a keyboard for example).
+This holds utility-based helpers that can be used globally. The only utility present is `.hide-visually` which will hide an element visually but still be accessible to a screen reader. It comes with a companion class, `.u-hide-visually--focus-unhide` which will show an element if focused (by a keyboard for example).
 
 #### Tips
 
