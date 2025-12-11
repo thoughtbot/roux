@@ -45,11 +45,10 @@ a.badge--accent {
   border-radius: var(--border-radius--large);
   background-color: var(--color--text-inverse);
   color: var(--color--primary-base);
-  /* padding: 0.1em 0.4em; */
   font-weight: bold;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  padding-left: var(--space--x-small);
+  padding-right: var(--space--x-small);
 }
