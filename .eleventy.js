@@ -5,8 +5,8 @@ export default function (eleventyConfig) {
   })
 
   // === COLLECTIONS ===
-  eleventyConfig.addCollection("components", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("site/component_library/**/*");
+  eleventyConfig.addCollection("component", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("site/component-library/**/*");
   });
 
   // === PASSTHROUGH COPY ===
