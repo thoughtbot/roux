@@ -14,7 +14,7 @@
     "clean": "rm -rf _site",
     "dev": "npm run clean && npm run start",
     "build-site": "npx @11ty/eleventy",
-    "deploy": "npm run clean && NODE_ENV=production ELEVENTY_PRODUCTION=true npm run build-site"
+    "deploy": "npm run clean && SITE_ENV=production npm run build-site"
   },
   "repository": {
     "type": "git",

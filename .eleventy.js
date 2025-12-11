@@ -17,10 +17,24 @@ export default function (eleventyConfig) {
   // Watch CSS files for changes during development
   eleventyConfig.addWatchTarget("src/css/**/*.css");
 
-  return {
+  const config = {
     dir: {
       input: "site",
       output: "_site"
     }
+  };
+
+  // Set pathPrefix in production for GitHub Pages
+  //
+  // GitHub Pages currently serves this site at 
+  // https://thoughtbot.github.io/roux/,
+  // but this site is built expecting to be at the root `/`.
+  // Therefore, we need to set `pathPrefix` to `/roux/` in production
+  // to serve the site correctly. If we decide to use a custom domain,
+  // we can remove this.
+  if (process.env.SITE_ENV === 'production') {
+    config.pathPrefix = "/roux/";
   }
+
+  return config;
 }
