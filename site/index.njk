@@ -10,7 +10,7 @@ permalink: /
   <h2>Component Library</h2>
   <ul>
     {%- for component in collections.component %}
-      <li><a href="{{ component.url }}">{{ component.fileSlug }}</a></li>
+      <li><a href="{{ component.url | url }}">{{ component.fileSlug }}</a></li>
     {%- endfor %}
   </ul>
 {% endblock %}
