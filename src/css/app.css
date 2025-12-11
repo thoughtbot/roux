@@ -22,6 +22,7 @@
 @import "components/_badge.css";
 @import "components/_loading-indicator.css";
 @import "components/_alert.css";
+@import "components/_header-nav.css";
 
 /* Utilities */
 @import "utilities/_hide-visually.css";
