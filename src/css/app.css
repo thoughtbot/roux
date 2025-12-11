@@ -19,6 +19,7 @@
 /* Components */
 /* Import components from the component folder here in ABC order */
 /* For example: @import "components/_card.css" */
+@import "components/_badge.css";
 
 /* Utilities */
 @import "utilities/_hide-visually.css";
