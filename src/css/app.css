@@ -21,6 +21,7 @@
 /* For example: @import "components/_card.css" */
 @import "components/_badge.css";
 @import "components/_loading-indicator.css";
+@import "components/_alert.css";
 
 /* Utilities */
 @import "utilities/_hide-visually.css";
