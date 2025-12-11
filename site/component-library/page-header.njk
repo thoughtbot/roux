@@ -1,11 +1,11 @@
 ---
-permalink: /component-library/header-nav.html
+permalink: /component-library/page-header.html
 ---
 
 {% extends "site/_includes/layouts/base.njk" %}
 
 {% block content %}
-  <h1>Header navigation with skip navigation link</h1>
+  <h1>Page header with navigation and skip navigation link</h1>
 
  <header class="page-header">
     <a
@@ -40,7 +40,7 @@ permalink: /component-library/header-nav.html
       
 </a>
     <nav aria-label="Main menu" >
-      <ul class="header-nav">
+      <ul class="page-nav">
         <li>
           <a href="#">Link 1</a>
         </li>
@@ -48,7 +48,7 @@ permalink: /component-library/header-nav.html
           <a href="#">Link 2</a>
         </li>
         <li>
-          <a href="#" class="header-nav__link--active" aria-current="page">Link 3</a>
+          <a href="#" class="page-nav__link--active" aria-current="page">Link 3</a>
         </li>
         <li>
           <a href="#">Link 4</a>

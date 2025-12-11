@@ -7,6 +7,10 @@
   gap: var(--space--large);
 }
 
+.page-header .page-nav {
+  grid-area: nav;
+}
+
 .header-logo {
   grid-area: logo;
 }
@@ -15,25 +19,6 @@
 .header-logo img {
   width: 12rem;
   height: auto;
-}
-
-.header-nav {
-  display: flex;
-  flex-direction: row;
-  gap: var(--space--medium);
-  grid-area: nav;
-}
-
-.header-nav a {
-  text-decoration: none;
-}
-.header-nav a:hover,
-.header-nav a:focus {
-  text-decoration: underline;
-}
-
-.header-nav [aria-current="page"] {
-  color: var(--color--accent-dark);
 }
 
 .header-actions {
