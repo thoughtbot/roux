@@ -1,0 +1,122 @@
+---
+permalink: /component_library/pagination.html
+---
+
+{% extends "site/_includes/layouts/base.njk" %}
+
+{% block content %}
+  <h1>Pagination</h1>
+
+  <h1>Pagy series nav</h1>
+  <nav class="pagy series-nav" aria-label="Pages">
+    <a href="/path?example=123&page=2" rel="prev" aria-label="Previous">&lt;</a
+    ><a href="/path?example=123&page=1">1</a
+    ><a href="/path?example=123&page=2" rel="prev">2</a
+    ><a role="link" aria-disabled="true" aria-current="page">3</a
+    ><a href="/path?example=123&page=4" rel="next">4</a
+    ><a href="/path?example=123&page=5">5</a
+    ><a role="separator" aria-disabled="true">&hellip;</a
+    ><a href="/path?example=123&page=50">50</a
+    ><a href="/path?example=123&page=4" rel="next" aria-label="Next">&gt;</a>
+  </nav>
+
+  <h1>Pagy series nav with limited slots</h1>
+  <nav aria-label="Pages">
+    <ul>
+      <li>
+        <a
+          href="/path?example=123&page=2"
+          class="pagination-previous"
+          rel="prev"
+          aria-label="Previous"
+          >&lt;</a
+        >
+      </li>
+      <li>
+        <a href="/path?example=123&page=2" class="pagination-link" rel="prev"
+          >2</a
+        >
+      </li>
+      <li>
+        <a
+          role="link"
+          class="pagination-link is-current"
+          aria-current="page"
+          aria-disabled="true"
+          >3</a
+        >
+      </li>
+      <li>
+        <a href="/path?example=123&page=4" class="pagination-link" rel="next"
+          >4</a
+        >
+      </li>
+      <li>
+        <a
+          href="/path?example=123&page=4"
+          class="pagination-next"
+          rel="next"
+          aria-label="Next"
+          >&gt;</a
+        >
+      </li>
+    </ul>
+  </nav>
+
+  <h1>Pagy input nav</h1>
+  <nav aria-label="Pages">
+    <a href="/path?example=123&page=2" rel="prev" aria-label="Previous">&lt;</a
+    ><label
+      >Page
+      <input
+        name="page"
+        type="number"
+        min="1"
+        max="50"
+        value="3"
+        aria-current="page"
+      /><a style="display: none">#</a> of 50</label
+    ><a href="/path?example=123&page=4" rel="next" aria-label="Next">&gt;</a>
+  </nav>
+
+  <h1>Super simple nav</h1>
+  <nav aria-label="Pages">
+    <a href="#" aria-disabled="true">&lt; Previous</a>
+
+    <a href="#" aria-current="page">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+
+    <a href="#">Next &gt; </a>
+  </nav>
+
+  <h1>Fancy nav</h1>
+  <nav aria-label="Pages">
+    <ul>
+      <li>
+        <a href="#"> Previous </a>
+      </li>
+      <li>&#8230;</li>
+      <li>&#8230;</li>
+      <li>&#8230;</li>
+      <li>
+        <a href="#"> 7 </a>
+      </li>
+      <li>
+        <a href="#" aria-current="page"> 8 </a>
+      </li>
+      <li>
+        <a href="#"> 9 </a>
+      </li>
+      <li>&#8230;</li>
+      <li>&#8230;</li>
+      <li>&#8230;</li>
+      <li>
+        <a href="#"> Next </a>
+      </li>
+    </ul>
+
+    <span> 70 - 90 of 436 </span>
+  </nav>
+{% endblock %}

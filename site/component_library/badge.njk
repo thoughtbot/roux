@@ -1,0 +1,20 @@
+---
+permalink: /component_library/badge.html
+---
+
+{% extends "site/_includes/layouts/base.njk" %}
+
+{% block content %}
+  <h1>Badge</h1>
+
+  <span class="badge badge--primary">Archived</span>
+
+  <span class="badge badge--accent" aria-label="12 notifications">12</span>
+  <a href="#" class="badge badge--accent" aria-label="12 notifications">12</a>
+
+  <span class="badge badge--primary">
+    Unread <span class="badge__count" aria-label="3 unread">322</span>
+  </span>
+
+  <a href="#" class="badge badge--primary">New!</a>
+{% endblock %}
