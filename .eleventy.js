@@ -1,3 +1,5 @@
+import lightningcssPlugin from "@11tyrocks/eleventy-plugin-lightningcss";
+
 export default function (eleventyConfig) {
   const now = String(Date.now())
   eleventyConfig.addShortcode('version', function () {
@@ -16,6 +18,16 @@ export default function (eleventyConfig) {
   // === WATCH TARGETS ===
   // Watch CSS files for changes during development
   eleventyConfig.addWatchTarget("src/css/**/*.css");
+
+  eleventyConfig.addPlugin(lightningcssPlugin, {
+    src: "src/css/app.css",
+
+    lightningcssOptions: {
+      minify: true,
+      sourceMap: true,
+      targets: "defaults"
+    }
+  });
 
   const config = {
     dir: {
