@@ -1,0 +1,36 @@
+---
+permalink: /component-library/page-footer.html
+---
+
+{% extends "site/_includes/layouts/base.njk" %}
+
+{% block content %}
+  <h1>Page footer</h1>
+
+ <footer class="page-footer">
+
+
+   <p class="page-copyright">
+      &copy; 2026 thoughtbot, inc.
+      </p>
+
+
+    <nav aria-label="Main menu" >
+      <ul class="page-nav">
+        <li>
+          <a href="#">Link 1</a>
+        </li>
+        <li>
+          <a href="#">Link 2</a>
+        </li>
+        <li>
+          <a href="#" class="page-nav__link--active" aria-current="page">Link 3</a>
+        </li>
+        <li>
+          <a href="#">Link 4</a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+
+{% endblock %}
