@@ -32,6 +32,8 @@
   --color--accent-dark: var(--color--purple-900);
   --color--accent-light: var(--color--purple-100);
 
+  --color--disabled: var(--color--gray-100);
+
   --color--background-base: var(--color--white-500);
   --color--background-light: var(--color--gray-100);
   --color--background-x-light: var(--color--gray-50);
