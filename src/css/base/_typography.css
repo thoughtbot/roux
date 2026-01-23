@@ -54,3 +54,11 @@ hr {
   border: var(--border--light);
   width: 100%;
 }
+
+table {
+  font-variant-numeric: tabular-nums lining-nums slashed-zero;
+}
+
+code {
+  font-variant-numeric: slashed-zero;
+}
