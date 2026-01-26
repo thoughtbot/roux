@@ -10,6 +10,10 @@ details {
   p:not(:last-of-type) {
     margin-bottom: var(--space--small);
   }
+
+  [dir="rtl"] &:not([open]) summary:after {
+    transform: rotate(180deg);
+  }
 }
 
 summary {
