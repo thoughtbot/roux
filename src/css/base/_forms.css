@@ -46,11 +46,11 @@ fieldset > *:not(:last-child) {
 
   &[readonly] {
     border-color: transparent;
-    padding-left: 0;
+    padding-inline-start: 0;
     padding-top: 0;
 
     &:focus {
-      padding-left: var(--space--small);
+      padding-inline-start: var(--space--small);
       padding-top: var(--space--small);
     }
   }
@@ -120,7 +120,7 @@ label:has(
 ) > span::after,
 .fieldset-required > legend::after {
   content: "*";
-  margin-left: var(--space--xx-small);
+  margin-inline-start: var(--space--xx-small);
 }
 
 textarea {

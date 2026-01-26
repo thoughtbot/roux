@@ -10,7 +10,7 @@ dl {
   }
 
   dd {
-    margin-left: 0;
+    margin-inline-start: 0;
 
     &:not(:last-of-type) {
       margin-bottom: var(--space--base);

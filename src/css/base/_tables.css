@@ -9,7 +9,7 @@ table {
 }
 
 :where(thead, tbody) :where(th, td) {
-  border-right: var(--border--light);
+  border-inline-end: var(--border--light);
   border-bottom: var(--border--light);
   padding: var(--space--small);
 }
@@ -17,11 +17,11 @@ table {
 :where(tfoot) td, caption {
   font-weight: var(--font-weight--bold);
   padding: var(--space--xx-small) var(--space--small);
-  text-align: left;
+  text-align: start;
 }
 
 :where(thead, tbody) :where(th, td):first-child {
-  border-left: var(--border--light);
+  border-inline-start: var(--border--light);
 }
 
 th {
@@ -29,7 +29,7 @@ th {
   border-top: var(--border--light);
   font-size: var(--font-size--small);
   font-weight: var(--font-weight--bold);
-  text-align: left;
+  text-align: start;
 }
 
 tr:first-child th:first-child {
