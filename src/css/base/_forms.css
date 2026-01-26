@@ -133,6 +133,10 @@ textarea {
   background-position: calc(100% - var(--space--small)) center;
   background-repeat: no-repeat;
   background-size: var(--space--small);
+
+  [dir="rtl"] & {
+    background-position: var(--space--small) center;
+  }
 }
 
 :where([type="search"])::-webkit-search-cancel-button {
