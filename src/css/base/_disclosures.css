@@ -7,12 +7,12 @@ details {
     transform: rotate(90deg);
   }
 
-  [dir="rtl"] &[open] summary:after {
-    transform: scaleX(-1) rotate(-90deg);
-  }
-
   p:not(:last-of-type) {
     margin-bottom: var(--space--small);
+  }
+
+  [dir="rtl"] &:not([open]) summary:after {
+    transform: rotate(180deg);
   }
 }
 
@@ -41,9 +41,5 @@ summary {
     transition: var(--transition-duration--base) transform
       var(--transition-timing--base);
     width: var(--size);
-
-    [dir="rtl"] & {
-      transform: scaleX(-1);
-    }
   }
 }
