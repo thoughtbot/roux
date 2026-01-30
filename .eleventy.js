@@ -12,12 +12,16 @@ export default function (eleventyConfig) {
   });
 
   // === PASSTHROUGH COPY ===
-    // Copy the entire styles directory to _site
+  // Copy the entire styles directory to _site
   eleventyConfig.addPassthroughCopy("src/css/");
+  // Copy JavaScript files to _site
+  eleventyConfig.addPassthroughCopy("src/js/");
 
   // === WATCH TARGETS ===
   // Watch CSS files for changes during development
   eleventyConfig.addWatchTarget("src/css/**/*.css");
+  // Watch JavaScript files for changes during development
+  eleventyConfig.addWatchTarget("src/js/**/*.js");
 
   eleventyConfig.addPlugin(lightningcssPlugin, {
     src: "src/css/app.css",

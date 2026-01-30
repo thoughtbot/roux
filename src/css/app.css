@@ -30,18 +30,7 @@
 @import "utilities/_hide-visually.css";
 @import "utilities/_sizing.css";
 
-.component-example {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space--medium);
-}
-
-.component-example__preview-frame {
-  border: var(--border--dark);
-}
-
-.component-example__code {
-  border: var(--border--base);
-  display: block;
-  padding: var(--space--base);
-}
+/* Site */
+/* Import components used for this site here (not design system components) */
+@import "site/_tabs-automatic.css";
+@import "site/_component-example.css";

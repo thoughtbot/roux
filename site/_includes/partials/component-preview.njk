@@ -1,6 +1,21 @@
-{% macro preview(title, code) %}
+{% macro preview(title, code, id) %}
 <div class="component-example">
+
+  <div role="tablist" aria-labelledby="{{id}}" class="automatic">
+    <button id="tab-preview-{{id}}" type="button" role="tab" aria-selected="true" aria-controls="tabpanel-preview-{{id}}">
+      <span class="focus">Preview</span>
+    </button>
+    <button id="tab-code-{{id}}" type="button" role="tab" aria-selected="false" aria-controls="tabpanel-code-{{id}}" tabindex="-1">
+      <span class="focus">Code</span>
+    </button>
+  </div>
+
+<div id="tabpanel-preview-{{id}}" role="tabpanel" tabindex="0" aria-labelledby="tab-preview-{{id}}">
+  <iframe class="component-example__preview-frame" title="{{ title }}" srcdoc="{{['<link rel="stylesheet" href="', '/src/css/app.css' | url, '?v=', version, '"/>', code] | join}}" ></iframe>
+  </div>
+
+<div id="tabpanel-code-{{id}}" role="tabpanel" tabindex="0" aria-labelledby="tab-code-{{id}}" class="is-hidden">
   <code class="component-example__code">{{code | escape}}</code>
-  <iframe class="component-example__preview-frame" title="{{ title + ' Example' }}" srcdoc="{{['<link rel="stylesheet" href="', '/src/css/app.css' | url, '?v=', version, '"/>', code] | join}}" ></iframe>
+  </div>
 </div>
 {% endmacro %}

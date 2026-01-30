@@ -26,13 +26,13 @@ Using semantic roles instead of JavaScript-driven announcements ensures reliabil
 ## Examples
 
 ### Info Alert
-{{ preview(code=example_info) }}
+{{ preview(title="Info Alert Example", code=example_info, id="example_info") }}
 
 ### Success Alert
-{{ preview(code=example_success) }}
+{{ preview(title="Success Alert Example", code=example_success, id="example_success") }}
 
 ### Error Alert
-{{ preview(code=example_error) }}
+{{ preview(title="Error Alert Example", code=example_error, id="example_error") }}
 
 {% endblock %}
 
@@ -48,3 +48,14 @@ Using semantic roles instead of JavaScript-driven announcements ensures reliabil
 <div class="alert alert--danger" role="alert"><p>We’ve been trying to reach to you about your car’s extended warranty.</p></div>
 {% endset %}
 
+
+
+
+
+
+
+<!-- TODO
+- no-js fallback for tabs
+- ensure that tab ids and aria references are correct and unique
+- typescript instead of JS for the tabs logic
+-->
