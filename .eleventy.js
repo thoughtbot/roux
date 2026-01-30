@@ -48,5 +48,9 @@ export default function (eleventyConfig) {
     config.pathPrefix = "/roux/";
   }
 
+  // support .md and .njk template engines in same files
+  config.markdownTemplateEngine = 'njk';
+  config.htmlTemplateEngine = 'njk';
+
   return config;
 }

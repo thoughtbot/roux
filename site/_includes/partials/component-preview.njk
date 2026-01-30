@@ -1,0 +1,6 @@
+{% macro preview(title, code) %}
+<div class="component-example">
+  <code class="component-example__code">{{code | escape}}</code>
+  <iframe class="component-example__preview-frame" title="{{ title + ' Example' }}" srcdoc="{{['<link rel="stylesheet" href="', '/src/css/app.css' | url, '?v=', version, '"/>', code] | join}}" ></iframe>
+</div>
+{% endmacro %}
