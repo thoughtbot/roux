@@ -1,0 +1,16 @@
+---
+permalink: /
+---
+
+{% extends "site/_includes/layouts/base.njk" %}
+
+{% block content %}
+  <h1>Welcome to Roux</h1>
+  <p>This is the home page.</p>
+  <h2>Component Library</h2>
+  <ul>
+    {%- for component in collections.component %}
+      <li><a href="{{ component.url | url }}">{{ component.fileSlug }}</a></li>
+    {%- endfor %}
+  </ul>
+{% endblock %}

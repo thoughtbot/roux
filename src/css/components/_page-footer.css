@@ -1,0 +1,17 @@
+.page-footer {
+  display: grid;
+  grid-template-areas: "copyright nav";
+  grid-template-columns: 1fr auto;
+  padding: var(--space--base) var(--space--x-large);
+  align-items: center;
+  gap: var(--space--large);
+}
+
+.page-copyright {
+  grid-area: copyright;
+  font-size: var(--font-size--small);
+}
+
+.page-footer .page-nav {
+  grid-area: nav;
+}

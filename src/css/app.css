@@ -12,12 +12,20 @@
 @import "base/_forms.css";
 @import "base/_lists.css";
 @import "base/_media.css";
+@import "base/_modal.css";
 @import "base/_tables.css";
 @import "base/_typography.css";
 
 /* Components */
 /* Import components from the component folder here in ABC order */
 /* For example: @import "components/_card.css" */
+@import "components/_badge.css";
+@import "components/_loading-indicator.css";
+@import "components/_alert.css";
+@import "components/_page-header.css";
+@import "components/_page-footer.css";
+@import "components/_page-nav.css";
 
 /* Utilities */
 @import "utilities/_hide-visually.css";
+@import "utilities/_sizing.css";
