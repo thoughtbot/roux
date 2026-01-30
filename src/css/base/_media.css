@@ -1,4 +1,7 @@
 :where(
+  audio,
+  canvas,
+  iframe,
   img,
   figure,
   picture,
@@ -8,4 +11,12 @@
   height: auto;
   margin: 0;
   width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+svg:not([fill]) {
+  fill: currentColor;
 }

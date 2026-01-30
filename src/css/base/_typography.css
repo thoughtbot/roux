@@ -33,7 +33,7 @@ a {
 label {
   font-size: var(--font-size--ui);
   font-weight: var(--font-weight--bold);
-  text-align: left;
+  text-align: start;
 }
 
 input {
@@ -63,4 +63,12 @@ blockquote + figcaption {
   margin-block-end: var(--space--base);
   margin-inline-start: var(--space--large);
   margin-inline-end: var(--space--large);
+}
+
+table {
+  font-variant-numeric: tabular-nums lining-nums slashed-zero;
+}
+
+code {
+  font-variant-numeric: slashed-zero;
 }
