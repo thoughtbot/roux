@@ -14,12 +14,12 @@
     {% block head %}{% endblock %}
   </head>
   <body>
-    {# {% include "partials/_navigation.njk" %} #}
+    {% include "partials/_header.njk" %}
 
-    {% block content %}
+<main>
       {{ content | safe }}
-    {% endblock %}
 
+</main>
     {# {% include "partials/_footer.njk" %} #}
     <script src="{{ '/src/js/app.mjs' | url }}?v={% version %}" type="module"></script>
   </body>
