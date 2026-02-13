@@ -21,7 +21,7 @@ permalink: /component-library/form.html
           spellcheck="false"
           required
           autocomplete="given-name"
-          />
+        />
       </label>
       <label for="last-name">
         <span>Last Name</span>
@@ -34,7 +34,7 @@ permalink: /component-library/form.html
           spellcheck="false"
           required
           autocomplete="family-name"
-          />
+        />
       </label>
       <label for="email">
         <span>Your email</span>
@@ -47,7 +47,7 @@ permalink: /component-library/form.html
           spellcheck="false"
           required
           autocomplete="email"
-          />
+        />
       </label>
       <label for="birthday">
         <span>Your birthday</span>
@@ -57,88 +57,55 @@ permalink: /component-library/form.html
           name="birthday"
           required
           autocomplete="bday"
-          />
+        />
       </label>
     </fieldset>
     <fieldset class="fieldset-required">
       <legend>Do you like ice cream?</legend>
       <label for="icecream-yes">
-        <input
-          id="icecream-yes"
-          type="radio"
-          value="Yes"
-          name="icecream">
-            Yes
-       </label>
+        <input id="icecream-yes" type="radio" value="Yes" name="icecream" />
+        Yes
+      </label>
       <label for="icecream-no">
-        <input
-          id="icecream-no"
-          type="radio"
-          value="No"
-          name="icecream">
-            No
-       </label>
-     </fieldset>
+        <input id="icecream-no" type="radio" value="No" name="icecream" />
+        No
+      </label>
+    </fieldset>
     <fieldset class="fieldset-required">
-      <legend>
-        What kind of ice cream do you like?
-      </legend>
+      <legend>What kind of ice cream do you like?</legend>
       <label for="vanilla">
-        <input
-          id="vanilla"
-          type="checkbox"
-          value="Vanilla"
-          name="flavor">
-            Vanilla
+        <input id="vanilla" type="checkbox" value="Vanilla" name="flavor" />
+        Vanilla
       </label>
       <label for="chocolate">
-        <input
-          id="chocolate"
-          type="checkbox"
-          value="Chocolate"
-          name="flavor">
-            Chocolate
+        <input id="chocolate" type="checkbox" value="Chocolate" name="flavor" />
+        Chocolate
       </label>
       <label for="strawberry">
         <input
           id="strawberry"
           type="checkbox"
           value="Strawberry"
-          name="flavor">
-            Strawberry
+          name="flavor"
+        />
+        Strawberry
       </label>
       <label for="nothing">
-        <input
-          id="nothing"
-          type="checkbox"
-          value="nothing"
-          name="flavor">
-            Nothing (I don't like ice cream)
+        <input id="nothing" type="checkbox" value="nothing" name="flavor" />
+        Nothing (I don't like ice cream)
       </label>
     </fieldset>
     <label for="terms">
-      <input id="terms"
-             type="checkbox"
-             name="termsAgreement">
-       I accept the Terms of Service
-      </label>
+      <input id="terms" type="checkbox" name="termsAgreement" />
+      I accept the Terms of Service
+    </label>
     <label for="explain">
       <span>Explain your answers</span>
-      <textarea
-        id="explain"
-        dir="auto"
-        rows="5"
-        name="explain"
-       >
-       </textarea>
+      <textarea id="explain" dir="auto" rows="5" name="explain"> </textarea>
     </label>
     <label for="favorite-color">
       <span>Favorite color</span>
-      <select
-        id="favorite-color"
-        name="favorite-color"
-        required
-       >
+      <select id="favorite-color" name="favorite-color" required>
         <optgroup label="Primary colors">
           <option value="red">🟥 Red</option>
           <option value="yellow">🟨 Yellow</option>
@@ -149,11 +116,16 @@ permalink: /component-library/form.html
           <option value="green">🟩 Green</option>
           <option value="purple">🟪 Purple</option>
         </optgroup>
-      </select>    
+      </select>
     </label>
     <label for="myBrowser">
       <span>Your browser</span>
-      <input list="browsers" id="myBrowser" name="myBrowser" autocomplete="off" />
+      <input
+        list="browsers"
+        id="myBrowser"
+        name="myBrowser"
+        autocomplete="off"
+      />
       <datalist id="browsers">
         <option value="Chrome"></option>
         <option value="Firefox"></option>
@@ -165,7 +137,7 @@ permalink: /component-library/form.html
     <label for="input-range">
       <span>Range Input</span>
       <input id="input-range" name="range" type="range" />
-     </label>
+    </label>
     <button type="submit" class="button button--primary">Submit</button>
   </form>
 {% endblock %}

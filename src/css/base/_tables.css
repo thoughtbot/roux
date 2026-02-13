@@ -14,7 +14,8 @@ table {
   padding: var(--space--small);
 }
 
-:where(tfoot) td, caption {
+:where(tfoot) td,
+caption {
   font-weight: var(--font-weight--bold);
   padding: var(--space--xx-small) var(--space--small);
   text-align: start;

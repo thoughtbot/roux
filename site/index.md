@@ -12,6 +12,7 @@ Much like Roux CSS, these components are meant to be a baseline for you to build
 Much of these components consider semantic HTML and accessibility.
 
 ## Components
+
 <ul>
   {%- for component in collections.component %}
     <li><a href="{{ component.url | url }}">{{ component.data.title | default(component.fileSlug) }}</a>

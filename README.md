@@ -12,10 +12,10 @@ You can cherry-pick what you need, use it for inspiration, or adopt the whole sy
 
 When you start a new web project, you face a blank CSS file and dozens of decisions:
 
-* How should I organize my styles as the project grows?
-* Should I define colors and spacing as variables, or hardcode them?
-* Do I need to reset browser defaults?
-* How do I structure forms, buttons, and typography consistently?
+- How should I organize my styles as the project grows?
+- Should I define colors and spacing as variables, or hardcode them?
+- Do I need to reset browser defaults?
+- How do I structure forms, buttons, and typography consistently?
 
 Without a plan, you may end up with unmaintainable and disorganized CSS files that are not approachable to you or your team. Roux solves this by providing thoughtful defaults and organization patterns that scale with your project.
 
@@ -23,24 +23,24 @@ Without a plan, you may end up with unmaintainable and disorganized CSS files th
 
 ### Use Roux when you:
 
-* Want to write custom CSS (not use a framework like Tailwind or Bootstrap)
-* Need a structured starting point instead of a blank stylesheet
-* Want consistent design tokens (colors, spacing, fonts) defined upfront as CSS variables
-* Are starting a new project or refactoring messy CSS
-* Want the flexibility to customize everything to your exact needs
+- Want to write custom CSS (not use a framework like Tailwind or Bootstrap)
+- Need a structured starting point instead of a blank stylesheet
+- Want consistent design tokens (colors, spacing, fonts) defined upfront as CSS variables
+- Are starting a new project or refactoring messy CSS
+- Want the flexibility to customize everything to your exact needs
 
 ### Don't use Roux if you:
 
-* Prefer utility-first frameworks like Tailwind
-* Need pre-built UI components (use a component library instead)
-* Already have an established CSS system you're happy with
+- Prefer utility-first frameworks like Tailwind
+- Need pre-built UI components (use a component library instead)
+- Already have an established CSS system you're happy with
 
 ## What you get
 
-* **Organized file structure:** Separate files for forms, typography, buttons, tables, etc.
-* **CSS custom properties:** Colors, spacing, font sizes defined as variables in one place
-* **Base element styling:** Sensible defaults for buttons, forms, tables, and more
-* **A system to build on:** Not a finished product, but a solid foundation you customize
+- **Organized file structure:** Separate files for forms, typography, buttons, tables, etc.
+- **CSS custom properties:** Colors, spacing, font sizes defined as variables in one place
+- **Base element styling:** Sensible defaults for buttons, forms, tables, and more
+- **A system to build on:** Not a finished product, but a solid foundation you customize
 
 ## See it in action
 
@@ -50,12 +50,14 @@ Without a plan, you may end up with unmaintainable and disorganized CSS files th
 
 Installation is very hands-off.
 
-* ```
+- ```
   npx github:thoughtbot/roux init
   ```
-  * This will copy all files from [src/css](src/css) into a `css` folder at the root of your project. Feel free to move or rename depending on your needs, OR
-* Copy and paste [from the source code](src/css), OR
-* Clone this project: `https://github.com/thoughtbot/roux`.
+
+  - This will copy all files from [src/css](src/css) into a `css` folder at the root of your project. Feel free to move or rename depending on your needs, OR
+
+- Copy and paste [from the source code](src/css), OR
+- Clone this project: `https://github.com/thoughtbot/roux`.
 
 ## Quick start
 
@@ -65,8 +67,8 @@ After installation:
 2. **Link the main CSS file:** Import or link to `css/app.css` in your HTML.
 3. **Start building:** Add your component styles in `css/components/`.
 4. **Compile (optional):** Use your preferred CSS compiler to bundle everything into one file
-    * This project uses [lightning CSS] to minify and compile the CSS into one file. [There are lots of options for CSS compiliation](https://www.alwaystwisted.com/articles/UnSassing-my-CSS-CSS-imports), depending on your project setup and your own preferences. If you're using [Dart Sass](https://sass-lang.com/dart-sass/), you'll need to use `@use` instead of `@import` in your main `app.css` file (you'll also need to switch your file types from `css` to `scss`).
-    * To compile in this repo, run `npm i` then `npm run build` (will output into a `dist` folder).
+   - This project uses [lightning CSS] to minify and compile the CSS into one file. [There are lots of options for CSS compiliation](https://www.alwaystwisted.com/articles/UnSassing-my-CSS-CSS-imports), depending on your project setup and your own preferences. If you're using [Dart Sass](https://sass-lang.com/dart-sass/), you'll need to use `@use` instead of `@import` in your main `app.css` file (you'll also need to switch your file types from `css` to `scss`).
+   - To compile in this repo, run `npm i` then `npm run build` (will output into a `dist` folder).
 
 That's it! You now have an organized CSS foundation to build on.
 
@@ -116,13 +118,14 @@ Open `css/base/_variables.css` to customize your project. This is where all your
 
 #### Color system
 
-* Define primitive colors with ranges (e.g., `--color--blue-100` through `--color--blue-900`)
-* Map primitives to semantic names (e.g., `--color--primary-base: var(--color--blue-500)`)
-* Use semantic names throughout your CSS
+- Define primitive colors with ranges (e.g., `--color--blue-100` through `--color--blue-900`)
+- Map primitives to semantic names (e.g., `--color--primary-base: var(--color--blue-500)`)
+- Use semantic names throughout your CSS
 
 #### Tips
-* Follow the naming convention: `--property--variant` (e.g., `--color--primary`, `--space--large`, `--font-size--small`).
-* Another fun thing you can add to in `:root` is defining [dark mode (or light mode) styles](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) with the same conventions.
+
+- Follow the naming convention: `--property--variant` (e.g., `--color--primary`, `--space--large`, `--font-size--small`).
+- Another fun thing you can add to in `:root` is defining [dark mode (or light mode) styles](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) with the same conventions.
 
 #### Example
 
@@ -130,10 +133,10 @@ Open `css/base/_variables.css` to customize your project. This is where all your
 :root {
   --color--beige-100: #f1f1eb;
   --color--beige-900: #b2b2a7;
-  
+
   --color--blue-100: #57929e;
   --color--blue-900: #164650;
-  
+
   --color--pink-100: #efaf98;
 
   --color--background-base: var(--color--beige-100);
@@ -155,8 +158,8 @@ Open `css/base/_fonts.css` to add your custom fonts. This is a dependency file s
 
 #### Tips
 
-* Generally, `font-display: swap` is a solid default for most fonts so you always fallback to the other fonts defined in your stack while your custom font is loading.
-* When you define a font in this file, you'll want to add it to a custom property with a stack in your `_variables.css` file.
+- Generally, `font-display: swap` is a solid default for most fonts so you always fallback to the other fonts defined in your stack while your custom font is loading.
+- When you define a font in this file, you'll want to add it to a custom property with a stack in your `_variables.css` file.
 
 #### Example
 
@@ -212,18 +215,8 @@ Roux uses a classname for a "button" style since it can be applied to both `butt
 #### Example
 
 ```html
-<button
-  type="button"
-  class="button button--primary"
- >
-  A primary button
-</button>
-<a
-  href="#"
-  class="button button--secondary"
->
-  A secondary button link
-</a>
+<button type="button" class="button button--primary">A primary button</button>
+<a href="#" class="button button--secondary"> A secondary button link </a>
 ```
 
 ### Forms
@@ -244,7 +237,7 @@ Most form styling relies on how you structure the HTML. In Roux's styling, you s
     spellcheck="false"
     required
     autocomplete="email"
-    />
+  />
 </label>
 ```
 
@@ -269,9 +262,7 @@ label:has(
 If you prefer to keep those elements separate, you can adjust the CSS in the forms to use [the next-sibling combinator](https://developer.mozilla.org/en-US/docs/Web/CSS/Next-sibling_combinator) (or any other selector of your choice). You'll likely have to make some other declarations or use another element to wrap the `label` and `input`.
 
 ```html
-<label for="email">
-  Your email
-</label>
+<label for="email"> Your email </label>
 <input
   id="email"
   type="email"
@@ -340,14 +331,14 @@ The `.slide-in` class can be added for a smooth slide-from-bottom transition whe
 
 #### Tips
 
-* Use the autofocus attribute on the first interactive element you want to focus to when a modal is open (usually the close modal button).
+- Use the autofocus attribute on the first interactive element you want to focus to when a modal is open (usually the close modal button).
 
 #### Example
 
 **Default modal**
 
 ```html
- <dialog aria-modal="true">
+<dialog aria-modal="true">
   <button class="button button--plain" type="button" autofocus>Close</button>
   <p>Hello there</p>
 </dialog>
@@ -356,7 +347,7 @@ The `.slide-in` class can be added for a smooth slide-from-bottom transition whe
 **Slide in modal**
 
 ```html
- <dialog class="slide-in" aria-modal="true">
+<dialog class="slide-in" aria-modal="true">
   <button class="button button--plain" type="button" autofocus>Close</button>
   <p>Hello there</p>
 </dialog>
@@ -374,7 +365,9 @@ Rounded border and striped row styling for tables. This also includes classes to
 
 ```html
 <table>
-  <caption>Monthly spending</caption>
+  <caption>
+    Monthly spending
+  </caption>
   <thead>
     <tr>
       <th>Month</th>
@@ -403,11 +396,14 @@ Rounded border and striped row styling for tables. This also includes classes to
   </tfoot>
 </table>
 ```
+
 **A striped table**
 
 ```html
 <table class="table--striped">
-  <caption>Monthly spending</caption>
+  <caption>
+    Monthly spending
+  </caption>
   <thead>
     <tr>
       <th>Month</th>
@@ -443,7 +439,9 @@ Rounded border and striped row styling for tables. This also includes classes to
 <div class="table-outer-wrapper">
   <div class="table-inner-wrapper">
     <table class="table--striped">
-      <caption>Monthly spending with overflow container for smaller viewports</caption>
+      <caption>
+        Monthly spending with overflow container for smaller viewports
+      </caption>
       <thead>
         <tr>
           <th>Category</th>
@@ -472,10 +470,10 @@ Rounded border and striped row styling for tables. This also includes classes to
           <td>+$20</td>
         </tr>
         <tr>
-           <td>Transportation</td>
-           <td>$100</td>
-           <td>$80</td>
-           <td>-$20</td>
+          <td>Transportation</td>
+          <td>$100</td>
+          <td>$80</td>
+          <td>-$20</td>
         </tr>
         <tr>
           <td>Entertainment</td>
@@ -521,7 +519,7 @@ This holds utility-based helpers that can be used globally. The only utility pre
 
 #### Tips
 
-* Add your own utilities following the `.u-[name]` pattern.
+- Add your own utilities following the `.u-[name]` pattern.
 
 ## Contributing
 
@@ -562,4 +560,4 @@ We are [available for hire][hire].
 [codepen]: https://codepen.io/enatario/pen/LEppZLZ
 [custom properties]: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
 [lightning CSS]: https://lightningcss.dev/
-[normalize]: https://github.com/necolas/normalize.css 
+[normalize]: https://github.com/necolas/normalize.css

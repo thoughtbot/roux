@@ -7,7 +7,7 @@ dialog {
   gap: var(--space--base);
   max-width: var(--container--base);
   width: calc(100% - var(--space--base));
-  
+
   &[open] {
     display: flex;
   }

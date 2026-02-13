@@ -1,13 +1,13 @@
 import lightningcssPlugin from "@11tyrocks/eleventy-plugin-lightningcss";
 
 export default function (eleventyConfig) {
-  const now = String(Date.now())
-  eleventyConfig.addShortcode('version', function () {
-    return now
-  })
+  const now = String(Date.now());
+  eleventyConfig.addShortcode("version", function () {
+    return now;
+  });
 
   // === COLLECTIONS ===
-  eleventyConfig.addCollection("component", function(collectionApi) {
+  eleventyConfig.addCollection("component", function (collectionApi) {
     return collectionApi.getFilteredByGlob("site/component-library/**/*");
   });
 
@@ -29,32 +29,32 @@ export default function (eleventyConfig) {
     lightningcssOptions: {
       minify: true,
       sourceMap: true,
-      targets: "defaults"
-    }
+      targets: "defaults",
+    },
   });
 
   const config = {
     dir: {
       input: "site",
-      output: "_site"
-    }
+      output: "_site",
+    },
   };
 
   // Set pathPrefix in production for GitHub Pages
   //
-  // GitHub Pages currently serves this site at 
+  // GitHub Pages currently serves this site at
   // https://thoughtbot.github.io/roux/,
   // but this site is built expecting to be at the root `/`.
   // Therefore, we need to set `pathPrefix` to `/roux/` in production
   // to serve the site correctly. If we decide to use a custom domain,
   // we can remove this.
-  if (process.env.SITE_ENV === 'production') {
+  if (process.env.SITE_ENV === "production") {
     config.pathPrefix = "/roux/";
   }
 
   // support .md and .njk template engines in same files
-  config.markdownTemplateEngine = 'njk';
-  config.htmlTemplateEngine = 'njk';
+  config.markdownTemplateEngine = "njk";
+  config.htmlTemplateEngine = "njk";
 
   return config;
 }
