@@ -21,7 +21,6 @@
         <span class="focus">Code</span>
       </button>
     </div>
-
     <div
       id="tabpanel-preview-{{ id }}"
       role="tabpanel"
@@ -31,10 +30,9 @@
       <iframe
         class="component-example__preview-frame"
         title="{{ title }}"
-        srcdoc="{{ ['<link rel="stylesheet" href="', '/src/css/app.css' | url, '?v=', version, '"/>', code] | join }}"
+        srcdoc="{{ ['<link rel="stylesheet" href="', '/src/css/app.css' | url, '?v=', version, '"/>', code | trim] | join }}"
       ></iframe>
     </div>
-
     <div
       id="tabpanel-code-{{ id }}"
       role="tabpanel"
@@ -42,7 +40,7 @@
       aria-labelledby="tab-code-{{ id }}"
       class="is-hidden"
     >
-      <code class="component-example__code">{{ code | escape }}</code>
+      <code class="component-example__code">{{ code | trim |escape }}</code>
     </div>
   </div>
 {% endmacro %}
