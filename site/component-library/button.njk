@@ -1,0 +1,70 @@
+---
+title: Button
+description: Buttons trigger actions and help users move through tasks.
+permalink: /component-library/button.html
+---
+
+{% from "partials/_component-preview.njk" import preview %}
+
+
+{% set example_buttons %}
+  <button type="button" class="button button--primary">A primary button</button>
+  <button type="button" class="button button--secondary">
+    A secondary button
+  </button>
+  <button type="button" class="button button--primary" disabled>
+    A disabled primary button
+  </button>
+  <a href="#" class="button button--primary"> A primary button link </a>
+  <a href="#" class="button button--secondary"> A secondary button link </a>
+{% endset %}
+
+<h1>{{ title }}</h1>
+
+{% if description %}
+  <p>{{ description }}</p>
+{% endif %}
+
+<h2>Considerations</h2>
+
+<p>
+  Our button component uses a base <code>.button</code> class with modifier
+  classes like <code>.button--primary</code> and
+  <code>.button--secondary</code> to provide a clear visual hierarchy and
+  consistent styling.
+</p>
+<p>
+  We use semantic <code>&lt;button&gt;</code> elements for actions and
+  <code>&lt;a&gt;</code> elements styled as buttons for navigation. This
+  preserves correct browser and assistive-technology behavior—buttons submit
+  forms or trigger in-page interactions, while links take users to new
+  locations.
+</p>
+<p>
+  Remember, when deciding which one to use:
+  <a href="https://www.a11y-collective.com/blog/button-vs-link/"
+    ><strong>Links go places. Buttons do things.</strong></a
+  >
+</p>
+<p>
+  Disabled states rely on the native <code>disabled</code> attribute for true
+  <code>&lt;button&gt;</code> elements, ensuring proper accessibility and
+  preventing interaction.
+</p>
+<p>If using a disabled state:</p>
+<ul>
+  <li>
+    Consider not disabling on a form or user action and allowing a user to
+    submit and receive error feedback to fix the issue
+  </li>
+  <li>Add in <em>why</em> a button is disabled if still using it</li>
+  <li>
+    This state can be useful to apply while a form is submitting to prevent
+    multiple submissions.
+  </li>
+</ul>
+
+<h2>Examples</h2>
+
+<h3 id="example_buttons">Various Button Types</h3>
+{{ preview(title="Buttons Example", code=example_buttons, id="example_buttons") }}

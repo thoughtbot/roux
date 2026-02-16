@@ -30,7 +30,7 @@
       <iframe
         class="component-example__preview-frame"
         title="{{ title }}"
-        srcdoc="{{ ['<link rel="stylesheet" href="', '/src/css/app.css' | url, '?v=', version, '"/>', code | trim] | join }}"
+        srcdoc="{{ ['<div class="component-example__preview-frame__wrapper"><link rel="stylesheet" href="', '/src/css/app.css' | url, '?v=', version, '"/>', code | trim, '</div>'] | join }}"
       ></iframe>
     </div>
     <div

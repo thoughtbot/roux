@@ -1,5 +1,13 @@
 .component-example__preview-frame {
   border: var(--border--dark);
+  min-height: 340px;
+}
+
+.component-example__preview-frame__wrapper {
+  padding: var(--space--base);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space--base);
 }
 
 .component-example__code {

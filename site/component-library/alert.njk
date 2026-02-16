@@ -1,0 +1,55 @@
+---
+title: Alert
+description: Alerts provide timely feedback or status updates to users. They communicate information, success states, and errors in a consistent, accessible way.
+permalink: /component-library/alert.html
+---
+
+{% from "partials/_component-preview.njk" import preview %}
+
+
+{% set example_basic %}
+  {% include 'partials/examples/alerts/basic.html' %}
+{% endset %}
+
+<h1>{{ title }}</h1>
+
+{% if description %}
+  <p>{{ description }}</p>
+{% endif %}
+
+<h2>Considerations</h2>
+
+<p>
+  We use a simple <code>&lt;div class=&quot;alert&quot;&gt;</code> structure
+  with modifier classes (e.g., <code>alert--success</code>,
+  <code>alert--danger</code>) so visual styling is predictable and easy to
+  extend. Each alert includes an appropriate ARIA live-region role:
+</p>
+<ul>
+  <li>
+    <code>role=&quot;status&quot;</code> for informational or success messages
+    that should be announced politely,
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/status_role"
+      >which is implicit when set</a
+    >.
+  </li>
+  <li>
+    <code>role=&quot;alert&quot;</code> for urgent or error messages that
+    require immediate attention and announced assertively,
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role"
+      >which is implicit when set</a
+    >.
+  </li>
+</ul>
+<p>
+  Using semantic roles instead of JavaScript-driven announcements ensures
+  reliability across assistive technologies, keeps the component lightweight,
+  and aligns with accessibility best practices.
+</p>
+
+<h2>Examples</h2>
+
+<h3 id="example_info">Info, Success, and Error Alerts</h3>
+{{ preview(title="Info, Success, and Error Alerts", code=example_basic, id="example_basic") }}
