@@ -1,143 +1,43 @@
 ---
-permalink: /component-library/form.html
+title: Forms
+description: Forms collect structured user input and must be accessible, predictable, and easy to navigate.
+permalink: /component-library/forms.html
 ---
 
-{% extends "site/_includes/layouts/base.njk" %}
+{% from "partials/_component-preview.njk" import preview %}
 
-{% block content %}
-  <h1>Form</h1>
+{% set example_form %}
+  {% include 'partials/examples/forms/basic.html' %}
+  {% endset %}
+  
+<h1>{{ title }}</h1>
 
-  <form>
-    <fieldset>
-      <legend>Personal information</legend>
-      <label for="first-name">
-        <span>First Name</span>
-        <input
-          id="first-name"
-          type="text"
-          name="first-name"
-          autocapitalize="off"
-          autocorrect="off"
-          spellcheck="false"
-          required
-          autocomplete="given-name"
-        />
-      </label>
-      <label for="last-name">
-        <span>Last Name</span>
-        <input
-          id="last-name"
-          type="text"
-          name="last-name"
-          autocapitalize="off"
-          autocorrect="off"
-          spellcheck="false"
-          required
-          autocomplete="family-name"
-        />
-      </label>
-      <label for="email">
-        <span>Your email</span>
-        <input
-          id="email"
-          type="email"
-          name="email"
-          autocapitalize="off"
-          autocorrect="off"
-          spellcheck="false"
-          required
-          autocomplete="email"
-        />
-      </label>
-      <label for="birthday">
-        <span>Your birthday</span>
-        <input
-          id="birthday"
-          type="date"
-          name="birthday"
-          required
-          autocomplete="bday"
-        />
-      </label>
-    </fieldset>
-    <fieldset class="fieldset-required">
-      <legend>Do you like ice cream?</legend>
-      <label for="icecream-yes">
-        <input id="icecream-yes" type="radio" value="Yes" name="icecream" />
-        Yes
-      </label>
-      <label for="icecream-no">
-        <input id="icecream-no" type="radio" value="No" name="icecream" />
-        No
-      </label>
-    </fieldset>
-    <fieldset class="fieldset-required">
-      <legend>What kind of ice cream do you like?</legend>
-      <label for="vanilla">
-        <input id="vanilla" type="checkbox" value="Vanilla" name="flavor" />
-        Vanilla
-      </label>
-      <label for="chocolate">
-        <input id="chocolate" type="checkbox" value="Chocolate" name="flavor" />
-        Chocolate
-      </label>
-      <label for="strawberry">
-        <input
-          id="strawberry"
-          type="checkbox"
-          value="Strawberry"
-          name="flavor"
-        />
-        Strawberry
-      </label>
-      <label for="nothing">
-        <input id="nothing" type="checkbox" value="nothing" name="flavor" />
-        Nothing (I don't like ice cream)
-      </label>
-    </fieldset>
-    <label for="terms">
-      <input id="terms" type="checkbox" name="termsAgreement" />
-      I accept the Terms of Service
-    </label>
-    <label for="explain">
-      <span>Explain your answers</span>
-      <textarea id="explain" dir="auto" rows="5" name="explain"> </textarea>
-    </label>
-    <label for="favorite-color">
-      <span>Favorite color</span>
-      <select id="favorite-color" name="favorite-color" required>
-        <optgroup label="Primary colors">
-          <option value="red">🟥 Red</option>
-          <option value="yellow">🟨 Yellow</option>
-          <option value="blue">🟦 Blue</option>
-        </optgroup>
-        <optgroup label="Secondary colors">
-          <option value="orange">🟧 Orange</option>
-          <option value="green">🟩 Green</option>
-          <option value="purple">🟪 Purple</option>
-        </optgroup>
-      </select>
-    </label>
-    <label for="myBrowser">
-      <span>Your browser</span>
-      <input
-        list="browsers"
-        id="myBrowser"
-        name="myBrowser"
-        autocomplete="off"
-      />
-      <datalist id="browsers">
-        <option value="Chrome"></option>
-        <option value="Firefox"></option>
-        <option value="Opera"></option>
-        <option value="Safari"></option>
-        <option value="Microsoft Edge"></option>
-      </datalist>
-    </label>
-    <label for="input-range">
-      <span>Range Input</span>
-      <input id="input-range" name="range" type="range" />
-    </label>
-    <button type="submit" class="button button--primary">Submit</button>
-  </form>
-{% endblock %}
+{% if description %}
+<p>{{ description }}</p>
+{% endif %}
+
+<h2>Considerations</h2>
+
+<p>This form uses semantic HTML elements—<code>&lt;form&gt;</code>, <code>&lt;fieldset&gt;</code>, <code>&lt;legend&gt;</code>, <code>&lt;label&gt;</code>, and appropriate input types—to convey relationships and groupings clearly.</p>
+<ul>
+<li><strong>Fieldsets &amp; Legends:</strong> Group related inputs (e.g., personal info, ice cream preferences) to improve comprehension for all users, including those using assistive technology.</li>
+<li><strong>Labels &amp; Inputs:</strong> Every input is associated with a <code>&lt;label&gt;</code> for accessibility and larger click/tap targets.</li>
+<li><strong>Input Types &amp; Attributes:</strong> Proper types (<code>email</code>, <code>date</code>, <code>checkbox</code>, <code>radio</code>, <code>select</code>, <code>textarea</code>, <code>range</code>) guide browser validation, mobile keyboards, and autocomplete. Attributes like <code>required</code>, <code>autocomplete</code>, and <code>spellcheck</code> enhance usability.</li>
+<li><strong>Radio Buttons &amp; Checkboxes:</strong> Ensure mutually exclusive or multi-select options are clear, with grouped legends for context.</li>
+<li><strong>Select &amp; Datalist:</strong> Provide structured choices while maintaining flexibility for user input.</li>
+<li><strong>Accessibility &amp; Usability:</strong> Semantic structure, focusable elements, and visual cues ensure the form works well for keyboard and screen reader users.</li>
+</ul>
+<p>This approach keeps the form <strong>accessible, extensible, and user-friendly</strong> while supporting both simple and advanced interactions.</p>
+
+
+
+<h2>Examples</h2>
+
+
+
+<h3 id="example_form">Basic Form</h3>
+<div>
+  {{ preview(title="Basic Form", code=example_form,
+  id="example_form") }}
+</div>
+
