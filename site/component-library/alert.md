@@ -21,7 +21,7 @@ permalink: /component-library/alert.html
 <div class="alert alert--danger" role="alert"><p>We’ve been trying to reach you about your car’s extended warranty.</p></div>
 {% endset %}
 
-# Alert
+# {{ title }}
 
 {% if description %}
 {{ description }}

@@ -1,66 +1,52 @@
 ---
+title: Disclosures
+description: Disclosures (<details>/<summary>) provide a way to hide and reveal additional content, making pages cleaner while keeping information accessible. They are ideal for FAQs, explanations, or optional details.
 permalink: /component-library/disclosures.html
 ---
 
-{% extends "site/_includes/layouts/base.njk" %}
+{% from "partials/_component-preview.njk" import preview %}
 
-{% block content %}
-  <h1>Disclosures</h1>
-  <details>
-    <summary>What is tax filing status?</summary>
-    <dl>
-      <dt>Head of household</dt>
-      <dd>
-        Choose this option if you are unmarried and pay at least half the cost
-        of housing and support for others.
-      </dd>
-      <dt>Married/domestic partnership</dt>
-      <dd>
-        Choose this option if you are married or in a domestic partnership and
-        have filed separately or jointly.
-      </dd>
-      <dt>Single</dt>
-      <dd>
-        Choose this option if you are unmarried and don't qualify for another
-        filing status.
-      </dd>
-    </dl>
-  </details>
+{% set example_single %}
+  {% include 'partials/examples/disclosures/single.html' %}
+  {% endset %}
+  
+{% set example_faq %}
+  {% include 'partials/examples/disclosures/faq.html' %}
+{% endset %}
 
-  <h1>FAQ-style disclosures that collapse themselves</h1>
-  <details name="faq-group">
-    <summary>What is tax filing status?</summary>
-    <dl>
-      <dt>Head of household</dt>
-      <dd>
-        Choose this option if you are unmarried and pay at least half the cost
-        of housing and support for others.
-      </dd>
-      <dt>Married/domestic partnership</dt>
-      <dd>
-        Choose this option if you are married or in a domestic partnership and
-        have filed separately or jointly.
-      </dd>
-      <dt>Single</dt>
-      <dd>
-        Choose this option if you are unmarried and don't qualify for another
-        filing status.
-      </dd>
-    </dl>
-  </details>
-  <details name="faq-group">
-    <summary>When are taxes due?</summary>
-    <p>
-      Federal income taxes are typically due on April 15th of each year, unless
-      that date falls on a weekend or holiday, in which case the deadline may be
-      extended to the next business day.
-    </p>
-  </details>
-  <details name="faq-group">
-    <summary>How should I submit my tax return?</summary>
-    <p>
-      You can submit your tax return electronically using e-filing services or
-      by mailing a paper return to the appropriate IRS address.
-    </p>
-  </details>
-{% endblock %}
+<h1>{{ title }}</h1>
+
+{% if description %}
+<p>{{ description }}</p>
+{% endif %}
+
+<h2>Considerations</h2>
+
+<p>Using native <code>&lt;details&gt;</code> ensures built-in keyboard accessibility and allows screen readers to announce expandable content automatically. The <code>&lt;summary&gt;</code> element serves as the visible trigger, while nested content like <code>&lt;dl&gt;</code> or <code>&lt;p&gt;</code> holds the details. Grouping multiple disclosures under the same <code>name</code> (or similar attribute) can support interactive patterns where only one section is expanded at a time, improving usability without extra JavaScript.</p>
+<p>This approach leverages semantic HTML, keeps interactions lightweight, and ensures content remains readable even if styles or scripts fail.</p>
+<p><strong>Variations:</strong></p>
+<ul>
+<li>Basic Disclosure</li>
+<li>Auto-collapsing disclosures that only open at a time. You can achieve this by giving every <code>&lt;details&gt;</code> element you want to group with a <code>name</code> attribute of the same value.</li>
+</ul>
+
+
+
+<h2>Examples</h2>
+
+
+
+<h3 id="example_single">Single Disclosure</h3>
+<div>
+  {{ preview(title="Single Disclosure", code=example_single,
+  id="example_single") }}
+</div>
+
+<h3 id="example_faq">FAQ-style Disclosures</h3>
+<p>In this example only one disclosure can be open at a time.</p>
+<div>
+  {{ preview(title="FAQ-style Disclosures", code=example_faq,
+  id="example_faq") }}
+</div>
+
+

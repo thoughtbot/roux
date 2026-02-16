@@ -18,7 +18,7 @@ A disabled primary button
 <a href="#" class="button button--secondary"> A secondary button link </a>
 {% endset %}
 
-## Button
+## {{ title }}
 
 {% if description %}
 {{ description }}
