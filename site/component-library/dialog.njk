@@ -6,10 +6,12 @@ permalink: /component-library/dialog.html
 
 {% from "partials/_component-preview.njk" import preview %}
 
+
 {% set example_basic_modal %}
   {% include 'partials/examples/dialogs/basic.html' %}
-  {% endset %}
-  
+{% endset %}
+
+
 {% set example_slide_in_modal %}
   {% include 'partials/examples/dialogs/slide-in.html' %}
 {% endset %}
@@ -17,32 +19,61 @@ permalink: /component-library/dialog.html
 <h1>{{ title }}</h1>
 
 {% if description %}
-<p>{{ description }}</p>
+  <p>{{ description }}</p>
 {% endif %}
 
 <h2>Considerations</h2>
 
-<p>We use the native <code>&lt;dialog&gt;</code> element with <code>showModal()</code> to take advantage of built-in accessibility features like focus trapping, inert background behavior, and automatic announcement by assistive technologies.</p>
-<p>Data attributes (<code>data-dialogOpen</code>, <code>data-dialogElement</code>, <code>data-dialogClose</code>) are used to keep the JavaScript lightweight and decoupled from styling, making the component easy to reuse. The close button is always included and labeled for screen readers, and clicking outside the dialog closes it for an intuitive, user-friendly experience.</p>
-<p><code>aria-modal=&quot;true&quot;</code> reinforces the modal’s role for assistive technologies, ensuring that users understand they’re in a temporary, focused overlay.</p>
-<p>Remember to set autofocus to a close button or the first interaction. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog">According to MDN</a>:</p>
+<p>
+  We use the native <code>&lt;dialog&gt;</code> element with
+  <code>showModal()</code> to take advantage of built-in accessibility features
+  like focus trapping, inert background behavior, and automatic announcement by
+  assistive technologies.
+</p>
+<p>
+  Data attributes (<code>data-dialogOpen</code>,
+  <code>data-dialogElement</code>, <code>data-dialogClose</code>) are used to
+  keep the JavaScript lightweight and decoupled from styling, making the
+  component easy to reuse. The close button is always included and labeled for
+  screen readers, and clicking outside the dialog closes it for an intuitive,
+  user-friendly experience.
+</p>
+<p>
+  <code>aria-modal=&quot;true&quot;</code> reinforces the modal’s role for
+  assistive technologies, ensuring that users understand they’re in a temporary,
+  focused overlay.
+</p>
+<p>
+  Remember to set autofocus to a close button or the first interaction.
+  <a
+    href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog"
+    >According to MDN</a
+  >:
+</p>
 <blockquote>
-<p>The <code>autofocus</code> attribute should be added to the element the user is expected to interact with immediately upon opening a modal dialog. If no other element involves more immediate interaction, it is recommended to add <code>autofocus</code> to the close button inside the dialog, or the dialog itself if the user is expected to click/activate it to dismiss.</p>
+  <p>
+    The <code>autofocus</code> attribute should be added to the element the user
+    is expected to interact with immediately upon opening a modal dialog. If no
+    other element involves more immediate interaction, it is recommended to add
+    <code>autofocus</code> to the close button inside the dialog, or the dialog
+    itself if the user is expected to click/activate it to dismiss.
+  </p>
 </blockquote>
-
 
 <h2>Examples</h2>
 
-
-
 <h3 id="example_basic_modal">Basic Modal</h3>
 <div>
-  {{ preview(title="Basic Modal", code=example_basic_modal,
-  id="example_basic_modal") }}
+  {{
+    preview(title="Basic Modal", code=example_basic_modal,
+    id="example_basic_modal")
+  }}
 </div>
 
 <h3 id="example_slide_in_modal">Slide-in Modal</h3>
 <div>
-  {{ preview(title="Slide-in Modal", code=example_slide_in_modal,
-  id="example_slide_in_modal") }}
+  {{
+    preview(title="Slide-in Modal", code=example_slide_in_modal,
+    id="example_slide_in_modal")
+  }}
 </div>

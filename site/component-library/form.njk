@@ -6,38 +6,69 @@ permalink: /component-library/forms.html
 
 {% from "partials/_component-preview.njk" import preview %}
 
+
 {% set example_form %}
   {% include 'partials/examples/forms/basic.html' %}
-  {% endset %}
-  
+{% endset %}
+
 <h1>{{ title }}</h1>
 
 {% if description %}
-<p>{{ description }}</p>
+  <p>{{ description }}</p>
 {% endif %}
 
 <h2>Considerations</h2>
 
-<p>This form uses semantic HTML elements—<code>&lt;form&gt;</code>, <code>&lt;fieldset&gt;</code>, <code>&lt;legend&gt;</code>, <code>&lt;label&gt;</code>, and appropriate input types—to convey relationships and groupings clearly.</p>
+<p>
+  This form uses semantic HTML elements—<code>&lt;form&gt;</code>,
+  <code>&lt;fieldset&gt;</code>, <code>&lt;legend&gt;</code>,
+  <code>&lt;label&gt;</code>, and appropriate input types—to convey
+  relationships and groupings clearly.
+</p>
 <ul>
-<li><strong>Fieldsets &amp; Legends:</strong> Group related inputs (e.g., personal info, ice cream preferences) to improve comprehension for all users, including those using assistive technology.</li>
-<li><strong>Labels &amp; Inputs:</strong> Every input is associated with a <code>&lt;label&gt;</code> for accessibility and larger click/tap targets.</li>
-<li><strong>Input Types &amp; Attributes:</strong> Proper types (<code>email</code>, <code>date</code>, <code>checkbox</code>, <code>radio</code>, <code>select</code>, <code>textarea</code>, <code>range</code>) guide browser validation, mobile keyboards, and autocomplete. Attributes like <code>required</code>, <code>autocomplete</code>, and <code>spellcheck</code> enhance usability.</li>
-<li><strong>Radio Buttons &amp; Checkboxes:</strong> Ensure mutually exclusive or multi-select options are clear, with grouped legends for context.</li>
-<li><strong>Select &amp; Datalist:</strong> Provide structured choices while maintaining flexibility for user input.</li>
-<li><strong>Accessibility &amp; Usability:</strong> Semantic structure, focusable elements, and visual cues ensure the form works well for keyboard and screen reader users.</li>
+  <li>
+    <strong>Fieldsets &amp; Legends:</strong> Group related inputs (e.g.,
+    personal info, ice cream preferences) to improve comprehension for all
+    users, including those using assistive technology.
+  </li>
+  <li>
+    <strong>Labels &amp; Inputs:</strong> Every input is associated with a
+    <code>&lt;label&gt;</code> for accessibility and larger click/tap targets.
+  </li>
+  <li>
+    <strong>Input Types &amp; Attributes:</strong> Proper types
+    (<code>email</code>, <code>date</code>, <code>checkbox</code>,
+    <code>radio</code>, <code>select</code>, <code>textarea</code>,
+    <code>range</code>) guide browser validation, mobile keyboards, and
+    autocomplete. Attributes like <code>required</code>,
+    <code>autocomplete</code>, and <code>spellcheck</code> enhance usability.
+  </li>
+  <li>
+    <strong>Radio Buttons &amp; Checkboxes:</strong> Ensure mutually exclusive
+    or multi-select options are clear, with grouped legends for context.
+  </li>
+  <li>
+    <strong>Select &amp; Datalist:</strong> Provide structured choices while
+    maintaining flexibility for user input.
+  </li>
+  <li>
+    <strong>Accessibility &amp; Usability:</strong> Semantic structure,
+    focusable elements, and visual cues ensure the form works well for keyboard
+    and screen reader users.
+  </li>
 </ul>
-<p>This approach keeps the form <strong>accessible, extensible, and user-friendly</strong> while supporting both simple and advanced interactions.</p>
-
-
+<p>
+  This approach keeps the form
+  <strong>accessible, extensible, and user-friendly</strong> while supporting
+  both simple and advanced interactions.
+</p>
 
 <h2>Examples</h2>
 
-
-
 <h3 id="example_form">Basic Form</h3>
 <div>
-  {{ preview(title="Basic Form", code=example_form,
-  id="example_form") }}
+  {{
+    preview(title="Basic Form", code=example_form,
+    id="example_form")
+  }}
 </div>
-
