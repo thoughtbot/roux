@@ -12,6 +12,6 @@
   font-size: var(--font-size--small);
 }
 
-.page-footer .page-nav {
+.page-footer .footer-nav {
   grid-area: nav;
 }
