@@ -1,10 +1,12 @@
 .page-footer {
   display: grid;
-  grid-template-areas: "copyright nav";
-  grid-template-columns: 1fr auto;
-  padding: var(--space--base) var(--space--x-large);
+  grid-template-areas:
+    "copyright"
+    "nav";
+  grid-template-columns: 1fr;
+  padding: var(--space--base);
   align-items: center;
-  gap: var(--space--large);
+  gap: var(--space--small) var(--space--medium);
 }
 
 .page-copyright {
@@ -14,4 +16,12 @@
 
 .page-footer .footer-nav {
   grid-area: nav;
+}
+
+@media (min-width: 600px) {
+  .page-footer {
+    grid-template-areas: "copyright nav";
+    grid-template-columns: 1fr auto;
+    padding: var(--space--base) var(--space--x-large);
+  }
 }
