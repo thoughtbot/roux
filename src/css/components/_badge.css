@@ -32,6 +32,9 @@ a.badge {
   --badge-background: var(--color--accent-base);
   --badge-text: var(--color--text);
 }
+.badge--no-break {
+  white-space: nowrap;
+}
 
 a.badge--accent {
   &:hover,
@@ -51,4 +54,14 @@ a.badge--accent {
   justify-content: center;
   padding-left: var(--space--x-small);
   padding-right: var(--space--x-small);
+}
+
+.badge__icon {
+  height: 20px;
+}
+
+.badge-group {
+  display: flex;
+  gap: var(--space--x-small);
+  flex-wrap: wrap;
 }

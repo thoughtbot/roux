@@ -1,20 +1,39 @@
 ---
+title: Badge
+description: Badges show a status, count, or label.
 permalink: /component-library/badge.html
 ---
 
-{% extends "site/_includes/layouts/base.njk" %}
+{% from "partials/_component-preview.njk" import preview %}
 
-{% block content %}
-  <h1>Badge</h1>
 
-  <span class="badge badge--primary">Archived</span>
+{% set example_basic %}
+  {% include 'partials/examples/badges/basic.html' %}
+{% endset %}
 
-  <span class="badge badge--accent" aria-label="12 notifications">12</span>
-  <a href="#" class="badge badge--accent" aria-label="12 notifications">12</a>
+<h1>{{ title }}</h1>
 
-  <span class="badge badge--primary">
-    Unread <span class="badge__count" aria-label="3 unread">322</span>
-  </span>
+{% if description %}
+  <p>{{ description }}</p>
+{% endif %}
 
-  <a href="#" class="badge badge--primary">New!</a>
-{% endblock %}
+<h2>Considerations</h2>
+
+<p>
+  If badges contain just a number or text that requires extra context, add an
+  <code>aria-label</code> to provide that context. For example, a badge on a
+  mail icon displaying "12" should have a label of "12 unread messages" so that
+  assistive tech understands the intent. Or to be even more clear, include the
+  label inside the badge.
+</p>
+
+<p>
+  Badge text is often atomic and text wrapping to a new line is not ideal. Test
+  your use case and consider preventing line breaks (use the
+  <code>badge--no-break</code> class).
+</p>
+
+<h2>Examples</h2>
+
+<h3 id="example_info">Various Badges</h3>
+{{ preview(title="Various Badges", code=example_basic, id="example_basic") }}
