@@ -1,32 +1,35 @@
 ---
+title: Page Footer
+description: The page footer contains copyright information and secondary navigation.
 permalink: /component-library/page-footer.html
 ---
 
-{% extends "site/_includes/layouts/base.njk" %}
+{% from "partials/_component-preview.njk" import preview %}
 
-{% block content %}
-  <h1>Page footer</h1>
 
-  <footer class="page-footer">
-    <p class="page-copyright">&copy; 2026 thoughtbot, inc.</p>
+{% set example_nav %}
+  {% include 'partials/examples/page-footer/nav.html' %}
+{% endset %}
 
-    <nav aria-label="Footer menu" class="page-nav-container">
-      <ul class="page-nav">
-        <li>
-          <a href="#">Link 1</a>
-        </li>
-        <li>
-          <a href="#">Link 2</a>
-        </li>
-        <li>
-          <a href="#" class="page-nav__link--active" aria-current="page"
-            >Link 3</a
-          >
-        </li>
-        <li>
-          <a href="#">Link 4</a>
-        </li>
-      </ul>
-    </nav>
-  </footer>
-{% endblock %}
+<h1>{{ title }}</h1>
+
+{% if description %}
+  <p>{{ description }}</p>
+{% endif %}
+
+<h2>Considerations</h2>
+<p>
+  We use the <code>&lt;footer&gt;</code> element to wrap content, which provides
+  a "contentinfo" role to assistive technologies. Only use one per page.
+</p>
+
+<p>
+  As in the page header, navigation must use a <code>&lt;nav&gt;</code> element
+  which provides the "navigation" role to assistive technologies. Give it an
+  aria-label like "Footer menu" to differentiate it from other navs on the page.
+</p>
+
+<h2>Examples</h2>
+
+<h3 id="example_info">Page Footer with Navigation</h3>
+{{ preview(title="Page Footer with Navigation", code=example_nav, id="example_nav") }}
