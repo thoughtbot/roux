@@ -1,5 +1,12 @@
+.loading-indicator {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .loading-indicator svg {
   animation: rotate 0.75s linear infinite;
+  max-width: 3rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
