@@ -1,28 +1,32 @@
 ---
+title: Quote
+description: Quotes are something someone said, often with a citation.
 permalink: /component-library/quote.html
 ---
 
-{% extends "site/_includes/layouts/base.njk" %}
+{% from "partials/_component-preview.njk" import preview %}
 
-{% block content %}
-  <h1>Quote</h1>
 
-  <figure>
-    <blockquote>
-      <p>
-        Code less, question more. Some of the most experienced developers I know
-        ask a lot of questions before begining to work on a feature. This often
-        leads to a simpler implementation, or sometimes, no implementation at
-        all since the questioning revealed more research was needed.
-      </p>
-      <p>
-        I find that this “question first” mindset is helpful in other areas of
-        consulting, and life as well. It provides an opportunity for others to
-        share their ideas and feel heard.
-      </p>
-    </blockquote>
-    <figcaption>
-      — <cite>Steve Polito</cite>, Senior Developer at thoughtbot
-    </figcaption>
-  </figure>
-{% endblock %}
+{% set example_basic %}
+  {% include 'partials/examples/quotes/basic.html' %}
+{% endset %}
+
+<h1>{{ title }}</h1>
+
+{% if description %}
+  <p>{{ description }}</p>
+{% endif %}
+
+<h2>Considerations</h2>
+
+<p>
+  A <code>&lt;blockquote&gt;</code> element contains the actual quote. To
+  associate the quote with its source, use a
+  <code>&lt;figcaption&gt;</code> inside a <code>&lt;figure&gt;</code> element.
+  The <code>&lt;cite&gt;</code> element should not be used for quotes.
+</p>
+
+<h2>Examples</h2>
+
+<h3 id="example_info">Quote with Citation</h3>
+{{ preview(title="Quote with Citation", code=example_basic, id="example_basic") }}
