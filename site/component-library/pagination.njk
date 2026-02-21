@@ -1,122 +1,82 @@
 ---
+title: Pagination
+description: Pagination allows the user to navigate through pages of content.
 permalink: /component-library/pagination.html
 ---
 
-{% extends "site/_includes/layouts/base.njk" %}
+{% from "partials/_component-preview.njk" import preview %}
 
-{% block content %}
-  <h1>Pagination</h1>
 
-  <h1>Pagy series nav</h1>
-  <nav class="pagy series-nav" aria-label="Pages">
-    <a href="/path?example=123&page=2" rel="prev" aria-label="Previous">&lt;</a
-    ><a href="/path?example=123&page=1">1</a
-    ><a href="/path?example=123&page=2" rel="prev">2</a
-    ><a role="link" aria-disabled="true" aria-current="page">3</a
-    ><a href="/path?example=123&page=4" rel="next">4</a
-    ><a href="/path?example=123&page=5">5</a
-    ><a role="separator" aria-disabled="true">&hellip;</a
-    ><a href="/path?example=123&page=50">50</a
-    ><a href="/path?example=123&page=4" rel="next" aria-label="Next">&gt;</a>
-  </nav>
+{% set example_pagy %}
+  {% include 'partials/examples/pagination/pagy-series.html' %}
+{% endset %}
 
-  <h1>Pagy series nav with limited slots</h1>
-  <nav aria-label="Pages">
-    <ul>
-      <li>
-        <a
-          href="/path?example=123&page=2"
-          class="pagination-previous"
-          rel="prev"
-          aria-label="Previous"
-          >&lt;</a
-        >
-      </li>
-      <li>
-        <a href="/path?example=123&page=2" class="pagination-link" rel="prev"
-          >2</a
-        >
-      </li>
-      <li>
-        <a
-          role="link"
-          class="pagination-link is-current"
-          aria-current="page"
-          aria-disabled="true"
-          >3</a
-        >
-      </li>
-      <li>
-        <a href="/path?example=123&page=4" class="pagination-link" rel="next"
-          >4</a
-        >
-      </li>
-      <li>
-        <a
-          href="/path?example=123&page=4"
-          class="pagination-next"
-          rel="next"
-          aria-label="Next"
-          >&gt;</a
-        >
-      </li>
-    </ul>
-  </nav>
 
-  <h1>Pagy input nav</h1>
-  <nav aria-label="Pages">
-    <a href="/path?example=123&page=2" rel="prev" aria-label="Previous">&lt;</a
-    ><label
-      >Page
-      <input
-        name="page"
-        type="number"
-        min="1"
-        max="50"
-        value="3"
-        aria-current="page"
-      /><a style="display: none">#</a> of 50</label
-    ><a href="/path?example=123&page=4" rel="next" aria-label="Next">&gt;</a>
-  </nav>
+{% set example_pagy_limited %}
+  {% include 'partials/examples/pagination/pagy-series-limited.html' %}
+{% endset %}
 
-  <h1>Super simple nav</h1>
-  <nav aria-label="Pages">
-    <a href="#" aria-disabled="true">&lt; Previous</a>
 
-    <a href="#" aria-current="page">1</a>
-    <a href="#">2</a>
-    <a href="#">3</a>
-    <a href="#">4</a>
+{% set example_pagy_input %}
+  {% include 'partials/examples/pagination/pagy-input.html' %}
+{% endset %}
 
-    <a href="#">Next &gt; </a>
-  </nav>
 
-  <h1>Fancy nav</h1>
-  <nav aria-label="Pages">
-    <ul>
-      <li>
-        <a href="#"> Previous </a>
-      </li>
-      <li>&#8230;</li>
-      <li>&#8230;</li>
-      <li>&#8230;</li>
-      <li>
-        <a href="#"> 7 </a>
-      </li>
-      <li>
-        <a href="#" aria-current="page"> 8 </a>
-      </li>
-      <li>
-        <a href="#"> 9 </a>
-      </li>
-      <li>&#8230;</li>
-      <li>&#8230;</li>
-      <li>&#8230;</li>
-      <li>
-        <a href="#"> Next </a>
-      </li>
-    </ul>
+{% set example_simple %}
+  {% include 'partials/examples/pagination/simple.html' %}
+{% endset %}
 
-    <span> 70 - 90 of 436 </span>
-  </nav>
-{% endblock %}
+
+{% set example_fancy %}
+  {% include 'partials/examples/pagination/fancy.html' %}
+{% endset %}
+
+<h1>{{ title }}</h1>
+
+{% if description %}
+  <p>{{ description }}</p>
+{% endif %}
+
+<h2>Considerations</h2>
+
+<p>
+  Wrap pagination in a <code>nav</code> component with a label (using
+  <code>aria-label</code> or <code>aria-labelledby</code>) so assistive
+  technology can identify it as a navigation landmark.
+</p>
+<p>
+  Indicate the current page both visually, and using
+  <code>aria-current=&quot;page&quot;</code> for assistive tech.
+</p>
+<p>
+  If possible, show the total number of pages to give users a sense of how much
+  content there is.
+</p>
+<p>
+  Save the pagination state in the URL so users can bookmark or share links to
+  specific pages, and use the back button to navigate.
+</p>
+
+<h2>Examples</h2>
+
+<h3>Pagy Support</h3>
+<p>
+  Roux includes styles for the popular
+  <a href="https://github.com/ddnexus/pagy">Pagy Ruby gem</a>. Pagy offers a few
+  types of nav views.
+</p>
+
+<h4 id="example_pagy_series">Pagy series nav</h4>
+{{ preview(title="Pagy series nav", code=example_pagy, id="example_pagy") }}
+
+<h4 id="example_pagy_limited">Pagy series nav with limited slots</h4>
+{{ preview(title="Pagy series nav with limited slots", code=example_pagy_limited, id="example_pagy_limited") }}
+
+<h4 id="example_pagy_input">Pagy input nav</h4>
+{{ preview(title="Pagy input nav", code=example_pagy_input, id="example_pagy_input") }}
+
+<h3 id="example_simple">Super simple nav</h3>
+{{ preview(title="Super simple nav", code=example_simple, id="example_simple") }}
+
+<h3 id="example_fancy">Fancy nav</h3>
+{{ preview(title="Fancy nav", code=example_fancy, id="example_fancy") }}
