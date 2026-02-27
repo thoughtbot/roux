@@ -1,43 +1,60 @@
 ---
+title: Search
+description: A free-text entry component for finding or filtering content.
 permalink: /component-library/search.html
 ---
 
-{% extends "site/_includes/layouts/base.njk" %}
+{% from "partials/_component-preview.njk" import preview %}
 
-{% block content %}
-  <h1>Search</h1>
 
-  <search>
-    <form>
-      <label for="search">
-        <span>Search</span>
-        <input
-          id="search"
-          type="search"
-          autocapitalize="off"
-          autocorrect="off"
-          spellcheck="false"
-        />
-      </label>
-      <button type="submit" class="button button--primary">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 22 22"
-          width="22"
-          height="22"
-          fill="currentColor"
-          role="img"
-          aria-labelledby="search-title"
-        >
-          <title id="search-title">Search this site</title>
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M10 .875a9.5 9.5 0 0 1 7.692 15.071l3.369 3.368.103.115a1.5 1.5 0 0 1-2.11 2.11l-.114-.104-3.369-3.368A9.5 9.5 0 1 1 10 .875Zm0 3a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Z"
-          ></path>
-        </svg>
-        Search
-      </button>
-    </form>
-  </search>
-{% endblock %}
+{% set example_basic %}
+  {% include 'partials/examples/search/basic.html' %}
+{% endset %}
+
+<h1>{{ title }}</h1>
+
+{% if description %}
+  <p>{{ description }}</p>
+{% endif %}
+
+<h2>Considerations</h2>
+
+<p>
+  The search component is wrapped in a <code>&lt;search&gt;</code> element which
+  defines a <code>search</code> landmark for assistive tech. Search inputs
+  should also be wrapped in a <code>&lt;form&gt;</code>, even if submitted via
+  JavaScript. Give the <code>&lt;search&gt;</code> commponent a label with
+  <code>aria-label</code> or <code>aria-labelledby</code> to distinguish
+  different types of search components (like full-site search vs filtering a
+  table).
+</p>
+<p>
+  As tempting as it may be, don&#39;t omit the button or label, and don&#39;t
+  use placeholder text as the label. It&#39;s important to provide clear labels
+  and controls for all users, but especially for assistive tech users.
+</p>
+<p>
+  An input with <code>type=&quot;search&quot;</code> allows browsers to provide
+  search UI or change keyboard behavior on mobile devices. The input should
+  usually have a <code>required</code> attribute to prevent empty searches.
+</p>
+<p>
+  Since most searches are freeform, autocomplete, autocorrect, and spellcheck
+  should be turned off to avoid trying to &quot;fix&quot; the query. (<code
+    >autocapitalize=&quot;off&quot; autocorrect=&quot;off&quot;
+    spellcheck=&quot;false&quot;</code
+  >)
+</p>
+
+<h2>Examples</h2>
+
+<h3 id="example_info">Basic Search</h3>
+
+<p>
+  This example includes a basic search form with a label, input, and submit
+  button. Since the button contains both an icon and text, the icon is hidden
+  from assistive technology using <code>aria-hidden=&quot;true&quot;</code> so
+  that it is not announced.
+</p>
+
+{{ preview(title="Basic Search", code=example_basic, id="example_basic") }}
