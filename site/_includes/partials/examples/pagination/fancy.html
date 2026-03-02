@@ -1,27 +1,29 @@
-<nav aria-label="Pages">
-  <ul>
-    <li>
-      <a href="#"> Previous </a>
+<nav aria-label="Pages" class="pagination pagination--fancy">
+  <ul class="pagination__list">
+    <li class="pagination__control pagination__control--prev">
+      <a href="#" rel="prev"> Previous </a>
     </li>
-    <li>&#8230;</li>
-    <li>&#8230;</li>
-    <li>&#8230;</li>
-    <li>
-      <a href="#"> 7 </a>
+    <li class="pagination__page">
+      <a href="#">1</a>
     </li>
-    <li>
-      <a href="#" aria-current="page"> 8 </a>
+    <li class="pagination__space">&#8230;</li>
+    <li class="pagination__page">
+      <a href="#" rel="prev">7</a>
     </li>
-    <li>
-      <a href="#"> 9 </a>
+    <li class="pagination__page">
+      <a href="#" aria-current="page">8</a>
     </li>
-    <li>&#8230;</li>
-    <li>&#8230;</li>
-    <li>&#8230;</li>
-    <li>
-      <a href="#"> Next </a>
+    <li class="pagination__page">
+      <a href="#" rel="next">9</a>
+    </li>
+    <li class="pagination__space">&#8230;</li>
+    <li class="pagination__page">
+      <a href="#">42</a>
+    </li>
+    <li class="pagination__control pagination__control--next">
+      <a href="#" rel="next"> Next </a>
     </li>
   </ul>
 
-  <span> 70 - 90 of 436 </span>
+  <span class="pagination__meta">70 - 90 of 436</span>
 </nav>

@@ -1,7 +1,7 @@
-<nav aria-label="Pages">
-  <a href="/path?example=123&page=2" rel="prev" aria-label="Previous">&lt;</a
-  ><label
-    >Page
+<nav aria-label="Pages" class="pagy input-nav">
+  <a href="/path?example=123&page=2" rel="prev" aria-label="Previous">&lt;</a>
+  <label>
+    Page
     <input
       name="page"
       type="number"
@@ -9,6 +9,8 @@
       max="50"
       value="3"
       aria-current="page"
-    /><a style="display: none">#</a> of 50</label
-  ><a href="/path?example=123&page=4" rel="next" aria-label="Next">&gt;</a>
+    />
+    <a style="display: none">#</a> of 50
+  </label>
+  <a href="/path?example=123&page=4" rel="next" aria-label="Next">&gt;</a>
 </nav>

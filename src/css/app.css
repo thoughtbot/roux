@@ -25,6 +25,7 @@
 @import "components/_page-header.css";
 @import "components/_page-footer.css";
 @import "components/_page-nav.css";
+@import "components/_pagination.css";
 
 /* Utilities */
 @import "utilities/_hide-visually.css";

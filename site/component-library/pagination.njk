@@ -53,11 +53,32 @@ permalink: /component-library/pagination.html
   content there is.
 </p>
 <p>
+  When on the first or last page, remove the "next"/"previous" button so users
+  can't proceed further in that direction. The best way is to simply omit the
+  link/button. If the button is important for layout, disable it with
+  <code>aria-disabled=&quot;true&quot;</code>, remove the
+  <code>href</code> attribute, and add <code>role="link"</code>. If using a
+  <code>&lt;button&gt;</code>, disable it with the
+  <code>disabled</code> attribute.
+  <a href="https://www.scottohara.me/blog/2021/05/28/disabled-links.html"
+    >Read more about this technique.</a
+  >
+</p>
+
+<p>
   Save the pagination state in the URL so users can bookmark or share links to
-  specific pages, and use the back button to navigate.
+  specific pages, and use the back button to navigate. Next/previous and page
+  number buttons should use <code>&lt;a&gt;</code> tags, not
+  <code>&lt;button&gt;</code> tags.
 </p>
 
 <h2>Examples</h2>
+
+<h3 id="example_simple">Simple nav</h3>
+{{ preview(title="Simple nav", code=example_simple, id="example_simple") }}
+
+<h3 id="example_fancy">Nav with page gaps and metadata</h3>
+{{ preview(title="Nav with page gaps and metadata", code=example_fancy, id="example_fancy") }}
 
 <h3>Pagy Support</h3>
 <p>
@@ -74,9 +95,3 @@ permalink: /component-library/pagination.html
 
 <h4 id="example_pagy_input">Pagy input nav</h4>
 {{ preview(title="Pagy input nav", code=example_pagy_input, id="example_pagy_input") }}
-
-<h3 id="example_simple">Super simple nav</h3>
-{{ preview(title="Super simple nav", code=example_simple, id="example_simple") }}
-
-<h3 id="example_fancy">Fancy nav</h3>
-{{ preview(title="Fancy nav", code=example_fancy, id="example_fancy") }}
