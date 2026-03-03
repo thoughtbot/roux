@@ -40,7 +40,9 @@
       aria-labelledby="tab-code-{{ id }}"
       class="is-hidden"
     >
-      <div class="component-example__code">{% highlight "js" %}{{ code | trim | safe }}{% endhighlight %}</div>
+      <div class="component-example__code">
+        {% highlight "js" %}{{ code | trim | safe }}{% endhighlight %}
+      </div>
     </div>
   </div>
 {% endmacro %}
