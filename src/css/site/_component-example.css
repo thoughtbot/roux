@@ -18,11 +18,10 @@
 .component-example__code {
   border: var(--border--base);
   display: block;
-  padding: var(--space--base);
   overflow: auto;
   height: 340px;
 }
 
-.component-example pre {
+.component-example pre[class*="language-"] {
   margin: 0;
 }

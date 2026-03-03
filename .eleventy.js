@@ -1,4 +1,5 @@
 import lightningcssPlugin from "@11tyrocks/eleventy-plugin-lightningcss";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 
 export default function (eleventyConfig) {
   const now = String(Date.now());
@@ -23,6 +24,7 @@ export default function (eleventyConfig) {
   // Watch JavaScript files for changes during development
   eleventyConfig.addWatchTarget("src/js/**/*.js");
 
+  // minify CSS with LightningCSS
   eleventyConfig.addPlugin(lightningcssPlugin, {
     src: "src/css/app.css",
 
@@ -32,6 +34,9 @@ export default function (eleventyConfig) {
       targets: "defaults",
     },
   });
+
+  // syntax highlighting for code blocks
+  eleventyConfig.addPlugin(syntaxHighlight);
 
   const config = {
     dir: {
