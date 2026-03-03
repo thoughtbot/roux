@@ -1,0 +1,11 @@
+search form {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: var(--space--x-small);
+}
+
+/* since search has a single field which is always required, we can omit the required indicator */
+search form label:has([type="search"][required]) > span:after {
+  display: none;
+}

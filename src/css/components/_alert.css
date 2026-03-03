@@ -1,7 +1,13 @@
 .alert {
   background-color: var(--color--background-light);
   color: var(--color--text);
-  padding: var(--space--xx-small);
+  padding: var(--space--small);
+}
+.alert p:first-child {
+  margin-top: 0;
+}
+.alert p:last-child {
+  margin-bottom: 0;
 }
 
 .alert--success {
