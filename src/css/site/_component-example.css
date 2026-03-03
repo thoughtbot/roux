@@ -1,6 +1,11 @@
+.component-example [role="tabpanel"] {
+  resize: both;
+  overflow: auto;
+}
+
 .component-example__preview-frame {
   border: var(--border--dark);
-  min-height: 340px;
+  height: 340px;
 }
 
 .component-example__preview-frame__wrapper {
@@ -14,4 +19,10 @@
   border: var(--border--base);
   display: block;
   padding: var(--space--base);
+  overflow: auto;
+  height: 340px;
+}
+
+.component-example pre {
+  margin: 0;
 }

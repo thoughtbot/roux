@@ -33,5 +33,6 @@
 
 /* Site */
 /* Import components used for this site here (not design system components) */
+@import "site/_layout.css";
 @import "site/_tabs-automatic.css";
 @import "site/_component-example.css";
