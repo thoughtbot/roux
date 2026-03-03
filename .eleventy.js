@@ -9,7 +9,11 @@ export default function (eleventyConfig) {
 
   // === COLLECTIONS ===
   eleventyConfig.addCollection("component", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("site/component-library/**/*");
+    return collectionApi
+      .getFilteredByGlob("site/component-library/**/*")
+      .sort((a, b) => {
+        return a.data.title.localeCompare(b.data.title);
+      });
   });
 
   // === PASSTHROUGH COPY ===
