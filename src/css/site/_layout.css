@@ -1,4 +1,11 @@
-main {
+main,
+header,
+footer {
   padding: var(--space--medium) var(--space--x-large);
   max-width: var(--container--base);
+}
+
+.github-stars {
+  height: 1.5rem;
+  width: auto;
 }

@@ -20,8 +20,8 @@
   <body>
     {% include "partials/_header.njk" %}
 
-    <main>{{ content | safe }}</main>
-    {# {% include "partials/_footer.njk" %} #}
+    <main id="main">{{ content | safe }}</main>
+
     <script
       src="{{ '/src/js/app.mjs' | url }}?v={% version %}"
       type="module"
