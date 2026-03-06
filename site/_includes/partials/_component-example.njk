@@ -30,7 +30,15 @@
       <iframe
         class="component-example__preview-frame"
         title="{{ title }}"
-        srcdoc="{{ ['<div class="component-preview-contents"><link rel="stylesheet" href="', '/src/css/app.css' | url, '"/><link rel="stylesheet" href="', '/assets/css/component-preview.css' | url, '"/>', code | trim, '</div>'] | join }}"
+        srcdoc="{{
+          [
+            '<div class="component-preview-contents">',
+              '<link rel="stylesheet" href="', '/src/css/app.css' | url, '"/>',
+              '<link rel="stylesheet" href="', '/assets/css/component-preview.css' | url, '"/>',
+              code | trim,
+            '</div>'
+          ] | join
+        }}"
       ></iframe>
     </div>
     <div
