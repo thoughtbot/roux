@@ -21,6 +21,10 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css/");
   // Copy JavaScript files to _site
   eleventyConfig.addPassthroughCopy("src/js/");
+  // meta icons
+  eleventyConfig.addPassthroughCopy("site/*.ico");
+  eleventyConfig.addPassthroughCopy("site/*.svg");
+  eleventyConfig.addPassthroughCopy("site/*.png");
 
   // === WATCH TARGETS ===
   // Watch CSS files for changes during development

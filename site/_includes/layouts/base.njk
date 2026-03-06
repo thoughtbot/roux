@@ -1,16 +1,34 @@
+{%- set siteName = 'Roux Components' -%}
+{%- set siteUrl = 'https://thoughtbot.github.io/roux' -%}
+{%- set siteDescription = 'Extend Roux CSS with ready-to-use components to build your project.' -%}
+{%- set pageTitle = title ~ ' - ' ~ siteName if title else siteName -%}
+{%- set pageDescription = description or siteDescription -%}
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{% block title %}Roux{% endblock %}</title>
+    <title>{{ pageTitle }}</title>
     <meta charset="UTF-8" />
-    {% if description %}
-      <meta name="description" content="{{ description }}" />
-    {% endif %}
+    <meta name="description" content="{{ pageDescription }}" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
     />
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ siteName }}">
+    <meta property="og:url" content="{{ siteUrl ~ page.url }}">
+    <meta property="og:title" content="{{ pageTitle }}">
+    <meta property="og:description" content="{{ pageDescription }}">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" type="image/x-icon" href="/favicon-c39babd7aaf33dd9a1cb8bc87fefa0975f8194a799246524bc9295c9c7397527.ico" />
+    <link rel="apple-touch-icon" type="image/x-icon" href="/apple-touch-icon-d153905f7cace4e341a2b660042bef3999c7a97666f11dcf49022f9f1f45c991.png" />
+    <link rel="icon" type="image/png" href="/android-chrome-512x512-502cf6bfb78386d37214fca1098500430b469e6f6b9ee21926b51c5e36c2d094.png" sizes="512x512" />
+    <link rel="icon" type="image/png" href="/android-chrome-192x192-b8faf450f97a3d12df17351021cdf80f6942c9594f5c7cc6276709dc64a65764.png" sizes="192x192" />
+
+
     <link
       rel="stylesheet"
       href="{{ '/src/css/app.css' | url }}?v={% version %}"
