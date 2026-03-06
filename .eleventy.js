@@ -7,6 +7,9 @@ export default function (eleventyConfig) {
     return now;
   });
 
+  // === IGNORES ===
+  eleventyConfig.ignores.add("site/README.md");
+
   // === COLLECTIONS ===
   eleventyConfig.addCollection("component", function (collectionApi) {
     return collectionApi
@@ -17,10 +20,10 @@ export default function (eleventyConfig) {
   });
 
   // === PASSTHROUGH COPY ===
-  // Copy the entire styles directory to _site
+  // Copy the Roux framework styles to _site
   eleventyConfig.addPassthroughCopy("src/css/");
-  // Copy JavaScript files to _site
-  eleventyConfig.addPassthroughCopy("src/js/");
+  // Copy site-specific assets to _site
+  eleventyConfig.addPassthroughCopy("site/assets/");
   // meta icons
   eleventyConfig.addPassthroughCopy("site/*.ico");
   eleventyConfig.addPassthroughCopy("site/*.svg");
@@ -29,19 +32,30 @@ export default function (eleventyConfig) {
   // === WATCH TARGETS ===
   // Watch CSS files for changes during development
   eleventyConfig.addWatchTarget("src/css/**/*.css");
+  eleventyConfig.addWatchTarget("site/assets/css/**/*.css");
   // Watch JavaScript files for changes during development
-  eleventyConfig.addWatchTarget("src/js/**/*.js");
+  eleventyConfig.addWatchTarget("site/assets/js/**/*.js");
 
   // minify CSS with LightningCSS
-  eleventyConfig.addPlugin(lightningcssPlugin, {
-    src: "src/css/app.css",
-
-    lightningcssOptions: {
-      minify: true,
-      sourceMap: true,
-      targets: "defaults",
+  // Process both Roux framework CSS and site-specific CSS
+  eleventyConfig.addPlugin(lightningcssPlugin, [
+    {
+      src: "src/css/app.css",
+      lightningcssOptions: {
+        minify: true,
+        sourceMap: true,
+        targets: "defaults",
+      },
     },
-  });
+    {
+      src: "site/assets/css/site.css",
+      lightningcssOptions: {
+        minify: true,
+        sourceMap: true,
+        targets: "defaults",
+      },
+    },
+  ]);
 
   // syntax highlighting for code blocks
   eleventyConfig.addPlugin(syntaxHighlight);

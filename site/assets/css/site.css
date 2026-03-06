@@ -1,0 +1,14 @@
+/* Site-specific styles for Roux Components documentation */
+/* These styles are only used for the documentation website, not part of the Roux CSS framework */
+
+/* Site layout and structure */
+@import "_layout.css";
+
+/* Tab component for code/preview switching */
+@import "_tabs-automatic.css";
+
+/* Component example styling */
+@import "_component-example.css";
+
+/* Syntax highlighting for code blocks */
+@import "vendor/prismjs/prism.css";
