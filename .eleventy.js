@@ -37,7 +37,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addWatchTarget("site/assets/js/**/*.js");
 
   // minify CSS with LightningCSS
-  // Process both Roux framework CSS and site-specific CSS
+  // Process Roux framework CSS, site-specific CSS, and component preview CSS
   eleventyConfig.addPlugin(lightningcssPlugin, [
     {
       src: "src/css/app.css",
@@ -49,6 +49,14 @@ export default function (eleventyConfig) {
     },
     {
       src: "site/assets/css/site.css",
+      lightningcssOptions: {
+        minify: true,
+        sourceMap: true,
+        targets: "defaults",
+      },
+    },
+    {
+      src: "site/assets/css/component-preview.css",
       lightningcssOptions: {
         minify: true,
         sourceMap: true,

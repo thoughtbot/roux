@@ -1,0 +1,9 @@
+/* Styles specifically for component preview iframes */
+/* This CSS is loaded inside the iframe to provide layout for component examples */
+
+.component-preview-contents {
+  padding: var(--space--base);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space--base);
+}
