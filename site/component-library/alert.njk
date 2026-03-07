@@ -4,19 +4,6 @@ description: Alerts provide timely feedback or status updates to users. They com
 permalink: /component-library/alert.html
 ---
 
-{% from "partials/_component-example.njk" import preview %}
-
-
-{% set example_basic %}
-  {% include 'partials/examples/alerts/basic.html' %}
-{% endset %}
-
-<h1>{{ title }}</h1>
-
-{% if description %}
-  <p>{{ description }}</p>
-{% endif %}
-
 <h2>Considerations</h2>
 
 <p>
@@ -51,5 +38,12 @@ permalink: /component-library/alert.html
 
 <h2>Examples</h2>
 
-<h3 id="example_info">Info, Success, and Error Alerts</h3>
+{% from "partials/_component-preview.njk" import preview %}
+
+
+{% set example_basic %}
+  {% include 'partials/examples/alerts/basic.html' %}
+{% endset %}
+
+<h3 id="example_basic">Info, Success, and Error Alerts</h3>
 {{ preview(title="Info, Success, and Error Alerts", code=example_basic, id="example_basic") }}

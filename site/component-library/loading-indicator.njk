@@ -4,19 +4,6 @@ description: Loading indicators show that content is being loaded, processed, or
 permalink: /component-library/loading-indicator.html
 ---
 
-{% from "partials/_component-example.njk" import preview %}
-
-
-{% set example_basic %}
-  {% include 'partials/examples/loading-indicator/basic.html' %}
-{% endset %}
-
-<h1>{{ title }}</h1>
-
-{% if description %}
-  <p>{{ description }}</p>
-{% endif %}
-
 <h2>Considerations</h2>
 
 <p>
@@ -35,5 +22,12 @@ permalink: /component-library/loading-indicator.html
 
 <h2>Examples</h2>
 
-<h3 id="example_info">Spinning Loading Indicator</h3>
+{% from "partials/_component-preview.njk" import preview %}
+
+
+{% set example_basic %}
+  {% include 'partials/examples/loading-indicator/basic.html' %}
+{% endset %}
+
+<h3 id="example_basic">Spinning Loading Indicator</h3>
 {{ preview(title="Spinning Loading Indicator", code=example_basic, id="example_basic") }}

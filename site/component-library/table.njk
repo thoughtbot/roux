@@ -4,29 +4,6 @@ description: Tables present structured data that needs clear relationships betwe
 permalink: /component-library/tables.html
 ---
 
-{% from "partials/_component-example.njk" import preview %}
-
-
-{% set example_basic %}
-  {% include 'partials/examples/tables/basic.html' %}
-{% endset %}
-
-
-{% set example_striped %}
-  {% include 'partials/examples/tables/striped.html' %}
-{% endset %}
-
-
-{% set example_overflow %}
-  {% include 'partials/examples/tables/overflow.html' %}
-{% endset %}
-
-<h1>{{ title }}</h1>
-
-{% if description %}
-  <p>{{ description }}</p>
-{% endif %}
-
 <h2>Considerations</h2>
 
 <p>
@@ -72,26 +49,28 @@ permalink: /component-library/tables.html
 
 <h2>Examples</h2>
 
+{% from "partials/_component-preview.njk" import preview %}
+
+
+{% set example_basic %}
+  {% include 'partials/examples/tables/basic.html' %}
+{% endset %}
+
+
+{% set example_striped %}
+  {% include 'partials/examples/tables/striped.html' %}
+{% endset %}
+
+
+{% set example_overflow %}
+  {% include 'partials/examples/tables/overflow.html' %}
+{% endset %}
+
 <h3 id="example_basic">Basic Table</h3>
-<div>
-  {{
-    preview(title="Basic Table", code=example_basic,
-    id="example_basic")
-  }}
-</div>
+{{ preview(title="Basic Table", code=example_basic, id="example_basic") }}
 
 <h3 id="example_striped">Striped Table</h3>
-<div>
-  {{
-    preview(title="Striped Table", code=example_striped,
-    id="example_striped")
-  }}
-</div>
+{{ preview(title="Striped Table", code=example_striped, id="example_striped") }}
 
 <h3 id="example_overflow">Overflow Scroll</h3>
-<div>
-  {{
-    preview(title="Overflow Scroll", code=example_overflow,
-    id="example_overflow")
-  }}
-</div>
+{{ preview(title="Overflow Scroll", code=example_overflow, id="example_overflow") }}

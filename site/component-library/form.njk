@@ -4,19 +4,6 @@ description: Forms collect structured user input and must be accessible, predict
 permalink: /component-library/forms.html
 ---
 
-{% from "partials/_component-example.njk" import preview %}
-
-
-{% set example_form %}
-  {% include 'partials/examples/forms/basic.html' %}
-{% endset %}
-
-<h1>{{ title }}</h1>
-
-{% if description %}
-  <p>{{ description }}</p>
-{% endif %}
-
 <h2>Considerations</h2>
 
 <p>
@@ -65,10 +52,12 @@ permalink: /component-library/forms.html
 
 <h2>Examples</h2>
 
+{% from "partials/_component-preview.njk" import preview %}
+
+
+{% set example_form %}
+  {% include 'partials/examples/forms/basic.html' %}
+{% endset %}
+
 <h3 id="example_form">Basic Form</h3>
-<div>
-  {{
-    preview(title="Basic Form", code=example_form,
-    id="example_form")
-  }}
-</div>
+{{ preview(title="Basic Form", code=example_form, id="example_form") }}

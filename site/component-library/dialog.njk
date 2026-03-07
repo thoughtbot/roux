@@ -4,24 +4,6 @@ description: Modals present focused content that requires the user’s attention
 permalink: /component-library/dialog.html
 ---
 
-{% from "partials/_component-example.njk" import preview %}
-
-
-{% set example_basic_modal %}
-  {% include 'partials/examples/dialogs/basic.html' %}
-{% endset %}
-
-
-{% set example_slide_in_modal %}
-  {% include 'partials/examples/dialogs/slide-in.html' %}
-{% endset %}
-
-<h1>{{ title }}</h1>
-
-{% if description %}
-  <p>{{ description }}</p>
-{% endif %}
-
 <h2>Considerations</h2>
 
 <p>
@@ -62,18 +44,20 @@ permalink: /component-library/dialog.html
 
 <h2>Examples</h2>
 
+{% from "partials/_component-preview.njk" import preview %}
+
+
+{% set example_basic_modal %}
+  {% include 'partials/examples/dialogs/basic.html' %}
+{% endset %}
+
+
+{% set example_slide_in_modal %}
+  {% include 'partials/examples/dialogs/slide-in.html' %}
+{% endset %}
+
 <h3 id="example_basic_modal">Basic Modal</h3>
-<div>
-  {{
-    preview(title="Basic Modal", code=example_basic_modal,
-    id="example_basic_modal")
-  }}
-</div>
+{{ preview(title="Basic Modal", code=example_basic_modal, id="example_basic_modal") }}
 
 <h3 id="example_slide_in_modal">Slide-in Drawer Modal</h3>
-<div>
-  {{
-    preview(title="Slide-in Drawer Modal", code=example_slide_in_modal,
-    id="example_slide_in_modal")
-  }}
-</div>
+{{ preview(title="Slide-in Drawer Modal", code=example_slide_in_modal, id="example_slide_in_modal") }}

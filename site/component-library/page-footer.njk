@@ -4,19 +4,6 @@ description: The page footer contains copyright information and secondary naviga
 permalink: /component-library/page-footer.html
 ---
 
-{% from "partials/_component-example.njk" import preview %}
-
-
-{% set example_nav %}
-  {% include 'partials/examples/page-footer/nav.html' %}
-{% endset %}
-
-<h1>{{ title }}</h1>
-
-{% if description %}
-  <p>{{ description }}</p>
-{% endif %}
-
 <h2>Considerations</h2>
 <p>
   We use the <code>&lt;footer&gt;</code> element to wrap content, which provides
@@ -31,5 +18,12 @@ permalink: /component-library/page-footer.html
 
 <h2>Examples</h2>
 
-<h3 id="example_info">Page Footer with Navigation</h3>
+{% from "partials/_component-preview.njk" import preview %}
+
+
+{% set example_nav %}
+  {% include 'partials/examples/page-footer/nav.html' %}
+{% endset %}
+
+<h3 id="example_nav">Page Footer with Navigation</h3>
 {{ preview(title="Page Footer with Navigation", code=example_nav, id="example_nav") }}

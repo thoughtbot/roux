@@ -4,19 +4,6 @@ description: Roux includes styles for headlines, body text, links and other typo
 permalink: /component-library/typography.html
 ---
 
-{% from "partials/_component-example.njk" import preview %}
-
-
-{% set example_basic %}
-  {% include 'partials/examples/typography/basic.html' %}
-{% endset %}
-
-<h1>{{ title }}</h1>
-
-{% if description %}
-  <p>{{ description }}</p>
-{% endif %}
-
 <h2>Considerations</h2>
 
 <p>
@@ -27,5 +14,12 @@ permalink: /component-library/typography.html
 
 <h2>Examples</h2>
 
-<h3 id="example_info">Basic Typography</h3>
+{% from "partials/_component-preview.njk" import preview %}
+
+
+{% set example_basic %}
+  {% include 'partials/examples/typography/basic.html' %}
+{% endset %}
+
+<h3 id="example_basic">Basic Typography</h3>
 {{ preview(title="Basic Typography", code=example_basic, id="example_basic") }}

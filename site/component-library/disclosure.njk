@@ -4,24 +4,6 @@ description: Disclosures (<details>/<summary>) provide a way to hide and reveal 
 permalink: /component-library/disclosures.html
 ---
 
-{% from "partials/_component-example.njk" import preview %}
-
-
-{% set example_single %}
-  {% include 'partials/examples/disclosures/single.html' %}
-{% endset %}
-
-
-{% set example_faq %}
-  {% include 'partials/examples/disclosures/faq.html' %}
-{% endset %}
-
-<h1>{{ title }}</h1>
-
-{% if description %}
-  <p>{{ description }}</p>
-{% endif %}
-
 <h2>Considerations</h2>
 
 <p>
@@ -50,19 +32,21 @@ permalink: /component-library/disclosures.html
 
 <h2>Examples</h2>
 
+{% from "partials/_component-preview.njk" import preview %}
+
+
+{% set example_single %}
+  {% include 'partials/examples/disclosures/single.html' %}
+{% endset %}
+
+
+{% set example_faq %}
+  {% include 'partials/examples/disclosures/faq.html' %}
+{% endset %}
+
 <h3 id="example_single">Single Disclosure</h3>
-<div>
-  {{
-    preview(title="Single Disclosure", code=example_single,
-    id="example_single")
-  }}
-</div>
+{{ preview(title="Single Disclosure", code=example_single, id="example_single") }}
 
 <h3 id="example_faq">FAQ-style Disclosures</h3>
 <p>In this example only one disclosure can be open at a time.</p>
-<div>
-  {{
-    preview(title="FAQ-style Disclosures", code=example_faq,
-    id="example_faq")
-  }}
-</div>
+{{ preview(title="FAQ-style Disclosures", code=example_faq, id="example_faq") }}

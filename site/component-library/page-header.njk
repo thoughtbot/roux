@@ -4,19 +4,6 @@ description: The page header contains top-level branding and navigation.
 permalink: /component-library/page-header.html
 ---
 
-{% from "partials/_component-example.njk" import preview %}
-
-
-{% set example_nav %}
-  {% include 'partials/examples/page-header/nav.html' %}
-{% endset %}
-
-<h1>{{ title }}</h1>
-
-{% if description %}
-  <p>{{ description }}</p>
-{% endif %}
-
 <h2>Considerations</h2>
 
 <p>
@@ -45,5 +32,12 @@ permalink: /component-library/page-header.html
 
 <h2>Examples</h2>
 
-<h3 id="example_info">Page Header with Navigation and Skip Navigation Link</h3>
+{% from "partials/_component-preview.njk" import preview %}
+
+
+{% set example_nav %}
+  {% include 'partials/examples/page-header/nav.html' %}
+{% endset %}
+
+<h3 id="example_nav">Page Header with Navigation and Skip Navigation Link</h3>
 {{ preview(title="Page Header with Navigation and Skip Navigation Link", code=example_nav, id="example_nav") }}

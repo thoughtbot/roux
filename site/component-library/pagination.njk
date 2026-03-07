@@ -4,39 +4,6 @@ description: Pagination allows the user to navigate through pages of content.
 permalink: /component-library/pagination.html
 ---
 
-{% from "partials/_component-example.njk" import preview %}
-
-
-{% set example_pagy %}
-  {% include 'partials/examples/pagination/pagy-series.html' %}
-{% endset %}
-
-
-{% set example_pagy_limited %}
-  {% include 'partials/examples/pagination/pagy-series-limited.html' %}
-{% endset %}
-
-
-{% set example_pagy_input %}
-  {% include 'partials/examples/pagination/pagy-input.html' %}
-{% endset %}
-
-
-{% set example_simple %}
-  {% include 'partials/examples/pagination/simple.html' %}
-{% endset %}
-
-
-{% set example_fancy %}
-  {% include 'partials/examples/pagination/fancy.html' %}
-{% endset %}
-
-<h1>{{ title }}</h1>
-
-{% if description %}
-  <p>{{ description }}</p>
-{% endif %}
-
 <h2>Considerations</h2>
 
 <p>
@@ -73,6 +40,33 @@ permalink: /component-library/pagination.html
 </p>
 
 <h2>Examples</h2>
+
+{% from "partials/_component-preview.njk" import preview %}
+
+
+{% set example_simple %}
+  {% include 'partials/examples/pagination/simple.html' %}
+{% endset %}
+
+
+{% set example_fancy %}
+  {% include 'partials/examples/pagination/fancy.html' %}
+{% endset %}
+
+
+{% set example_pagy %}
+  {% include 'partials/examples/pagination/pagy-series.html' %}
+{% endset %}
+
+
+{% set example_pagy_limited %}
+  {% include 'partials/examples/pagination/pagy-series-limited.html' %}
+{% endset %}
+
+
+{% set example_pagy_input %}
+  {% include 'partials/examples/pagination/pagy-input.html' %}
+{% endset %}
 
 <h3 id="example_simple">Simple nav</h3>
 {{ preview(title="Simple nav", code=example_simple, id="example_simple") }}

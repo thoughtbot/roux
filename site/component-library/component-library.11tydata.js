@@ -1,3 +1,3 @@
 export default {
-  layout: "layouts/base.njk",
+  layout: "layouts/component.njk",
 };
