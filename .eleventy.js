@@ -29,13 +29,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("site/*.svg");
   eleventyConfig.addPassthroughCopy("site/*.png");
 
-  // === WATCH TARGETS ===
-  // Watch CSS files for changes during development
-  eleventyConfig.addWatchTarget("src/css/**/*.css");
-  eleventyConfig.addWatchTarget("site/assets/css/**/*.css");
-  // Watch JavaScript files for changes during development
-  eleventyConfig.addWatchTarget("site/assets/js/**/*.js");
-
   // minify CSS with LightningCSS
   // Process Roux framework CSS, site-specific CSS, and component preview CSS
   eleventyConfig.addPlugin(lightningcssPlugin, [

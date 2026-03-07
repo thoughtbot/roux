@@ -1,1 +1,3 @@
 _site
+# the Prettier Jinja/Nunjucks formatter adds whitespace to the beginning of the file, which causes the XML declaration to be invalid
+site/sitemap.njk
