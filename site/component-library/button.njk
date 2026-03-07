@@ -1,29 +1,9 @@
 ---
+layout: layouts/component.njk
 title: Button
 description: Buttons trigger actions and help users move through tasks.
 permalink: /component-library/button.html
 ---
-
-{% from "partials/_component-example.njk" import preview %}
-
-
-{% set example_buttons %}
-  <button type="button" class="button button--primary">A primary button</button>
-  <button type="button" class="button button--secondary">
-    A secondary button
-  </button>
-  <button type="button" class="button button--primary" disabled>
-    A disabled primary button
-  </button>
-  <a href="#" class="button button--primary"> A primary button link </a>
-  <a href="#" class="button button--secondary"> A secondary button link </a>
-{% endset %}
-
-<h1>{{ title }}</h1>
-
-{% if description %}
-  <p>{{ description }}</p>
-{% endif %}
 
 <h2>Considerations</h2>
 
@@ -65,6 +45,12 @@ permalink: /component-library/button.html
 </ul>
 
 <h2>Examples</h2>
+
+{% from "partials/_component-example.njk" import preview %}
+
+{% set example_buttons %}
+  {% include 'partials/examples/buttons/basic.html' %}
+{% endset %}
 
 <h3 id="example_buttons">Various Button Types</h3>
 {{ preview(title="Buttons Example", code=example_buttons, id="example_buttons") }}
