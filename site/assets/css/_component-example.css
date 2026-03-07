@@ -1,20 +1,22 @@
 .component-example [role="tabpanel"] {
   resize: both;
   overflow: auto;
+  height: 340px;
 }
 
 .component-example__preview-frame {
   border: var(--border--dark);
-  height: 340px;
+  height: 100%;
 }
 
 .component-example__code {
   border: var(--border--base);
-  display: block;
+  display: flex;
   overflow: auto;
-  height: 340px;
+  height: 100%;
 }
 
 .component-example pre[class*="language-"] {
   margin: 0;
+  min-width: 100%;
 }
