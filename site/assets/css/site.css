@@ -11,4 +11,4 @@
 @import "_component-example.css";
 
 /* Syntax highlighting for code blocks */
-@import "vendor/prismjs/prism.css";
+@import "vendor/prismjs/a11y-light.css";
