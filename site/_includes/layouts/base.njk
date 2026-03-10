@@ -59,7 +59,7 @@
   <body>
     {% include "partials/_header.njk" %}
 
-    <main id="main">{{ content | safe }}</main>
+    <main id="main" aria-label="Main Content">{{ content | safe }}</main>
 
     <script
       src="{{ '/assets/js/app.mjs' | url }}?v={% version %}"
