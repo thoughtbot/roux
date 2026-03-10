@@ -77,7 +77,7 @@ This checklist is based on the [Front-End Checklist](https://github.com/thedavid
 | ⚠️     | 🤖  | HIGH     | Error Pages     | Custom 404 page with CSS                        | Need to check if GitHub Pages 404 exists |
 | ✅     | 🤖  | MED      | Noopener        | rel="noopener noreferrer" on external links     | External links should be checked         |
 | ⚠️     | 🤖  | HIGH     | W3C Compliance  | Validate with W3C HTML validator                | Need to run validation                   |
-| ⚠️     | 🤖  | HIGH     | HTML Lint       | Use linting tools                               | Need to run HTML linter                  |
+| ✅     | 🤖  | HIGH     | HTML Lint       | Use linting tools                               | Completed manually                       |
 | ⚠️     | 🤖  | HIGH     | Link Checker    | No broken links or 404s                         | Need to check all links                  |
 | ❌     | -   | MED      | Adblocker Test  | Site works with ad blockers                     | Not relevant - no ads                    |
 
@@ -179,32 +179,32 @@ This checklist is based on the [Front-End Checklist](https://github.com/thedavid
 
 ## 10. Accessibility
 
-| Status | Who | Priority | Item                    | Description                       | Notes                               |
-| ------ | --- | -------- | ----------------------- | --------------------------------- | ----------------------------------- |
-| ✅     | 👤  | MED      | Progressive Enhancement | Works without JavaScript          | Components use native HTML elements |
-| ⚠️     | 🤖  | MED      | Color Contrast          | WCAG AA standard (AAA for mobile) | Need to test with contrast checker  |
-| ⚠️     | 🤖  | HIGH     | H1 Heading              | Each page has one H1              | Need to verify all pages            |
-| ⚠️     | 🤖  | HIGH     | Heading Hierarchy       | Headings in order (H1-H6)         | Need to verify hierarchy            |
-| ⚠️     | 🤖  | MED      | HTML5 Input Types       | Specific input types for mobile   | Check form examples                 |
-| ⚠️     | 🤖  | HIGH     | Form Labels             | Labels associated with inputs     | Check form components               |
-| ⚠️     | 🤖  | HIGH     | WAVE Testing            | Test accessibility compliance     | Run WAVE or axe DevTools            |
-| ⚠️     | 👤  | HIGH     | Keyboard Navigation     | Full keyboard navigation          | Manual testing needed               |
-| ⚠️     | 👤  | MED      | Screen Reader           | Test with screen readers          | Manual testing with VoiceOver/NVDA  |
-| ⚠️     | 👤  | HIGH     | Focus Styles            | Visible focus states              | Manual testing, verify CSS          |
+| Status | Who | Priority | Item                    | Description                       | Notes                                            |
+| ------ | --- | -------- | ----------------------- | --------------------------------- | ------------------------------------------------ |
+| ✅     | 👤  | MED      | Progressive Enhancement | Works without JavaScript          | Components use native HTML elements              |
+| ⚠️     | 🤖  | MED      | Color Contrast          | WCAG AA standard (AAA for mobile) | Need to test with contrast checker               |
+| ✅     | 🤖  | HIGH     | H1 Heading              | Each page has one H1              | Verified - all pages have exactly one H1         |
+| ✅     | 🤖  | HIGH     | Heading Hierarchy       | Headings in order (H1-H6)         | Verified - proper hierarchy (H1→H2→H3→H4)        |
+| ✅     | 🤖  | MED      | HTML5 Input Types       | Specific input types for mobile   | Verified - using text, email, date, search, etc. |
+| ✅     | 🤖  | HIGH     | Form Labels             | Labels associated with inputs     | Verified - all form inputs have proper labels    |
+| ⚠️     | 🤖  | HIGH     | WAVE Testing            | Test accessibility compliance     | Run WAVE or axe DevTools                         |
+| ⚠️     | 👤  | HIGH     | Keyboard Navigation     | Full keyboard navigation          | Manual testing needed                            |
+| ⚠️     | 👤  | MED      | Screen Reader           | Test with screen readers          | Manual testing with VoiceOver/NVDA               |
+| ⚠️     | 👤  | HIGH     | Focus Styles            | Visible focus states              | Manual testing, verify CSS                       |
 
 ---
 
 ## 11. SEO
 
-| Status | Who | Priority | Item             | Description                        | Notes                             |
-| ------ | --- | -------- | ---------------- | ---------------------------------- | --------------------------------- |
-| ❌     | -   | LOW      | Google Analytics | Tracking analytics                 | Optional - not yet configured     |
-| ❌     | -   | LOW      | Search Console   | Google Search Console              | Optional - configure after launch |
-| ⚠️     | 🤖  | MED      | Heading Logic    | Headings clarify content structure | Need to verify                    |
-| ⚠️     | 🤖  | HIGH     | Sitemap.xml      | XML sitemap exists                 | Need to create sitemap.xml        |
-| ⚠️     | 🤖  | HIGH     | Robots.txt       | Robots.txt configured              | Need to create robots.txt         |
-| ⚠️     | 🤖  | HIGH     | Structured Data  | Schema.org/JSON-LD implemented     | Could add for better SEO          |
-| ⚠️     | 🤖  | MED      | HTML Sitemap     | HTML sitemap in footer             | Could add footer with sitemap     |
+| Status | Who | Priority | Item             | Description                        | Notes                              |
+| ------ | --- | -------- | ---------------- | ---------------------------------- | ---------------------------------- |
+| ❌     | -   | LOW      | Google Analytics | Tracking analytics                 | Optional - not yet configured      |
+| ❌     | -   | LOW      | Search Console   | Google Search Console              | Optional - configure after launch  |
+| ✅     | 🤖  | MED      | Heading Logic    | Headings clarify content structure | Verified - clear content structure |
+| ✅     | 🤖  | HIGH     | Sitemap.xml      | XML sitemap exists                 | Created in site/sitemap.njk        |
+| ✅     | 🤖  | HIGH     | Robots.txt       | Robots.txt configured              | Created in site/robots.txt         |
+| ⚠️     | 🤖  | HIGH     | Structured Data  | Schema.org/JSON-LD implemented     | Could add for better SEO           |
+| ⚠️     | 🤖  | MED      | HTML Sitemap     | HTML sitemap in footer             | Could add footer with sitemap      |
 
 ---
 
@@ -215,16 +215,16 @@ This checklist is based on the [Front-End Checklist](https://github.com/thedavid
 **Can be done by AI/Code (🤖):**
 
 1. ~~Add meta descriptions to all pages~~ ✅ DONE
-2. Validate HTML with W3C validator
-3. Run HTML linter
-4. Check for broken links
-5. Verify unique IDs in CSS/HTML
-6. Create sitemap.xml
-7. Create robots.txt
-8. Test for JavaScript console errors
-9. Verify H1 tags on all pages
-10. Verify heading hierarchy
-11. Verify form labels on all components
+2. ~~Create sitemap.xml~~ ✅ DONE
+3. ~~Create robots.txt~~ ✅ DONE
+4. ~~Verify H1 tags on all pages~~ ✅ DONE
+5. ~~Verify heading hierarchy~~ ✅ DONE
+6. ~~Verify form labels on all components~~ ✅ DONE
+7. Validate HTML with W3C validator (manual)
+8. ~~Run HTML linter~~ ✅ DONE
+9. Check for broken links
+10. Verify unique IDs in CSS/HTML (skipped for now)
+11. Test for JavaScript console errors
 12. Run WAVE accessibility checker
 
 **Requires Human (👤):**

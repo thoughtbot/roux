@@ -16,13 +16,13 @@ Find the code in [the Roux repo on GitHub](https://github.com/thoughtbot/roux).
 ## Components
 
 <ul>
-  {%- for component in collections.component %}
+  {%- for component in collections.component -%}
     <li><a href="{{ component.url | url }}">{{ component.data.title | default(component.fileSlug) }}</a>
-    {% if component.data.description %}
+    {%- if component.data.description -%}
       <p>{{ component.data.description }}</p>
-    {% endif %}
+    {% endif -%}
     </li>
-  {%- endfor %}
+  {%- endfor -%}
 </ul>
 
 ## Contributing

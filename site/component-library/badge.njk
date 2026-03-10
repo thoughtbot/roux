@@ -7,11 +7,14 @@ permalink: /component-library/badge.html
 <h2>Considerations</h2>
 
 <p>
-  If badges contain just a number or text that requires extra context, add an
-  <code>aria-label</code> to provide that context. For example, a badge on a
-  mail icon displaying "12" should have a label of "12 unread messages" so that
-  assistive tech understands the intent. Or to be even more clear, include the
-  label inside the badge.
+  If badges contain just a number or text that requires extra context, you
+  should provide that context with a visually-hidden element. For example, a
+  badge on a mail icon displaying "12" should read
+  <code
+    >12 &lt;span class="u-hide-visually"&gt;unread messages&lt;/span&gt;</code
+  >
+  so that assistive tech understands the intent. Or to be even more clear,
+  include the label visible inside the badge: <code>12 unread messages</code>
 </p>
 
 <p>
