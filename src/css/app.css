@@ -19,11 +19,11 @@
 /* Components */
 /* Import components from the component folder here in ABC order */
 /* For example: @import "components/_card.css" */
+@import "components/_alert.css";
 @import "components/_badge.css";
 @import "components/_loading-indicator.css";
-@import "components/_alert.css";
-@import "components/_page-header.css";
 @import "components/_page-footer.css";
+@import "components/_page-header.css";
 @import "components/_page-nav.css";
 @import "components/_pagination.css";
 @import "components/_search.css";
