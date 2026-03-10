@@ -24,7 +24,9 @@
 
   @media (forced-colors: none), (forced-colors: active) {
     :root {
-      --prism-a11y-color-background: hsla(0, 0%, 100%, 1);
+      /* tweak the color a bit: */
+      /* --prism-a11y-color-background: hsla(0, 5%, 100%, 1); */
+      --prism-a11y-color-background: hsla(84, 39%, 97%, 1);
       --prism-a11y-color-text-no-token: hsla(0, 0%, 33%, 1);
       --prism-a11y-color-text-comment: hsla(16, 100%, 25%, 1);
       --prism-a11y-color-text-blue: hsla(212, 55.2%, 43.7%, 1);

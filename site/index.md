@@ -13,6 +13,70 @@ All components are accessible and semantic by default.
 
 Find the code in [the Roux repo on GitHub](https://github.com/thoughtbot/roux).
 
+## Getting Started
+
+To use Roux Components in your project:
+
+1. **Copy the component CSS** from the Roux GitHub repo
+2. **Copy the component HTML** from the examples on this site
+3. **Customize both** to make them your own
+
+### Example: Using the Page Footer Component
+
+Here's how you might use the [Page Footer component](/component-library/page-footer.html):
+
+#### Step 1: Copy the component CSS
+
+Copy the styles from [`src/css/components/_page-footer.css`](https://github.com/thoughtbot/roux/blob/main/src/css/components/_page-footer.css) into your codebase. Don't forget to import them into your `app.css`:
+
+```diff
+/* app.css */
+
++ @import "components/_page-footer.css";
+```
+
+#### Step 2: Copy the component HTML
+
+Copy the [page footer example](/component-library/page-footer.html#example_nav) into your site's HTML.
+
+#### Step 3: Customize it!
+
+Maybe you don't need a copyright on your site:
+
+```diff
+/* _page-footer.css */
+
+.page-footer {
+  display: grid;
+  grid-template-areas:
+-   "copyright"
+    "nav";
+  grid-template-columns: 1fr;
+  …
+}
+```
+
+```diff
+<!-- footer.html.erb -->
+
+<footer class="page-footer">
+- <p class="page-copyright">&copy; 2026 thoughtbot, inc.</p>
+
+  <nav aria-label="Footer menu" class="footer-nav">
+    <ul class="page-nav">
+      <li>
+-       <a href="#">Link 1</a>
++       <a href="/about">About</a>
+      </li>
+      <li>
+-       <a href="#">Link 2</a>
++       <a href="/contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+```
+
 ## Components
 
 <ul>
