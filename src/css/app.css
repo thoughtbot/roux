@@ -1,5 +1,5 @@
-/* Reset */
-@import "reset/_normalize.css";
+/* Resets */
+@import "resets/_normalize.css";
 
 /* Dependencies */
 @import "base/_variables.css";
