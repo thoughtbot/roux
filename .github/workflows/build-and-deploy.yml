@@ -2,7 +2,7 @@ name: Build and Deploy to GitHub Pages
 
 on:
   push:
-    branches: [component_library]
+    branches: [component_library_2]
 
 permissions:
   contents: read
