@@ -8,7 +8,7 @@
   cursor: pointer;
 }
 
-:is(
+:where(
   input,
   label,
   select
@@ -28,7 +28,7 @@ form {
   gap: var(--space--large);
 }
 
-fieldset > *:not(:last-child) {
+:where(fieldset > *:not(:last-child)) {
  margin-bottom: var(--space--base);
 }
 
