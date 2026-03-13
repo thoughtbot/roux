@@ -126,9 +126,11 @@ label:has(
 }
 
 :is(input[type="checkbox"], input[type="radio"]) {
+--input-size: 1.125rem;
+
   flex-shrink: 0;
-  width: 1.125rem;
-  height: 1.125rem;
+  height: var(--input-size);
+  width: var(--input-size);
 
   &:focus {
     outline: none;
