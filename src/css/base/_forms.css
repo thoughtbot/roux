@@ -124,6 +124,21 @@ label:has(
   margin-inline-start: var(--space--xx-small);
 }
 
+:is(input[type="checkbox"], input[type="radio"]) {
+  flex-shrink: 0;
+  width: 1.125rem;
+  height: 1.125rem;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: var(--border-width--thick) solid var(--color--primary-base);
+    outline-offset: 2px;
+  }
+}
+
 textarea {
   resize: vertical;
 }
