@@ -109,6 +109,7 @@ label:has(
 
 label:has([type="radio"], [type="checkbox"]) {
   align-items: center;
+  cursor: pointer;
   display: flex;
   gap: var(--space--x-small);
   justify-self: start;
