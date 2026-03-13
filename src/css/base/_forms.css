@@ -80,6 +80,7 @@ form {
   border-radius: var(--border-radius--base);
   color: var(--color--text);
   padding: var(--space--small);
+  width: 100%;
 }
 
 label:has(
