@@ -1,0 +1,16 @@
+.loading-indicator svg {
+  animation: rotate 0.75s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-indicator svg {
+    animation: rotate 4s linear infinite;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

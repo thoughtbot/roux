@@ -1,0 +1,15 @@
+.alert {
+  background-color: var(--color--background-light);
+  color: var(--color--text);
+  padding: var(--space--xx-small);
+}
+
+.alert--success {
+  background-color: var(--color--ui-success-light);
+  color: var(--color--text);
+}
+
+.alert--danger {
+  background-color: var(--color--ui-danger-light);
+  color: var(--color--text);
+}

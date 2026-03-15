@@ -1,0 +1,17 @@
+.page-nav {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space--medium);
+}
+
+.page-nav a {
+  text-decoration: none;
+}
+.page-nav a:hover,
+.page-nav a:focus {
+  text-decoration: underline;
+}
+
+.page-nav [aria-current="page"] {
+  color: var(--color--accent-dark);
+}

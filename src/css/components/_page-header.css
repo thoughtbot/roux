@@ -1,0 +1,31 @@
+.page-header {
+  display: grid;
+  grid-template-areas: "logo nav actions";
+  grid-template-columns: min-content 1fr 18rem auto;
+  padding: var(--space--base) var(--space--x-large);
+  align-items: center;
+  gap: var(--space--large);
+}
+
+.page-header .page-nav {
+  grid-area: nav;
+}
+
+.header-logo {
+  grid-area: logo;
+}
+
+.header-logo svg,
+.header-logo img {
+  width: 12rem;
+  height: auto;
+}
+
+.header-actions {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space--medium);
+  justify-content: flex-end;
+  align-items: center;
+  grid-area: actions;
+}
