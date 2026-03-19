@@ -1,4 +1,6 @@
 :root {
+  /* Primitive colors */
+  
   --color--black-500: #000f08;
   
   --color--blue-100: #6c9fdf;
@@ -32,6 +34,8 @@
   --color--accent-dark: var(--color--purple-900);
   --color--accent-light: var(--color--purple-100);
   
+  /* Semantic colors */
+
   --color--background-base: var(--color--white-500);
   --color--background-light: var(--color--gray-100);
   --color--background-x-light: var(--color--gray-50);
@@ -46,9 +50,12 @@
   
   --color--text: var(--color--black-500);
   --color--text-inverse: var(--color--white-500);
+
   --color--link: var(--color--primary-base);
   --color--link-hover: var(--color--primary-dark);
   
+  /* Font & typography */
+
   --font-size--50: 0.875rem;
   --font-size--100: 1rem;
   --font-size--200: 1.25rem;
@@ -71,6 +78,8 @@
   
   --line-height--base: 1.5;
   --line-height--tight: 1.2;
+
+  /* Borders */
   
   --border-radius--small: 0.25rem;
   --border-radius--base: 0.5rem;
@@ -85,9 +94,13 @@
   --border--light: var(--border-width--base) solid var(--color--gray-500);
   --border--dark: var(--border-width--base) solid var(--color--primary-base);
   
+  /* Container sizing */
+
   --container--base: 50rem;
   --container--large: 85rem;
   
+  /* Spacing */
+
   --space--xx-small: 0.25rem;
   --space--x-small: 0.5rem;
   --space--small: 0.75rem;
@@ -97,9 +110,13 @@
   --space--x-large: 3rem;
   --space--xx-large: 4rem;
   
+  /* Transitions */
+
   --transition-duration--base: 0.2s;
   --transition-timing--base: ease-in-out;
   
+  /* Z-index */
+
   --z-index--basement: -999999;
   --z-index--base: 1;
   --z-index--layout: 1000;
