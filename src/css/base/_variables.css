@@ -109,6 +109,12 @@
   --space--large: 2rem;
   --space--x-large: 3rem;
   --space--xx-large: 4rem;
+
+
+  /* Spacing - Page margins */
+  
+  --space--page-margin-inline: var(--space--base);
+  --space--page-margin-block: var(--space--large);
   
   /* Transitions */
 
@@ -134,4 +140,10 @@
     medium: 820px;
     large: 1000px;
   */
+}
+
+@media screen and (min-width: 1000px) {
+  :root {
+    --space--page-margin-inline: var(--space--x-large);
+  }
 }
