@@ -1,0 +1,3 @@
+body {
+  margin: var(--space--page-margin-block) var(--space--page-margin-inline);
+}

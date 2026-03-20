@@ -86,6 +86,7 @@ css/
 │   ├── _disclosures.css        # Details/summary elements
 │   ├── _fonts.css              # Font-face declarations
 │   ├── _forms.css              # Form styling
+│   ├── _layout.css             # Layout styling
 │   ├── _lists.css              # List styling
 │   ├── _media.css              # Images, videos
 │   ├── _modal.css              # Dialog elements
@@ -121,6 +122,7 @@ Open `css/base/_variables.css` to customize your project. This is where all your
 * Use semantic names throughout your CSS
 
 #### Tips
+
 * Follow the naming convention: `--property--variant` (e.g., `--color--primary`, `--space--large`, `--font-size--small`).
 * Another fun thing you can add to in `:root` is defining [dark mode (or light mode) styles](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) with the same conventions.
 
@@ -315,6 +317,12 @@ Any global animations can go here. Roux's only animation defines smooth scrollin
 `base/css/_disclosures.css`
 
 Basic styling for the `details` and `summary` elements with a custom details marker caret.
+
+### Layout
+
+`base/css/_layout.css`
+
+A blank slate for your layout styles. It only adds margin around the `body` tag to start but it can be used to contain styles related to the broad layout of what you build.
 
 ### Lists
 
