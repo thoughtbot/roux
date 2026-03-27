@@ -11,12 +11,14 @@ table {
 :where(thead, tbody) :where(th, td) {
   border-inline-end: var(--border--light);
   border-bottom: var(--border--light);
-  padding: var(--space--small);
+  padding-block: var(--space--small);
+  padding-inline: var(--space--small);
 }
 
 :where(tfoot) td, caption {
   font-weight: var(--font-weight--bold);
-  padding: var(--space--xx-small) var(--space--small);
+  padding-block: var(--space--xx-small);
+  padding-inline: var(--space--small);
   text-align: start;
 }
 
@@ -59,6 +61,6 @@ tr:last-child td:last-child {
 .table-inner-wrapper {
   overflow-x: auto;
   flex: 1 1 0%;
-  margin-bottom: var(--space--base);
+  margin-block-end: var(--space--base);
   width: 1rem;
 }

@@ -9,7 +9,8 @@
   gap: var(--space--x-small);
   justify-content: center;
   line-height: 1;
-  padding: var(--space--small) var(--space--medium);
+  padding-block: var(--space--small);
+  padding-inline: var(--space--medium);
   text-align: center;
   text-decoration: none;
   transition-duration: var(--transition-duration--base);
@@ -17,7 +18,7 @@
   transition-timing-function: var(--transition-timing--base);
   
   &:focus-visible {
-    outline: var(--border-width--thick) solid var(--color--primary-base);
+    outline: var(--border-width--thick) solid var(--color--focus);
     outline-offset: 2px;
   }
 }

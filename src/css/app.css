@@ -1,23 +1,25 @@
+@layer reset, dependencies, base, components, utilities;
+
 /* Resets */
-@import "resets/_normalize.css";
+@import "reset/_normalize.css" layer(reset);
 
 /* Dependencies */
-@import "base/_variables.css";
-@import "base/_fonts.css";
+@import "base/_variables.css" layer(dependencies);
+@import "base/_fonts.css" layer(dependencies);
 
 /* Base */
-@import "base/_animation.css";
-@import "base/_buttons.css";
-@import "base/_disclosures.css";
-@import "base/_forms.css";
-@import "base/_lists.css";
-@import "base/_media.css";
-@import "base/_tables.css";
-@import "base/_typography.css";
+@import "base/_animation.css" layer(base);
+@import "base/_buttons.css" layer(base);
+@import "base/_disclosures.css" layer(base);
+@import "base/_forms.css" layer(base);
+@import "base/_lists.css" layer(base);
+@import "base/_media.css" layer(base);
+@import "base/_tables.css" layer(base);
+@import "base/_typography.css" layer(base);
 
 /* Components */
 /* Import components from the component folder here in ABC order */
-/* For example: @import "components/_card.css" */
+/* For example: @import "components/_card.css" layer(components); */
 
 /* Utilities */
-@import "utilities/_hide-visually.css";
+@import "utilities/_hide-visually.css" layer(utilities);

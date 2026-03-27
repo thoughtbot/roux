@@ -1,4 +1,7 @@
 :root {
+  /* Color scheme settings */
+  color-scheme: light dark;
+
   /* Primitive colors */
 
   --color--black-500: #000f08;
@@ -51,6 +54,7 @@
   --color--text: var(--color--black-500);
   --color--text-inverse: var(--color--white-500);
 
+  --color--focus: var(--color--primary-dark);
   --color--link: var(--color--primary-base);
   --color--link-hover: var(--color--primary-dark);
   
@@ -128,6 +132,16 @@
   --z-index--layout: 1000;
   --z-index--modal: 4000;
   --z-index--ceiling: 999999;
+
+  /* High contrast settings */
+
+  @media (prefers-contrast: more) {
+    --color--focus: Highlight;
+    --color--text: ButtonText;
+    --border--base: var(--border-width--base) solid ButtonText;
+    --border--light: var(--border-width--base) solid ButtonText;
+    --border--dark: var(--border-width--base) solid ButtonText;
+  }
 
   /* Breakpoints
     

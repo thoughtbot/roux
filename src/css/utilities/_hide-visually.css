@@ -16,7 +16,8 @@
   overflow: visible;
   white-space: inherit;
   width: auto;
-  padding: var(--space--small) var(--space--medium);
+  padding-block: var(--space--small);
+  padding-inline: var(--space--medium);
   position: absolute;
   text-align: center;
   z-index: calc(var(--z-index--layout) + 1);
