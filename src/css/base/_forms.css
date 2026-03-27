@@ -81,6 +81,11 @@ form {
   color: var(--color--text);
   padding: var(--space--small);
   width: 100%;
+
+  &:focus-visible {
+    outline: var(--border-width--thick) solid var(--color--focus);
+    outline-offset: 2px;
+  }
 }
 
 label:has(
@@ -126,7 +131,7 @@ label:has(
 }
 
 :is(input[type="checkbox"], input[type="radio"]) {
---input-size: 1.125rem;
+  --input-size: 1.125rem;
 
   flex-shrink: 0;
   height: var(--input-size);
@@ -137,7 +142,7 @@ label:has(
   }
 
   &:focus-visible {
-    outline: var(--border-width--thick) solid var(--color--primary-base);
+    outline: var(--border-width--thick) solid var(--color--focus);
     outline-offset: 2px;
   }
 }

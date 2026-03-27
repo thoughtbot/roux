@@ -17,7 +17,7 @@
   transition-timing-function: var(--transition-timing--base);
   
   &:focus-visible {
-    outline: var(--border-width--thick) solid var(--color--primary-base);
+    outline: var(--border-width--thick) solid var(--color--focus);
     outline-offset: 2px;
   }
 }
