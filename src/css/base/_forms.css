@@ -29,7 +29,7 @@ form {
 }
 
 :where(fieldset > *:not(:last-child)) {
- margin-bottom: var(--space--base);
+ margin-block-end: var(--space--base);
 }
 
 :is(
@@ -47,11 +47,9 @@ form {
   &[readonly] {
     border-color: transparent;
     padding-inline-start: 0;
-    padding-top: 0;
 
     &:focus {
       padding-inline-start: var(--space--small);
-      padding-top: var(--space--small);
     }
   }
 }
@@ -79,7 +77,8 @@ form {
   background-color: var(--color--background-base);
   border-radius: var(--border-radius--base);
   color: var(--color--text);
-  padding: var(--space--small);
+  padding-block: var(--space--small);
+  padding-inline: var(--space--small);
   width: 100%;
 
   &:focus-visible {
@@ -154,12 +153,12 @@ textarea {
 :where(select) {
   appearance: none;
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" fill="none"><path fill="%2332314C" fill-rule="evenodd" d="M.65.63A.875.875 0 0 1 1.885.602L4.828 3.42 7.77.603a.875.875 0 1 1 1.21 1.264l-3.374 3.23a1.125 1.125 0 0 1-1.556 0L.676 1.868A.875.875 0 0 1 .649.629Z" clip-rule="evenodd"/></svg>');
-  background-position: calc(100% - var(--space--small)) center;
+  background-position: right var(--space--small) center;
   background-repeat: no-repeat;
   background-size: var(--space--small);
 
   [dir="rtl"] & {
-    background-position: var(--space--small) center;
+    background-position: left var(--space--small) center;
   }
 }
 
