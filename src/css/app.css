@@ -1,7 +1,7 @@
 @layer reset, dependencies, base, components, utilities;
 
 /* Resets */
-@import "reset/_normalize.css" layer(reset);
+@import "resets/_normalize.css" layer(reset);
 
 /* Dependencies */
 @import "base/_variables.css" layer(dependencies);
