@@ -1,5 +1,7 @@
 import lightningcssPlugin from "@11tyrocks/eleventy-plugin-lightningcss";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import markdownItDirective from "markdown-it-directive";
+import previewMarkdownDirective from "./11tyconfig/previewMarkdownDirective.js";
 
 export default function (eleventyConfig) {
   const now = String(Date.now());
@@ -60,6 +62,12 @@ export default function (eleventyConfig) {
 
   // syntax highlighting for code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
+
+  // Configure markdown-it with directive support
+  eleventyConfig.amendLibrary("md", (mdLib) => {
+    mdLib.use(markdownItDirective).use(previewMarkdownDirective);
+    return mdLib;
+  });
 
   const config = {
     dir: {
