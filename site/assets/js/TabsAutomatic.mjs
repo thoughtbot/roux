@@ -28,12 +28,16 @@ export default class TabsAutomatic {
     this.tabs = Array.from(this.tablistNode.querySelectorAll("[role=tab]"));
     this.tabpanels = [];
 
+    // active the UI
+    this.tablistNode.classList.add("tabs-automatic--active");
+
     for (var i = 0; i < this.tabs.length; i += 1) {
       var tab = this.tabs[i];
       var tabpanel = document.getElementById(tab.getAttribute("aria-controls"));
 
       tab.tabIndex = -1;
       tab.setAttribute("aria-selected", "false");
+      tabpanel.classList.add("tabs-automatic--active");
       this.tabpanels.push(tabpanel);
 
       tab.addEventListener("keydown", this.onKeydown.bind(this));

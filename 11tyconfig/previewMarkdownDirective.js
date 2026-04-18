@@ -136,7 +136,6 @@ function generatePreviewHtml(id, title, htmlContent, pathPrefix, isTall) {
     role="tabpanel"
     tabindex="0"
     aria-labelledby="${ID.TAB.CODE}"
-    class="is-hidden"
   >
     <div class="component-example__code">
       ${eleventyPrism(htmlContent, "html")}

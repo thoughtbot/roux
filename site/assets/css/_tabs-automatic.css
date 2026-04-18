@@ -13,6 +13,11 @@ This software or document includes material copied from or derived from https://
 
 [role="tablist"] {
   min-width: 100%;
+  display: none;
+}
+
+[role="tablist"].tabs-automatic--active {
+  display: block;
 }
 
 [role="tab"],
@@ -50,6 +55,10 @@ This software or document includes material copied from or derived from https://
   border-radius: 0 var(--tabpanel-radius) var(--tabpanel-radius);
   border: var(--tabpanel-border);
   background: var(--tabpanel-background);
+}
+
+[role="tabpanel"] + [role="tabpanel"]:not(.tabs-automatic--active) {
+  margin-top: var(--space--small);
 }
 
 [role="tabpanel"].is-hidden {
