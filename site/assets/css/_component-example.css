@@ -14,12 +14,14 @@
 }
 
 .component-example__preview-frame {
-  border: var(--border--dark);
+  border: var(--border--base);
+  border-radius: var(--border-radius--small);
   height: 100%;
 }
 
 .component-example__code {
   border: var(--border--base);
+  border-radius: var(--border-radius--small);
   display: flex;
   overflow: auto;
   height: 100%;
