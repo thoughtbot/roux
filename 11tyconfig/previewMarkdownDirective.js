@@ -66,73 +66,83 @@ export default function previewMarkdownDirective(md) {
 
 function generatePreviewIframeContent(title, htmlContent, pathPrefix) {
   return `
-   <!DOCTYPE html>
-          <html lang="en">
-            <head>
-              <title>${title}</title>
-              <meta charset="UTF-8" />
-            </head>
-            <body>
-              <main aria-label="Component Example">
-                      <div class="component-preview-contents">
-                        <link rel="stylesheet" href="${pathPrefix}/src/css/app.css"/>
-                        <link rel="stylesheet" href="${pathPrefix}/assets/css/component-preview.css"/>
-                        ${htmlContent}
-                      </div>
-              </main>
-            </body>
-          </html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>${title}</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <main aria-label="Component Example">
+      <div class="component-preview-contents">
+        <link rel="stylesheet" href="${pathPrefix}/src/css/app.css"/>
+        <link rel="stylesheet" href="${pathPrefix}/assets/css/component-preview.css"/>
+        ${htmlContent}
+      </div>
+    </main>
+  </body>
+</html>
 `;
 }
 
 function generatePreviewHtml(id, title, htmlContent, pathPrefix, isTall) {
+  const ID = {
+    TAB: {
+      PREVIEW: `tab-preview-${id}`,
+      CODE: `tab-code-${id}`,
+    },
+    PANEL: {
+      PREVIEW: `tabpanel-preview-${id}`,
+      CODE: `tabpanel-code-${id}`,
+    },
+  };
   return `
  <div class="component-example${isTall ? " component-example--tall" : ""}">
-    <div role="tablist" aria-labelledby="${id}" class="automatic">
-      <button
-        id="tab-preview-${id}"
-        type="button"
-        role="tab"
-        aria-selected="true"
-        aria-controls="tabpanel-preview-${id}"
-      >
-        <span class="focus">Preview</span>
-      </button>
-      <button
-        id="tab-code-${id}"
-        type="button"
-        role="tab"
-        aria-selected="false"
-        aria-controls="tabpanel-code-${id}"
-        tabindex="-1"
-      >
-        <span class="focus">Code</span>
-      </button>
-    </div>
-    <div
-      id="tabpanel-preview-${id}"
-      role="tabpanel"
-      tabindex="0"
-      aria-labelledby="tab-preview-${id}"
+  <div role="tablist" aria-labelledby="${id}" class="automatic">
+    <button
+      id="${ID.TAB.PREVIEW}"
+      type="button"
+      role="tab"
+      aria-selected="true"
+      aria-controls="${ID.PANEL.PREVIEW}"
     >
-      <iframe
-        class="component-example__preview-frame"
-        title="${title}"
-        srcdoc="${escape(generatePreviewIframeContent(title, htmlContent, pathPrefix))}"
-      ></iframe>
-    </div>
-    <div
-      id="tabpanel-code-${id}"
-      role="tabpanel"
-      tabindex="0"
-      aria-labelledby="tab-code-${id}"
-      class="is-hidden"
+      <span class="focus">Preview</span>
+    </button>
+    <button
+      id="${ID.TAB.CODE}"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="${ID.PANEL.CODE}"
+      tabindex="-1"
     >
-      <div class="component-example__code">
-        ${eleventyPrism(htmlContent, "html")}
-      </div>
+      <span class="focus">Code</span>
+    </button>
+  </div>
+  <div
+    id="${ID.PANEL.PREVIEW}"
+    role="tabpanel"
+    tabindex="0"
+    aria-labelledby="${ID.TAB.PREVIEW}"
+  >
+    <iframe
+      class="component-example__preview-frame"
+      title="${title}"
+      srcdoc="${escape(generatePreviewIframeContent(title, htmlContent, pathPrefix))}"
+    ></iframe>
+  </div>
+  <div
+    id="${ID.PANEL.CODE}"
+    role="tabpanel"
+    tabindex="0"
+    aria-labelledby="${ID.TAB.CODE}"
+    class="is-hidden"
+  >
+    <div class="component-example__code">
+      ${eleventyPrism(htmlContent, "html")}
     </div>
   </div>
+</div>
 `;
 }
 
