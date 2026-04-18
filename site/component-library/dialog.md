@@ -20,8 +20,8 @@ Remember to set autofocus to a close button or the first interaction. [According
 
 ### Basic Modal
 
-::preview{file="dialogs/basic.html" title="Basic Modal" id="example_basic_modal"}::
+::preview{file="dialogs/basic.html" title="Basic Modal" id="example_basic_modal" tall="true"}::
 
 ### Slide-in Drawer Modal
 
-::preview{file="dialogs/slide-in.html" title="Slide-in Drawer Modal" id="example_slide_in_modal"}::
+::preview{file="dialogs/slide-in.html" title="Slide-in Drawer Modal" id="example_slide_in_modal" tall="true"}::

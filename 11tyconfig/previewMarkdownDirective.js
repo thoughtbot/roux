@@ -17,7 +17,7 @@ export default function previewMarkdownDirective(md) {
       return;
     }
 
-    const { file, title, id } = attrs;
+    const { file, title, id, tall } = attrs;
 
     let htmlContent;
     try {
@@ -43,6 +43,7 @@ export default function previewMarkdownDirective(md) {
       const previewTitle = escape(title || "Preview");
       const previewId = id || `preview_${directiveStartLine}`;
       const pathPrefix = process.env.SITE_ENV === "production" ? "/roux" : "";
+      const isTall = tall === "true";
 
       // create a markdown HTML block
       const token = state.push("html_block", "", 0);
@@ -52,6 +53,7 @@ export default function previewMarkdownDirective(md) {
         previewTitle,
         htmlContent,
         pathPrefix,
+        isTall,
       );
     } catch (error) {
       console.error("Error rendering preview", error);
@@ -83,9 +85,9 @@ function generatePreviewIframeContent(title, htmlContent, pathPrefix) {
 `;
 }
 
-function generatePreviewHtml(id, title, htmlContent, pathPrefix) {
+function generatePreviewHtml(id, title, htmlContent, pathPrefix, isTall) {
   return `
- <div class="component-example">
+ <div class="component-example${isTall ? " component-example--tall" : ""}">
     <div role="tablist" aria-labelledby="${id}" class="automatic">
       <button
         id="tab-preview-${id}"

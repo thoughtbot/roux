@@ -1,7 +1,16 @@
+.component-example {
+  /* expand beyond parent width for readability */
+  width: calc(100vw - var(--space--x-large) * 2);
+  max-width: 70rem;
+}
+
 .component-example [role="tabpanel"] {
   resize: both;
   overflow: auto;
   height: 340px;
+}
+.component-example--tall [role="tabpanel"] {
+  height: 540px;
 }
 
 .component-example__preview-frame {

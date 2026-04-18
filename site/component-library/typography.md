@@ -12,4 +12,4 @@ Be sure to use headline levels in order (H1 followed by H2, etc) so that assisti
 
 ### Basic Typography
 
-::preview{file="typography/basic.html" title="Basic Typography" id="example_basic"}::
+::preview{file="typography/basic.html" title="Basic Typography" id="example_basic" tall="true"}::

@@ -21,4 +21,4 @@ This approach keeps the form **accessible, extensible, and user-friendly** while
 
 ### Basic Form
 
-::preview{file="forms/basic.html" title="Basic Form" id="example_form"}::
+::preview{file="forms/basic.html" title="Basic Form" id="example_form" tall="true"}::

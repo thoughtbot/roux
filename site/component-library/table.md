@@ -32,4 +32,4 @@ Using these variations keeps tables readable, accessible, and responsive across 
 
 ### Overflow Scroll
 
-::preview{file="tables/overflow.html" title="Overflow Scroll" id="example_overflow"}::
+::preview{file="tables/overflow.html" title="Overflow Scroll" id="example_overflow" tall="true"}::
