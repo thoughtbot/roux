@@ -1,0 +1,52 @@
+import { readdirSync } from "fs";
+import { dirname, join, relative } from "path";
+import { fileURLToPath } from "url";
+import { test, expect } from "@playwright/test";
+import AxeBuilder from "@axe-core/playwright";
+
+const rootDir = join(dirname(fileURLToPath(import.meta.url)), "../..");
+
+const componentPages = readdirSync(join(rootDir, "site/component-library"))
+  .filter((f) => f.endsWith(".md"))
+  .map((f) => f.replace(".md", ""))
+  .sort();
+
+function findHtmlFiles(dir: string, base: string): string[] {
+  return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const fullPath = join(dir, entry.name);
+    if (entry.isDirectory()) return findHtmlFiles(fullPath, base);
+    if (entry.name.endsWith(".html")) return [relative(base, fullPath)];
+    return [];
+  });
+}
+
+const examplesDir = join(rootDir, "site/examples");
+const examplePages = findHtmlFiles(examplesDir, examplesDir).sort();
+
+test("homepage a11y", async ({ page }) => {
+  await page.goto("/");
+  const results = await new AxeBuilder({ page }).analyze();
+  expect(results.violations).toEqual([]);
+});
+
+for (const component of componentPages) {
+  test(`${component} a11y`, async ({ page }) => {
+    await page.goto(`/component-library/${component}.html`);
+    const results = await new AxeBuilder({ page }).analyze();
+    expect(results.violations).toEqual([]);
+  });
+}
+
+for (const example of examplePages) {
+  const name = example.replace("/", "-").replace(".html", "");
+  test(`${name} a11y`, async ({ page }) => {
+    await page.goto(`/examples/${example}`);
+    const results = await new AxeBuilder({ page }).analyze();
+    expect(results.violations).toEqual([]);
+  });
+
+  test(`${name} snapshot`, async ({ page }) => {
+    await page.goto(`/examples/${example}`);
+    await expect(page).toHaveScreenshot(`${name}.png`, { fullPage: true });
+  });
+}
