@@ -41,7 +41,10 @@ for (const example of examplePages) {
   const name = example.replace("/", "-").replace(".html", "");
   test(`${name} a11y`, async ({ page }) => {
     await page.goto(`/examples/${example}`);
-    const results = await new AxeBuilder({ page }).analyze();
+    const results = await new AxeBuilder({ page })
+      // example iframes do not have a heading structure
+      .disableRules(["page-has-heading-one"])
+      .analyze();
     expect(results.violations).toEqual([]);
   });
 

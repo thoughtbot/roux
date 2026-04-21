@@ -17,7 +17,7 @@
     "deploy": "npm run clean && SITE_ENV=production npm run build-site",
     "format": "prettier --write .",
     "test:a11y": "playwright test",
-    "test:html": "html-validate '_site/**/*.html'"
+    "test:html": "npm run build-site && html-validate '_site/**/*.html'"
   },
   "repository": {
     "type": "git",
