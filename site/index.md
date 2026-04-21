@@ -46,35 +46,35 @@ Maybe you don't need a copyright on your site:
 ```diff
 /* _page-footer.css */
 
-.page-footer {
-  display: grid;
-  grid-template-areas:
+  .page-footer {
+    display: grid;
+    grid-template-areas:
 -   "copyright"
-    "nav";
-  grid-template-columns: 1fr;
-  …
-}
+      "nav";
+    grid-template-columns: 1fr;
+    …
+  }
 ```
 
 ```diff
-<!-- footer.html.erb -->
+  <!-- footer.html.erb -->
 
-<footer class="page-footer">
-- <p class="page-copyright">&copy; 2026 thoughtbot, inc.</p>
+  <footer class="page-footer">
+-   <p class="page-copyright">&copy; 2026 thoughtbot, inc.</p>
 
-  <nav aria-label="Footer menu" class="footer-nav">
-    <ul class="page-nav">
-      <li>
--       <a href="#">Link 1</a>
-+       <a href="/about">About</a>
-      </li>
-      <li>
--       <a href="#">Link 2</a>
-+       <a href="/contact">Contact</a>
-      </li>
-    </ul>
-  </nav>
-</footer>
+    <nav aria-label="Footer menu" class="footer-nav">
+      <ul class="page-nav">
+        <li>
+-         <a href="#">Link 1</a>
++         <a href="/about">About</a>
+        </li>
+        <li>
+-         <a href="#">Link 2</a>
++         <a href="/contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
 ```
 
 ## Components
