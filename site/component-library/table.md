@@ -18,8 +18,6 @@ We use semantic HTML elements (`<table>`, `<caption>`, `<thead>`, `<tbody>`, `<t
 2. [**Striped Table**](#example_striped) (`.table--striped`): Alternating row backgrounds improve readability for large datasets.
 3. [**Overflow Scroll**](#example_overflow): Wrapping a table in `.table-outer-wrapper` and `.table-inner-wrapper` allows tables to scroll horizontally on smaller viewports, ensuring content remains accessible without breaking the layout.
 
-Using these variations keeps tables readable, accessible, and responsive across devices while maintaining semantic HTML.
-
 ## Examples
 
 ### Basic Table

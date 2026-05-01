@@ -15,7 +15,15 @@ This form uses semantic HTML elements—`<form>`, `<fieldset>`, `<legend>`, `<la
 - **Select & Datalist:** Provide structured choices while maintaining flexibility for user input.
 - **Accessibility & Usability:** Semantic structure, focusable elements, and visual cues ensure the form works well for keyboard and screen reader users.
 
-This approach keeps the form **accessible, extensible, and user-friendly** while supporting both simple and advanced interactions.
+In Roux we default to wrapping inputs with labels. If you prefer to keep labels and inputs side-by-side, make sure every label refers to its input with a `for` attribute.
+
+```html
+<label>Full name <input name="full-name" /></label>
+<!-- or -->
+<label for="full-name">Full name</label>
+<input name="full-name" id="full-name" />
+```
+
 
 ## Examples
 
