@@ -125,8 +125,8 @@ Open `css/base/_variables.css` to customize your project. This is where all your
 
 #### Tips
 
-* Follow the naming convention: `--property--variant` (e.g., `--color--primary`, `--space--large`, `--font-size--small`).
-* Another fun thing you can add to in `:root` is defining [dark mode (or light mode) styles](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) with the same conventions.
+- Follow the naming convention: `--property--variant` (e.g., `--color--primary`, `--space--large`, `--font-size--small`).
+- Another fun thing you can add to in `:root` is defining [dark mode (or light mode) styles](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) with the same conventions.
 
 #### Example
 

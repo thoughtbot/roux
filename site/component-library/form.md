@@ -24,7 +24,6 @@ In Roux we default to wrapping inputs with labels. If you prefer to keep labels 
 <input name="full-name" id="full-name" />
 ```
 
-
 ## Examples
 
 ### Basic Form
