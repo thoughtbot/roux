@@ -1,7 +1,6 @@
 main,
 header,
 footer {
-  padding: var(--space--medium) var(--space--x-large);
   max-width: var(--container--base);
 }
 
