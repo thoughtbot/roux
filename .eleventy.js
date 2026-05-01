@@ -63,7 +63,7 @@ export default function (eleventyConfig) {
   ]);
 
   // syntax highlighting for code blocks
-  eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(syntaxHighlight, { preAttributes: { tabindex: 0 } });
 
   // Configure markdown-it with directive support
   eleventyConfig.amendLibrary("md", (mdLib) => {

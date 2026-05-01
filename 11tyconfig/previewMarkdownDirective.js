@@ -115,7 +115,7 @@ function generatePreviewHtml(id, title, file, htmlContent, pathPrefix, isTall) {
     aria-labelledby="${ID.TAB.CODE}"
   >
     <div class="component-example__code">
-      ${eleventyPrism(htmlContent, "html")}
+      ${eleventyPrism(htmlContent, "html", undefined, { preAttributes: { tabindex: 0 } })}
     </div>
   </div>
 </div>
