@@ -30,6 +30,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("site/*.ico");
   eleventyConfig.addPassthroughCopy("site/*.svg");
   eleventyConfig.addPassthroughCopy("site/*.png");
+  // metadata
+  eleventyConfig.addPassthroughCopy("site/robots.txt");
 
   // minify CSS with LightningCSS
   // Process Roux framework CSS, site-specific CSS, and component preview CSS
