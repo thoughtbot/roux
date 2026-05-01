@@ -8,7 +8,7 @@ permalink: /component-library/dialog.html
 
 We use the native `<dialog>` element with `showModal()` to take advantage of built-in accessibility features like focus trapping, inert background behavior, and automatic announcement by assistive technologies.
 
-Data attributes (`data-dialogOpen`, `data-dialogElement`, `data-dialogClose`) are used to keep the JavaScript lightweight and decoupled from styling, making the component easy to reuse. The close button is always included and labeled for screen readers, and clicking outside the dialog closes it for an intuitive, user-friendly experience.
+Data attributes (`data-dialogopen`, `data-dialogelement`, `data-dialogclose`) are used to keep the JavaScript lightweight and decoupled from styling, making the component easy to reuse. The close button is always included and labeled for screen readers, and clicking outside the dialog closes it for an intuitive, user-friendly experience.
 
 `aria-modal="true"` reinforces the modal's role for assistive technologies, ensuring that users understand they're in a temporary, focused overlay.
 
