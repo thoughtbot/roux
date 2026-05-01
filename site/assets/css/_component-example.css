@@ -1,6 +1,6 @@
 .component-example {
   /* expand beyond parent width for readability */
-  width: calc(100vw - var(--space--x-large) * 2);
+  width: calc(100vw - var(--space--page-margin-inline) * 2);
   max-width: 70rem;
 }
 
