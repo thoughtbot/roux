@@ -1,7 +1,7 @@
 ---
 title: Tables
 description: Tables present structured data that needs clear relationships between rows and columns.
-permalink: /component-library/tables.html
+permalink: /component-library/table.html
 ---
 
 ## Considerations

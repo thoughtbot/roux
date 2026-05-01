@@ -1,7 +1,7 @@
 ---
 title: Disclosures
 description: Disclosures (<details>/<summary>) provide a way to hide and reveal additional content, making pages cleaner while keeping information accessible. They are ideal for FAQs, explanations, or optional details.
-permalink: /component-library/disclosures.html
+permalink: /component-library/disclosure.html
 ---
 
 ## Considerations

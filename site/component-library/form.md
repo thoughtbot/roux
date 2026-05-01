@@ -1,7 +1,7 @@
 ---
 title: Forms
 description: Forms collect structured user input and must be accessible, predictable, and easy to navigate.
-permalink: /component-library/forms.html
+permalink: /component-library/form.html
 ---
 
 ## Considerations
