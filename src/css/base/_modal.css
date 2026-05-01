@@ -28,7 +28,7 @@ dialog button[data-dialogClose] {
 dialog.slide-in {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  margin-bottom: 0;
+  margin-block-end: 0;
   transform: translateY(100%);
   transition:
     calc(var(--transition-duration--base) * 2) var(--transition-timing--base)
