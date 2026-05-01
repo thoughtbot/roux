@@ -1,6 +1,10 @@
 /* Styles specifically for component preview iframes */
 /* This CSS is loaded inside the iframe to provide layout for component examples */
 
+:root {
+  color-scheme: only light;
+}
+
 body {
   margin: var(--space--base);
 }
