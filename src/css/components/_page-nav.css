@@ -13,5 +13,5 @@
 }
 
 .page-nav [aria-current="page"] {
-  color: var(--color--accent-dark);
+  color: var(--color--current);
 }
