@@ -14,4 +14,4 @@ As in the page header, navigation must use a `<nav>` element which provides the 
 
 ### Page Footer with Navigation
 
-::preview{file="page-footer/nav.html" title="Page Footer with Navigation" id="example_nav"}::
+::preview{file="page-footer/nav.html" id="example_nav"}::

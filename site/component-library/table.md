@@ -22,12 +22,12 @@ We use semantic HTML elements (`<table>`, `<caption>`, `<thead>`, `<tbody>`, `<t
 
 ### Basic Table
 
-::preview{file="tables/basic.html" title="Basic Table" id="example_basic"}::
+::preview{file="tables/basic.html" id="example_basic"}::
 
 ### Striped Table
 
-::preview{file="tables/striped.html" title="Striped Table" id="example_striped"}::
+::preview{file="tables/striped.html" id="example_striped"}::
 
 ### Overflow Scroll
 
-::preview{file="tables/overflow.html" title="Overflow Scroll" id="example_overflow" tall="true"}::
+::preview{file="tables/overflow.html" id="example_overflow" tall="true"}::

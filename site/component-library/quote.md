@@ -12,4 +12,4 @@ A `<blockquote>` element contains the actual quote. To associate the quote with 
 
 ### Quote with Citation
 
-::preview{file="quotes/basic.html" title="Quote with Citation" id="example_basic"}::
+::preview{file="quotes/basic.html" id="example_basic"}::

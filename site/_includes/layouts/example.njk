@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/component-preview.css' | url }}?v={% version %}" />
   </head>
   <body>
-    <main aria-label="Component Example">
+    <main aria-label="{{ title or "Component Example" }}">
       <div class="component-preview-contents">
         {{ content | safe }}
       </div>

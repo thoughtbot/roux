@@ -19,10 +19,10 @@ This approach leverages semantic HTML, keeps interactions lightweight, and ensur
 
 ### Single Disclosure
 
-::preview{file="disclosures/single.html" title="Single Disclosure" id="example_single"}::
+::preview{file="disclosures/single.html" id="example_single"}::
 
 ### FAQ-style Disclosures
 
 In this example only one disclosure can be open at a time.
 
-::preview{file="disclosures/faq.html" title="FAQ-style Disclosures" id="example_faq"}::
+::preview{file="disclosures/faq.html" id="example_faq"}::

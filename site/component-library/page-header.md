@@ -18,4 +18,4 @@ Navigation must use a `<nav>` element which provides the "navigation" role to as
 
 ### Page Header with Navigation and Skip Navigation Link
 
-::preview{file="page-header/nav.html" title="Page Header with Navigation and Skip Navigation Link" id="example_nav"}::
+::preview{file="page-header/nav.html" id="example_nav"}::

@@ -1,6 +1,7 @@
 import { readFileSync } from "fs";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
+import matter from "gray-matter";
 
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 const eleventyPrism = syntaxHighlight.pairedShortcode;
@@ -17,14 +18,18 @@ export default function previewMarkdownDirective(md) {
       return;
     }
 
-    const { file, title, id, tall } = attrs;
+    const { file, id, tall } = attrs;
 
     let htmlContent;
+    let title;
     try {
       // Read the HTML file from the examples directory
       const __dirname = dirname(fileURLToPath(import.meta.url));
       const examplePath = join(__dirname, "../site/examples", file);
-      htmlContent = readFileSync(examplePath, "utf-8").trim();
+      const raw = readFileSync(examplePath, "utf-8");
+      const parsed = matter(raw);
+      htmlContent = parsed.content.trim();
+      title = parsed.data.title;
     } catch (error) {
       console.error(`Error reading preview file: ${file}`, error);
       const token = state.push("html_block", "", 0);

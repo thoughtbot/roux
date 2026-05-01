@@ -14,4 +14,4 @@ When loading content, use the `aria-busy="true"` attribute on the content's cont
 
 ### Spinning Loading Indicator
 
-::preview{file="loading-indicator/basic.html" title="Spinning Loading Indicator" id="example_basic"}::
+::preview{file="loading-indicator/basic.html" id="example_basic"}::

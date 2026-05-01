@@ -17,4 +17,4 @@ Using semantic roles instead of JavaScript-driven announcements ensures reliabil
 
 ### Info, Success, and Error Alerts
 
-::preview{file="alerts/basic.html" title="Info, Success, and Error Alerts" id="example_basic"}::
+::preview{file="alerts/basic.html" id="example_basic"}::

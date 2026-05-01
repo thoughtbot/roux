@@ -33,7 +33,7 @@ for (const component of componentPages) {
   test(`${component} a11y`, async ({ page }) => {
     await page.goto(`/component-library/${component}.html`);
     const results = await new AxeBuilder({ page }).analyze();
-    expect(results.violations).toEqual([]);
+    expect(results.violations).toHaveLength(0);
   });
 }
 
@@ -45,7 +45,7 @@ for (const example of examplePages) {
       // example iframes do not have a heading structure
       .disableRules(["page-has-heading-one"])
       .analyze();
-    expect(results.violations).toEqual([]);
+    expect(results.violations).toHaveLength(0);
   });
 
   test(`${name} snapshot`, async ({ page }) => {

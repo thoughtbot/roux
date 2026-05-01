@@ -20,11 +20,11 @@ Save the pagination state in the URL so users can bookmark or share links to spe
 
 ### Simple nav
 
-::preview{file="pagination/simple.html" title="Simple nav" id="example_simple"}::
+::preview{file="pagination/simple.html" id="example_simple"}::
 
 ### Nav with page gaps and metadata
 
-::preview{file="pagination/fancy.html" title="Nav with page gaps and metadata" id="example_fancy"}::
+::preview{file="pagination/fancy.html" id="example_fancy"}::
 
 ### Pagy Support
 
@@ -32,12 +32,12 @@ Roux includes styles for the popular [Pagy Ruby gem](https://github.com/ddnexus/
 
 #### Pagy series nav
 
-::preview{file="pagination/pagy-series.html" title="Pagy series nav" id="example_pagy"}::
+::preview{file="pagination/pagy-series.html" id="example_pagy"}::
 
 #### Pagy series nav with limited slots
 
-::preview{file="pagination/pagy-series-limited.html" title="Pagy series nav with limited slots" id="example_pagy_limited"}::
+::preview{file="pagination/pagy-series-limited.html" id="example_pagy_limited"}::
 
 #### Pagy input nav
 
-::preview{file="pagination/pagy-input.html" title="Pagy input nav" id="example_pagy_input"}::
+::preview{file="pagination/pagy-input.html" id="example_pagy_input"}::

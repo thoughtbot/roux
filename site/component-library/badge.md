@@ -14,4 +14,4 @@ Badge text is often atomic and text wrapping to a new line is not ideal. Test yo
 
 ### Various Badges
 
-::preview{file="badges/basic.html" title="Various Badges" id=example_basic}::
+::preview{file="badges/basic.html" id=example_basic}::

@@ -22,4 +22,4 @@ Since most searches are freeform, autocomplete, autocorrect, and spellcheck shou
 
 This example includes a basic search form with a label, input, and submit button. Since the button contains both an icon and text, the icon is hidden from assistive technology using `aria-hidden="true"` so that it is not announced.
 
-::preview{file="search/basic.html" title="Basic Search" id="example_basic"}::
+::preview{file="search/basic.html" id="example_basic"}::

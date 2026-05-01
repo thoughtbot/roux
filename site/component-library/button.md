@@ -24,4 +24,4 @@ If using a disabled state:
 
 ### Various Button Types
 
-::preview{file="buttons/basic.html" title="Buttons Example" id="example_buttons"}::
+::preview{file="buttons/basic.html" id="example_buttons"}::

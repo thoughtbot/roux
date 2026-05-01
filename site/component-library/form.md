@@ -29,4 +29,4 @@ In Roux we default to wrapping inputs with labels. If you prefer to keep labels 
 
 ### Basic Form
 
-::preview{file="forms/basic.html" title="Basic Form" id="example_form" tall="true"}::
+::preview{file="forms/basic.html" id="example_form" tall="true"}::
