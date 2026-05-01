@@ -6,7 +6,9 @@ permalink: /component-library/search.html
 
 ## Considerations
 
-The search component is wrapped in a `<search>` element which defines a `search` landmark for assistive tech. Search inputs should also be wrapped in a `<form>`, even if submitted via JavaScript. Give the `<search>` commponent a label with `aria-label` or `aria-labelledby` to distinguish different types of search components (like full-site search vs filtering a table).
+The search component is wrapped in a `<search>` element which defines a `search` landmark for assistive tech. Search inputs should also be wrapped in a `<form>`, even if submitted via JavaScript.
+
+Give the `<search>` commponent a label with `aria-label` or `aria-labelledby` to distinguish different types of search components (like full-site search vs filtering a table). If the same search appears in multiple spots on the page (like the header and footer) it's OK to repeat the label. Your label shouldn't include the word "search" because it will often be announced redundantly by assistive tech ("Site search search").
 
 As tempting as it may be, don't omit the button or label, and don't use placeholder text as the label. It's important to provide clear labels and controls for all users, but especially for assistive tech users.
 

@@ -7,5 +7,8 @@ export default defineConfig({
     "no-raw-characters": "off",
     // Prettier currently uses self-closing tags (<img />) instead of void elements (<img>)
     "void-style": "off",
+    // html-validate package doesn't know that search has a landmark role where aria-label is ok
+    "aria-label-misuse": ["error", { elements: { exclude: ["search"] } }],
+    "no-inline-style": "warn",
   },
 });

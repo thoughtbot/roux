@@ -1,7 +1,7 @@
 <form>
   <fieldset>
     <legend>Personal information</legend>
-    <label for="first-name">
+    <label>
       <span>First Name</span>
       <input
         id="first-name"
@@ -14,7 +14,7 @@
         autocomplete="given-name"
       />
     </label>
-    <label for="last-name">
+    <label>
       <span>Last Name</span>
       <input
         id="last-name"
@@ -27,7 +27,7 @@
         autocomplete="family-name"
       />
     </label>
-    <label for="email">
+    <label>
       <span>Your email</span>
       <input
         id="email"
@@ -40,7 +40,7 @@
         autocomplete="email"
       />
     </label>
-    <label for="birthday">
+    <label>
       <span>Your birthday</span>
       <input
         id="birthday"
@@ -53,43 +53,53 @@
   </fieldset>
   <fieldset class="fieldset-required">
     <legend>Do you like ice cream?</legend>
-    <label for="icecream-yes">
+    <label>
       <input id="icecream-yes" type="radio" value="Yes" name="icecream" />
       Yes
     </label>
-    <label for="icecream-no">
+    <label>
       <input id="icecream-no" type="radio" value="No" name="icecream" />
       No
     </label>
   </fieldset>
   <fieldset class="fieldset-required">
-    <legend>What kind of ice cream do you like?</legend>
-    <label for="vanilla">
-      <input id="vanilla" type="checkbox" value="Vanilla" name="flavor" />
+    <legend>What kinds of ice cream do you like?</legend>
+    <label>
+      <input id="vanilla" type="checkbox" value="Vanilla" name="flavors[]" />
       Vanilla
     </label>
-    <label for="chocolate">
-      <input id="chocolate" type="checkbox" value="Chocolate" name="flavor" />
+    <label>
+      <input
+        id="chocolate"
+        type="checkbox"
+        value="Chocolate"
+        name="flavors[]"
+      />
       Chocolate
     </label>
-    <label for="strawberry">
-      <input id="strawberry" type="checkbox" value="Strawberry" name="flavor" />
+    <label>
+      <input
+        id="strawberry"
+        type="checkbox"
+        value="Strawberry"
+        name="flavors[]"
+      />
       Strawberry
     </label>
-    <label for="nothing">
-      <input id="nothing" type="checkbox" value="nothing" name="flavor" />
+    <label>
+      <input id="nothing" type="checkbox" value="nothing" name="flavors[]" />
       Nothing (I don't like ice cream)
     </label>
   </fieldset>
-  <label for="terms">
+  <label>
     <input id="terms" type="checkbox" name="termsAgreement" />
     I accept the Terms of Service
   </label>
-  <label for="explain">
+  <label>
     <span>Explain your answers</span>
     <textarea id="explain" dir="auto" rows="5" name="explain"> </textarea>
   </label>
-  <label for="favorite-color">
+  <label>
     <span>Favorite color</span>
     <select id="favorite-color" name="favorite-color" required>
       <optgroup label="Primary colors">
@@ -104,9 +114,15 @@
       </optgroup>
     </select>
   </label>
-  <label for="myBrowser">
+  <label>
     <span>Your browser</span>
-    <input list="browsers" id="myBrowser" name="myBrowser" autocomplete="off" />
+    <input
+      list="browsers"
+      id="myBrowser"
+      name="myBrowser"
+      autocomplete="off"
+      type="text"
+    />
     <datalist id="browsers">
       <option value="Chrome"></option>
       <option value="Firefox"></option>
@@ -115,7 +131,7 @@
       <option value="Microsoft Edge"></option>
     </datalist>
   </label>
-  <label for="input-range">
+  <label>
     <span>Range Input</span>
     <input id="input-range" name="range" type="range" />
   </label>
