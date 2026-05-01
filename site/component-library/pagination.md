@@ -38,6 +38,3 @@ Roux includes styles for the popular [Pagy Ruby gem](https://github.com/ddnexus/
 
 ::preview{file="pagination/pagy-series-limited.html" id="example_pagy_limited"}::
 
-#### Pagy input nav
-
-::preview{file="pagination/pagy-input.html" id="example_pagy_input"}::
