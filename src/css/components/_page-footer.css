@@ -4,7 +4,6 @@
     "copyright"
     "nav";
   grid-template-columns: 1fr;
-  padding: var(--space--base);
   align-items: center;
   gap: var(--space--small) var(--space--medium);
 }
@@ -22,6 +21,5 @@
   .page-footer {
     grid-template-areas: "copyright nav";
     grid-template-columns: 1fr auto;
-    padding: var(--space--base) var(--space--x-large);
   }
 }

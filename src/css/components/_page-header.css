@@ -5,7 +5,6 @@
     "nav"
     "actions";
   grid-template-columns: 1fr;
-  padding: var(--space--base);
   align-items: center;
   gap: var(--space--small) var(--space--medium);
 }
@@ -34,7 +33,6 @@
 
 @media (min-width: 600px) {
   .page-header {
-    padding: var(--space--base) var(--space--x-large);
     grid-template-areas:
       "logo actions"
       "nav .";
