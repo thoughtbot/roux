@@ -37,4 +37,3 @@ Roux includes styles for the popular [Pagy Ruby gem](https://github.com/ddnexus/
 #### Pagy series nav with limited slots
 
 ::preview{file="pagination/pagy-series-limited.html" id="example_pagy_limited"}::
-

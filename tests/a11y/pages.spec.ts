@@ -66,7 +66,9 @@ test.describe.skip("dark mode snapshots", () => {
     test(`${name} - component example snapshot`, async ({ page }) => {
       const response = await page.goto(`/examples/${example}`);
       expect(response?.status()).toBe(200);
-      await expect(page).toHaveScreenshot(`dark-${name}.png`, { fullPage: true });
+      await expect(page).toHaveScreenshot(`dark-${name}.png`, {
+        fullPage: true,
+      });
     });
   }
 });
