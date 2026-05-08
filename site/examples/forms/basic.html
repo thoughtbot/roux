@@ -3,6 +3,7 @@ title: Basic Form
 ---
 
 <form>
+  <small>* asterisks denote required fields</small>
   <fieldset>
     <legend>Personal information</legend>
     <label>
@@ -58,7 +59,13 @@ title: Basic Form
   <fieldset class="fieldset-required">
     <legend>Do you like ice cream?</legend>
     <label>
-      <input id="icecream-yes" type="radio" value="Yes" name="icecream" />
+      <input
+        id="icecream-yes"
+        type="radio"
+        value="Yes"
+        name="icecream"
+        required
+      />
       Yes
     </label>
     <label>
@@ -101,7 +108,7 @@ title: Basic Form
   </label>
   <label>
     <span>Explain your answers</span>
-    <textarea id="explain" dir="auto" rows="5" name="explain"> </textarea>
+    <textarea id="explain" dir="auto" rows="5" name="explain"></textarea>
   </label>
   <label>
     <span>Favorite color</span>
