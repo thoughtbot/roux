@@ -78,18 +78,6 @@ export default function (eleventyConfig) {
     },
   };
 
-  // Set pathPrefix in production for GitHub Pages
-  //
-  // GitHub Pages currently serves this site at
-  // https://thoughtbot.github.io/roux/,
-  // but this site is built expecting to be at the root `/`.
-  // Therefore, we need to set `pathPrefix` to `/roux/` in production
-  // to serve the site correctly. If we decide to use a custom domain,
-  // we can remove this.
-  if (process.env.SITE_ENV === "production") {
-    config.pathPrefix = "/roux/";
-  }
-
   // support .md and .njk template engines in same files
   config.markdownTemplateEngine = "njk";
   config.htmlTemplateEngine = "njk";

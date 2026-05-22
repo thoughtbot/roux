@@ -1,7 +1,7 @@
 # Robots.txt for Roux Components
-# https://thoughtbot.github.io/roux/
+# https://roux.thoughtbot.dev
 
 User-agent: *
 Allow: /
 
-Sitemap: https://thoughtbot.github.io/roux/sitemap.xml
+Sitemap: https://roux.thoughtbot.dev/sitemap.xml

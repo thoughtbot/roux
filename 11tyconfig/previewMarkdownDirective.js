@@ -40,7 +40,7 @@ export default function previewMarkdownDirective(md) {
 
     try {
       const previewId = id || `preview_${directiveStartLine}`;
-      const pathPrefix = process.env.SITE_ENV === "production" ? "/roux" : "";
+      const pathPrefix = ""; // use pathPrefix if the content is served from a subdirectory
       const isTall = tall === "true";
 
       const token = state.push("html_block", "", 0);

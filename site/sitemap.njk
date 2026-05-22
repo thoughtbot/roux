@@ -7,7 +7,7 @@ eleventyExcludeFromCollections: true
   {%- for page in collections.all %}
     {%- if not page.data.eleventyExcludeFromCollections %}
       <url>
-        <loc>https://thoughtbot.github.io/roux{{ page.url }}</loc>
+        <loc>https://roux.thoughtbot.dev{{ page.url }}</loc>
         {%- if page.date %}
           <lastmod>{{ page.date.toISOString() }}</lastmod>
         {%- endif %}
