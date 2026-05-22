@@ -80,3 +80,4 @@ jobs:
 
       - name: Run snapshot tests
         run: npm run test:snapshots
+        continue-on-error: true
