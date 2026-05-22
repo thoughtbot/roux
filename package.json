@@ -16,9 +16,10 @@
     "build-site": "npx @11ty/eleventy",
     "deploy": "npm run clean && SITE_ENV=production npm run build-site",
     "format": "prettier --write .",
-    "test:a11y": "playwright test",
+    "test:a11y": "playwright test tests/a11y/pages.spec.ts",
+    "test:snapshots": "playwright test tests/a11y/snapshots.spec.ts",
     "test:html": "npm run build-site && html-validate '_site/**/*.html'",
-    "update-snapshots": "npx playwright test --update-snapshots -g \"snapshot\""
+    "update-snapshots": "npx playwright test tests/a11y/snapshots.spec.ts --update-snapshots"
   },
   "repository": {
     "type": "git",

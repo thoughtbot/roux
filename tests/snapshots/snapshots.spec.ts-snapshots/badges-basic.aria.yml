@@ -1,0 +1,15 @@
+- main "Various Badges":
+  - text: /Archived \d+ notifications/
+  - link /\d+ notifications/:
+    - /url: "#"
+  - text: ""
+  - link "New!":
+    - /url: "#"
+  - img "Tag"
+  - text: ""
+  - img "Tag"
+  - text: "Sleeve-length: long"
+  - img "Tag"
+  - text: "Material: cotton"
+  - img "Tag"
+  - text: ""

@@ -1,27 +1,6 @@
-import { readdirSync } from "fs";
-import { dirname, join, relative } from "path";
-import { fileURLToPath } from "url";
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
-
-const rootDir = join(dirname(fileURLToPath(import.meta.url)), "../..");
-
-const componentPages = readdirSync(join(rootDir, "site/component-library"))
-  .filter((f) => f.endsWith(".md"))
-  .map((f) => f.replace(".md", ""))
-  .sort();
-
-function findHtmlFiles(dir: string, base: string): string[] {
-  return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
-    const fullPath = join(dir, entry.name);
-    if (entry.isDirectory()) return findHtmlFiles(fullPath, base);
-    if (entry.name.endsWith(".html")) return [relative(base, fullPath)];
-    return [];
-  });
-}
-
-const examplesDir = join(rootDir, "site/examples");
-const examplePages = findHtmlFiles(examplesDir, examplesDir).sort();
+import { componentPages, examplePages } from "./pages.js";
 
 test("homepage a11y", async ({ page }) => {
   const response = await page.goto("/");
@@ -51,32 +30,4 @@ for (const example of examplePages) {
     expect(results.violations).toHaveLength(0);
   });
 
-  test(`${name} - component example snapshot`, async ({ page }) => {
-    const response = await page.goto(`/examples/${example}`);
-    expect(response?.status()).toBe(200);
-    await expect(page).toHaveScreenshot(`${name}.png`, { fullPage: true });
-  });
-
-  test(`${name} - component example aria snapshot`, async ({ page }) => {
-    const response = await page.goto(`/examples/${example}`);
-    expect(response?.status()).toBe(200);
-    await expect(page.locator("body")).toMatchAriaSnapshot({
-      name: `${name}.aria.yml`,
-    });
-  });
 }
-
-test.describe.skip("dark mode snapshots", () => {
-  test.use({ colorScheme: "dark" });
-
-  for (const example of examplePages) {
-    const name = example.replace("/", "-").replace(".html", "");
-    test(`${name} - component example snapshot`, async ({ page }) => {
-      const response = await page.goto(`/examples/${example}`);
-      expect(response?.status()).toBe(200);
-      await expect(page).toHaveScreenshot(`dark-${name}.png`, {
-        fullPage: true,
-      });
-    });
-  }
-});

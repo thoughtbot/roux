@@ -1,0 +1,12 @@
+- main "Simple nav":
+  - navigation "Simple nav - Pages":
+    - link "1":
+      - /url: "#"
+    - link "2":
+      - /url: "#"
+    - link "3":
+      - /url: "#"
+    - link "4":
+      - /url: "#"
+    - link "Next →":
+      - /url: "#"
