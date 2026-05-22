@@ -72,6 +72,12 @@ After installation:
 
 That's it! You now have an organized CSS foundation to build on.
 
+## Using Roux with Rails
+
+Rails 8 uses Propshaft by default, which does not support CSS `@import` directives. Even in setups that do support it, the raw `@import` approach tells the browser to load each file as a separate network request, which hurts performance. A CSS bundler compiles all your imports into a single file, solving both problems.
+
+You're free to use any bundler you prefer, but if you want a "just set this up for me" path, follow our [Rails setup guide] using cssbundling-rails and PostCSS.
+
 ## How it works
 
 Everything is imported into `app.css`, which you'll compile into one CSS file (or import directly).
@@ -564,6 +570,7 @@ We are [available for hire][hire].
 <!-- END /templates/footer.md -->
 
 [bitters]: https://github.com/thoughtbot/bitters
+[Rails setup guide]: guides/rails-setup.md
 [codepen]: https://codepen.io/enatario/pen/LEppZLZ
 [custom properties]: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
 [lightning CSS]: https://lightningcss.dev/

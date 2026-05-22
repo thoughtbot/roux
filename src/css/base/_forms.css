@@ -56,7 +56,6 @@ form {
   [type="datetime-local"],
   [type="email"],
   [type="month"],
-  [type="month"],
   [type="number"],
   [type="password"],
   [type="search"],
@@ -71,7 +70,6 @@ form {
   color: var(--color--text);
   padding-block: var(--space--small);
   padding-inline: var(--space--small);
-  width: 100%;
 
   &:focus-visible {
     outline: var(--border-width--thick) solid var(--color--focus);
