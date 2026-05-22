@@ -5,7 +5,7 @@ layout: layouts/base.njk
 
 # Roux Components
 
-Extend [Roux CSS](https://github.com/thoughtbot/roux) with ready-to-use components to build your project.
+## Extend [Roux CSS](https://github.com/thoughtbot/roux) with ready-to-use components to build your project.
 
 Much like Roux CSS, these components are meant as a baseline for you to build on top of, so feel free to adjust as needed. They're flexible and extendable, but opinionated about what matters.
 

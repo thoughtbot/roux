@@ -10,11 +10,6 @@ Using native `<details>` ensures built-in keyboard accessibility and allows scre
 
 This approach leverages semantic HTML, keeps interactions lightweight, and ensures content remains readable even if styles or scripts fail.
 
-**Variations:**
-
-- Basic Disclosure
-- Auto-collapsing disclosures that only open at a time. You can achieve this by giving every `<details>` element you want to group with a `name` attribute of the same value.
-
 ## Examples
 
 ### Single Disclosure
@@ -23,6 +18,6 @@ This approach leverages semantic HTML, keeps interactions lightweight, and ensur
 
 ### FAQ-style Disclosures
 
-In this example only one disclosure can be open at a time.
+In this example only one disclosure can be open at a time. Other disclosures are auto-collapsed. You can achieve this by giving every grouped `<details>` element a `name` attribute with the same value.
 
 ::preview{file="disclosures/faq.html" id="example_faq"}::
