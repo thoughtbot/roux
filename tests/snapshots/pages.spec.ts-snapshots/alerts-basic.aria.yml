@@ -1,0 +1,7 @@
+- main "Info, Success, and Error Alerts":
+  - status:
+    - paragraph: We’ve been trying to reach you about your car’s extended warranty.
+  - status:
+    - paragraph: We’ve been trying to reach you about your car’s extended warranty.
+  - alert:
+    - paragraph: We’ve been trying to reach you about your car’s extended warranty.

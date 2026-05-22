@@ -1,0 +1,16 @@
+- main "Page Footer with Navigation":
+  - paragraph: /© \d+ thoughtbot, inc\./
+  - navigation "Footer menu":
+    - list:
+      - listitem:
+        - link "Link 1":
+          - /url: "#"
+      - listitem:
+        - link "Link 2":
+          - /url: "#"
+      - listitem:
+        - link "Link 3":
+          - /url: "#"
+      - listitem:
+        - link "Link 4":
+          - /url: "#"

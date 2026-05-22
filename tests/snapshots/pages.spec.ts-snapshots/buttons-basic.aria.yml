@@ -1,0 +1,8 @@
+- main "Buttons Example":
+  - button "A primary button"
+  - button "A secondary button"
+  - button "A disabled primary button" [disabled]
+  - link "A primary button link":
+    - /url: "#"
+  - link "A secondary button link":
+    - /url: "#"

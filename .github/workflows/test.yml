@@ -49,7 +49,9 @@ jobs:
         with:
           key: cache/${{github.repository}}/${{github.ref}}
           restore-keys: cache/${{github.repository}}/refs/heads/main
-          path: tests/snapshots/**
+          path: |
+            tests/snapshots/**/*.png
+            tests/snapshots/**/*.aria.yml
 
       - name: Initialize snapshots
         if: ${{steps.cache.outputs.cache-hit != 'true'}}

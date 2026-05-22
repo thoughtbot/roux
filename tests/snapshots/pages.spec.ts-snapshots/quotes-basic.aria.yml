@@ -1,0 +1,6 @@
+- main "Quote with Citation":
+  - figure "— Steve Polito, Senior Developer at thoughtbot":
+    - blockquote:
+      - paragraph: Code less, question more. Some of the most experienced developers I know ask a lot of questions before begining to work on a feature. This often leads to a simpler implementation, or sometimes, no implementation at all since the questioning revealed more research was needed.
+      - paragraph: I find that this “question first” mindset is helpful in other areas of consulting, and life as well. It provides an opportunity for others to share their ideas and feel heard.
+    - text: ""
