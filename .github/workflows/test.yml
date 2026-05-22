@@ -29,12 +29,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: "18"
+          node-version: "24"
           cache: "npm"
 
       - name: Install dependencies
@@ -42,6 +42,18 @@ jobs:
 
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
+
+      - name: Set up snapshot cache
+        id: cache
+        uses: actions/cache@v4
+        with:
+          key: cache/${{github.repository}}/${{github.ref}}
+          restore-keys: cache/${{github.repository}}/refs/heads/main
+          path: tests/snapshots/**
+
+      - name: Initialize snapshots
+        if: ${{steps.cache.outputs.cache-hit != 'true'}}
+        run: npx playwright test --update-snapshots
 
       - name: Run a11y and snapshot tests
         run: npm run test:a11y
