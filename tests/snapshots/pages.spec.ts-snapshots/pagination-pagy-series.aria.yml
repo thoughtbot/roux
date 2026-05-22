@@ -1,20 +1,20 @@
 - main "Pagy series nav":
-  - navigation "Pagy series nav - Pages":
-    - link "Previous":
-      - /url: /path?example=123&page=2
-      - text: ""
-    - link "1":
-      - /url: /path?example=123&page=1
-    - link "2":
-      - /url: /path?example=123&page=2
-    - link "3" [disabled]
-    - link "4":
-      - /url: /path?example=123&page=4
-    - link "5":
-      - /url: /path?example=123&page=5
-    - separator [disabled]: …
-    - link /\d+/:
-      - /url: /path?example=123&page=50
-    - link "Next":
-      - /url: /path?example=123&page=4
-      - text: ""
+    - navigation "Pagy series nav - Pages":
+        - link "Previous":
+            - /url: /path?example=123&page=2
+            - text: ""
+        - link "1":
+            - /url: /path?example=123&page=1
+        - link "2":
+            - /url: /path?example=123&page=2
+        - link "3" [disabled]
+        - link "4":
+            - /url: /path?example=123&page=4
+        - link "5":
+            - /url: /path?example=123&page=5
+        - separator [disabled]: …
+        - link /\d+/:
+            - /url: /path?example=123&page=50
+        - link "Next":
+            - /url: /path?example=123&page=4
+            - text: ""

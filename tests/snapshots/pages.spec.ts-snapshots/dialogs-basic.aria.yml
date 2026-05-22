@@ -1,2 +1,2 @@
 - main "Basic Modal":
-  - button "Open a modal"
+    - button "Open a modal"

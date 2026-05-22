@@ -29,5 +29,4 @@ for (const example of examplePages) {
       .analyze();
     expect(results.violations).toHaveLength(0);
   });
-
 }

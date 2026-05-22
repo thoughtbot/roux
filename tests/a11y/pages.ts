@@ -16,7 +16,7 @@ function findHtmlFiles(dir: string, base: string): string[] {
 const examplesDir = join(rootDir, "site/examples");
 
 export const componentPages = readdirSync(
-  join(rootDir, "site/component-library")
+  join(rootDir, "site/component-library"),
 )
   .filter((f) => f.endsWith(".md"))
   .map((f) => f.replace(".md", ""))

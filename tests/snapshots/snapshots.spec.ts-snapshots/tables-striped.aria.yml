@@ -1,21 +1,21 @@
 - main "Striped Table":
-  - table "Monthly spending":
-    - caption: Monthly spending
-    - rowgroup:
-      - row "Month Savings":
-        - columnheader "Month"
-        - columnheader "Savings"
-    - rowgroup:
-      - row /January \$\d+/:
-        - cell "January"
-        - cell /\$\d+/
-      - row /February \$\d+/:
-        - cell "February"
-        - cell /\$\d+/
-      - row /March \$\d+/:
-        - cell "March"
-        - cell /\$\d+/
-    - rowgroup:
-      - row /Sum \$\d+/:
-        - cell "Sum"
-        - cell /\$\d+/
+    - table "Monthly spending":
+        - caption: Monthly spending
+        - rowgroup:
+            - row "Month Savings":
+                - columnheader "Month"
+                - columnheader "Savings"
+        - rowgroup:
+            - row /January \$\d+/:
+                - cell "January"
+                - cell /\$\d+/
+            - row /February \$\d+/:
+                - cell "February"
+                - cell /\$\d+/
+            - row /March \$\d+/:
+                - cell "March"
+                - cell /\$\d+/
+        - rowgroup:
+            - row /Sum \$\d+/:
+                - cell "Sum"
+                - cell /\$\d+/
