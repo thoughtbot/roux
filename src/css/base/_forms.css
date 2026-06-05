@@ -173,7 +173,9 @@ textarea {
 }
 
 label:has(input[type="range"]) {
-  gap: var(--space--base);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space--medium);
 }
 
 [type="range"]::-webkit-slider-thumb {
