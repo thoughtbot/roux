@@ -5,6 +5,7 @@ on:
 
 jobs:
   html-validate:
+    timeout-minutes: 10
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -26,6 +27,7 @@ jobs:
         run: npm run test:html
 
   a11y:
+    timeout-minutes: 10
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -47,6 +49,7 @@ jobs:
         run: npm run test:a11y
 
   snapshots:
+    timeout-minutes: 10
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

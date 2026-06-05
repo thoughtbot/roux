@@ -34,7 +34,7 @@
     "@11ty/eleventy": "^3.1.2",
     "@11tyrocks/eleventy-plugin-lightningcss": "^1.5.0",
     "@axe-core/playwright": "^4.10.0",
-    "@playwright/test": "^1.50.0",
+    "@playwright/test": "^1.6.0",
     "gray-matter": "^4.0.3",
     "html-validate": "^10.13.1",
     "lightningcss-cli": "^1.30.1",
