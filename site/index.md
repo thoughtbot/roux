@@ -3,79 +3,21 @@ permalink: /
 layout: layouts/base.njk
 ---
 
-# Roux Components
+# Roux
 
-## Extend [Roux CSS](https://github.com/thoughtbot/roux) with ready-to-use components to build your project.
+## A boilerplate of native CSS architecture, styling, and HTML to kickstart your project.
 
-Much like Roux CSS, these components are meant as a baseline for you to build on top of, so feel free to adjust as needed. They're flexible and extendable, but opinionated about what matters.
+Roux gives you an organized foundation of CSS files, variables, base styles, and simple HTML components so you can start building immediately instead of setting everything up from scratch. It's **a structured starting point for writing your own CSS**—not a framework like Tailwind. Think of it like a GitHub template repo, but for your stylesheets.
 
-All components aim to be accessible and semantic by default.
+You can cherry-pick what you need, use it for inspiration, or adopt the whole system—whatever works for your project. It's flexible and extendable, but opinionated about what matters. All HTML components aim to be accessible and semantic by default.
 
-Find the code in [the Roux repo on GitHub](https://github.com/thoughtbot/roux).
+You may have used [Bitters] and [Refills] in the past—move on over to a fully native setup with Roux.
+
+Find the code in [the Roux repo on GitHub][github].
 
 ## Getting Started
 
-To use Roux Components in your project:
-
-1. **Copy the component CSS** from the Roux GitHub repo
-2. **Copy the component HTML** from the examples on this site
-3. **Customize both** to make them your own
-
-### Example: Using the Page Footer Component
-
-Here's how you might use the [Page Footer component](/component-library/page-footer.html):
-
-#### Step 1: Copy the component CSS
-
-Copy the styles from [`src/css/components/_page-footer.css`](https://github.com/thoughtbot/roux/blob/main/src/css/components/_page-footer.css) into your codebase. Don't forget to import them into your `app.css`:
-
-```diff
-/* app.css */
-
-+ @import "components/_page-footer.css";
-```
-
-#### Step 2: Copy the component HTML
-
-Copy the [page footer example](/component-library/page-footer.html#example_nav) into your site's HTML.
-
-#### Step 3: Customize it!
-
-Maybe you don't need a copyright on your site:
-
-```diff
-/* _page-footer.css */
-
-  .page-footer {
-    display: grid;
-    grid-template-areas:
--   "copyright"
-      "nav";
-    grid-template-columns: 1fr;
-    …
-  }
-```
-
-```diff
-  <!-- footer.html.erb -->
-
-  <footer class="page-footer">
--   <p class="page-copyright">&copy; 2026 thoughtbot, inc.</p>
-
-    <nav aria-label="Footer menu" class="footer-nav">
-      <ul class="page-nav">
-        <li>
--         <a href="#">Link 1</a>
-+         <a href="/about">About</a>
-        </li>
-        <li>
--         <a href="#">Link 2</a>
-+         <a href="/contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
-  </footer>
-```
+Checkout the [GitHub README][github] for all the details on how to use Roux. Then come back here to grab the HTML for components.
 
 ## Components
 
@@ -105,10 +47,23 @@ Open source templates are Copyright (c) thoughtbot, inc. It contains free softwa
 
 Everyone interacting in Roux's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/thoughtbot/roux/blob/main/CODE_OF_CONDUCT.md).
 
+<!-- START /templates/footer.md -->
+
 ## About thoughtbot
 
 [![thoughtbot](https://thoughtbot.com/thoughtbot-logo-for-readmes.svg)](https://thoughtbot.com)
 
 This repo is maintained and funded by thoughtbot, inc. The names and logos for thoughtbot are trademarks of thoughtbot, inc.
 
-We love open source software! See [our other projects.](https://thoughtbot.com/community?utm_source=github) We are [available for hire.](https://thoughtbot.com/hire-us?utm_source=github)
+We love open source software!
+See [our other projects][community].
+We are [available for hire][hire].
+
+[community]: https://thoughtbot.com/community?utm_source=github
+[hire]: https://thoughtbot.com/hire-us?utm_source=github
+
+<!-- END /templates/footer.md -->
+
+[github]: https://github.com/thoughtbot/roux
+[bitters]: https://github.com/thoughtbot/bitters
+[refills]: https://github.com/thoughtbot/refills
