@@ -49,6 +49,7 @@ This software or document includes material copied from or derived from https://
 [role="tabpanel"] {
   min-height: 10em;
   width: 100%;
+  box-sizing: border-box;
   overflow: auto;
   padding: var(--tabpanel-padding);
   border-radius: 0 var(--tabpanel-radius) var(--tabpanel-radius);
