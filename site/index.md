@@ -9,7 +9,7 @@ layout: layouts/base.njk
 
 Much like Roux CSS, these components are meant as a baseline for you to build on top of, so feel free to adjust as needed. They're flexible and extendable, but opinionated about what matters.
 
-All components are accessible and semantic by default.
+All components aim to be accessible and semantic by default.
 
 Find the code in [the Roux repo on GitHub](https://github.com/thoughtbot/roux).
 
