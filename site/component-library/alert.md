@@ -6,12 +6,12 @@ permalink: /component-library/alert.html
 
 ## Considerations
 
-We use a simple `<div class="alert">` structure with modifier classes (e.g., `alert--success`, `alert--danger`) so visual styling is predictable and easy to extend. Each alert includes an appropriate ARIA live-region role:
+We use a simple `<div class="alert">` structure with modifier classes (e.g., `alert--success`, `alert--danger`) so visual styling is predictable and easy to extend. Each alert includes an appropriate ARIA role:
 
 - `role="status"` for informational or success messages that should be announced [politely](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/status_role).
 - `role="alert"` for urgent or error messages that require immediate attention and announced [assertively](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role).
 
-Using semantic roles instead of JavaScript-driven announcements ensures reliability across assistive technologies, keeps the component lightweight, and aligns with accessibility best practices.
+These roles inherently turn their content into a [live region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions), so that changes are announced by assistive tech.
 
 ## Examples
 
