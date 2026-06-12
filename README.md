@@ -1,4 +1,4 @@
-# Roux
+# Roux CSS & Components
 
 A boilerplate of pre-defined native CSS architecture, styling, and HTML to kickstart your project.
 
@@ -8,9 +8,9 @@ A boilerplate of pre-defined native CSS architecture, styling, and HTML to kicks
 
 ## What is Roux?
 
-Roux gives you an organized foundation of CSS files, variables, base styles, and simple HTML components so you can start building immediately instead of setting everything up from scratch. It's **a structured starting point for writing your own CSS**—not a framework like Tailwind. Think of it like a GitHub template repo, but for your stylesheets.
+Roux gives you an organized foundation of CSS files, variables, base styles, and simple HTML components so you can start building immediately instead of setting everything up from scratch. It's **a structured starting point for writing your own CSS and HTML**—not a framework like Tailwind or Material UI. Think of it like a GitHub template repo, but for your stylesheets and basic component markup.
 
-You can cherry-pick what you need, use it for inspiration, or adopt the whole system—whatever works for your project. It's flexible and extendable, but opinionated about what matters. All HTML components are accessible and semantic by default.
+You can cherry-pick what you need, use it for inspiration, or adopt the whole system—whatever works for your project. It's flexible and extendable, but opinionated about what matters. All HTML components aim to be accessible and semantic by default.
 
 You may have used [Bitters] and [Refills] in the past—move on over to a fully native setup with Roux.
 
@@ -378,7 +378,7 @@ This is where you'd put any component-based CSS files. It starts with some basel
 
 ```text
 components/
-├── _alert_.css
+├── _alert.css
 ├── _badge.css
 ├── _loading-indicator.css
 ├── _page-footer.css

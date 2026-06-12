@@ -3,11 +3,11 @@ permalink: /
 layout: layouts/base.njk
 ---
 
-# Roux
+# Roux CSS & Components
 
 ## A boilerplate of native CSS architecture, styling, and HTML to kickstart your project.
 
-Roux gives you an organized foundation of CSS files, variables, base styles, and simple HTML components so you can start building immediately instead of setting everything up from scratch. It's **a structured starting point for writing your own CSS**—not a framework like Tailwind. Think of it like a GitHub template repo, but for your stylesheets.
+Roux gives you an organized foundation of CSS files, variables, base styles, and simple HTML components so you can start building immediately instead of setting everything up from scratch. It's **a structured starting point for writing your own CSS and HTML**—not a framework like Tailwind or Material UI. Think of it like a GitHub template repo, but for your stylesheets and basic component markup.
 
 You can cherry-pick what you need, use it for inspiration, or adopt the whole system—whatever works for your project. It's flexible and extendable, but opinionated about what matters. All HTML components aim to be accessible and semantic by default.
 
@@ -17,7 +17,7 @@ Find the code in [the Roux repo on GitHub][github].
 
 ## Getting Started
 
-Checkout the [GitHub README][github] for all the details on how to use Roux. Then come back here to grab the HTML for components.
+Check out the [GitHub README][github] for all the details on how to use Roux. Then come back here to grab the HTML for components.
 
 ## Components
 
