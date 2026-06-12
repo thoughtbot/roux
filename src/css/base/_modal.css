@@ -29,37 +29,41 @@ dialog.slide-in {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   margin-block-end: 0;
-  transform: translateY(100%);
-  transition:
-    calc(var(--transition-duration--base) * 2) var(--transition-timing--base)
-      transform,
-    display var(--transition-duration--base) var(--transition-timing--base)
-      allow-discrete,
-    overlay var(--transition-duration--base) var(--transition-timing--base)
-      allow-discrete;
+
+  @media (prefers-reduced-motion: no-preference) {
+    transform: translateY(100%);
+    transition:
+      calc(var(--transition-duration--base) * 2) var(--transition-timing--base)
+        transform,
+      display var(--transition-duration--base) var(--transition-timing--base)
+        allow-discrete,
+      overlay var(--transition-duration--base) var(--transition-timing--base)
+        allow-discrete;
+  }
 
   &::backdrop {
-    transition:
-      overlay var(--transition-duration--base) allow-discrete,
-      display var(--transition-duration--base) allow-discrete,
-      var(--transition-duration--base) background-color
-        var(--transition-timing--base);
+    @media (prefers-reduced-motion: no-preference) {
+      transition:
+        overlay var(--transition-duration--base) allow-discrete,
+        display var(--transition-duration--base) allow-discrete,
+        var(--transition-duration--base) background-color
+          var(--transition-timing--base);
+    }
   }
 
   &[open] {
     transform: translateY(0);
-    transition: calc(var(--transition-duration--base) * 2)
-      var(--transition-timing--base) transform;
 
-    @starting-style {
-      transform: translateY(100%);
+    @media (prefers-reduced-motion: no-preference) {
+      transition: calc(var(--transition-duration--base) * 2)
+        var(--transition-timing--base) transform;
 
-      &::backdrop {
-        background-color: transparent;
-      }
+      @starting-style {
+        transform: translateY(100%);
 
-      @media screen and (prefers-reduced-motion: reduce) {
-        transform: translateY(0);
+        &::backdrop {
+          background-color: transparent;
+        }
       }
     }
   }
