@@ -233,10 +233,9 @@ Roux uses a classname for a "button" style since it can be applied to both `butt
 <a href="#" class="button button--secondary"> A secondary button link </a>
 ```
 
-
 ### Forms
 
-Most form styling relies on how you structure the HTML. In Roux's styling, you should be nesting an input within a label. 
+Most form styling relies on how you structure the HTML. In Roux's styling, you should be nesting an input within a label.
 
 #### Example
 
@@ -245,11 +244,7 @@ Most form styling relies on how you structure the HTML. In Roux's styling, you s
 ```html
 <label for="email">
   <span>Your email</span>
-  <input
-    id="email"
-    type="email"
-    name="email"
-  />
+  <input id="email" type="email" name="email" />
 </label>
 ```
 
@@ -275,11 +270,7 @@ If you prefer to keep those elements separate, you can adjust the CSS in the for
 
 ```html
 <label for="email"> Your email </label>
-<input
-  id="email"
-  type="email"
-  name="email"
-/>
+<input id="email" type="email" name="email" />
 ```
 
 ```css
@@ -299,7 +290,6 @@ label + :where(
   gap: var(--space--x-small);
 }
 ```
-
 
 ## Other files explained
 
@@ -345,11 +335,9 @@ Default setup and some base styles for `dialog` elements. This includes some tra
 
 The `.slide-in` class can be added for a smooth slide-from-bottom transition when opening a modal (and a slide out on close). [See the docs site][docs site modals] for setup in HTML and Javascript.
 
-
 #### Example
 
 [View example modals on the docs site][docs site modals]
-
 
 ### Tables
 
@@ -360,7 +348,6 @@ Rounded border and striped row styling for tables. This also includes classes to
 #### Example
 
 [View example tables on the docs site][docs site tables]
-
 
 ### Typography
 
