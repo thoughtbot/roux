@@ -72,7 +72,7 @@ After installation:
 3. **Start building:** Add your component styles in `css/components/`.
 4. **Copy components:** Grab boilerplate component HTML from the [docs site]
 5. **Compile (optional):** Use your preferred CSS compiler to bundle everything into one file
-   - This project uses [lightning CSS] to minify and compile the CSS into one file. [There are lots of options for CSS compiliation](https://www.alwaystwisted.com/articles/UnSassing-my-CSS-CSS-imports), depending on your project setup and your own preferences. If you're using [Dart Sass](https://sass-lang.com/dart-sass/), you'll need to use `@use` instead of `@import` in your main `app.css` file (you'll also need to switch your file types from `css` to `scss`).
+   - This project uses [lightning CSS] to minify and compile the CSS into one file. [There are lots of options for CSS compilation](https://www.alwaystwisted.com/articles/UnSassing-my-CSS-CSS-imports), depending on your project setup and your own preferences. If you're using [Dart Sass](https://sass-lang.com/dart-sass/), you'll need to use `@use` instead of `@import` in your main `app.css` file (you'll also need to switch your file types from `css` to `scss`).
    - To compile in this repo, run `npm i` then `npm run build` (will output into a `dist` folder).
 
 That's it! You now have an organized CSS foundation to build on.
@@ -222,7 +222,7 @@ h3 {
 
 ### Buttons
 
-Roux uses a classname for a "button" style since it can be applied to both `button` elements and `a` elements that want to appear as a button. We've defined a few variants (primary and secondary) to work from. When applying it to an element, use both `button` and `button--{variant}`. [See the demo codepen][codepen] for structuring.
+Roux uses a classname for a "button" style since it can be applied to both `button` elements and `a` elements that want to appear as a button. We've defined a few variants (primary and secondary) to work from. When applying it to an element, use both `button` and `button--{variant}`.
 
 #### Example
 
@@ -425,7 +425,6 @@ We are [available for hire][hire].
 [bitters]: https://github.com/thoughtbot/bitters
 [refills]: https://github.com/thoughtbot/refills
 [Rails setup guide]: guides/rails-setup.md
-[codepen]: https://codepen.io/enatario/pen/LEppZLZ
 [custom properties]: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
 [lightning CSS]: https://lightningcss.dev/
 [normalize]: https://github.com/necolas/normalize.css
