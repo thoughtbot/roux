@@ -14,4 +14,6 @@ When loading content, use the `aria-busy="true"` attribute on the content's cont
 
 ### Spinning Loading Indicator
 
+In this example the SVG is hidden from assistive tech with `aria-hidden="true"` because the "loading" text is enough.
+
 ::preview{file="loading-indicator/basic.html" id="example_basic"}::
