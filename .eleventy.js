@@ -21,6 +21,11 @@ export default function (eleventyConfig) {
       });
   });
 
+  // === WATCH TARGETS ===
+  // watch core Roux CSS files for changes so that Eleventy rebuilds the site
+  // normally only files in the site/ directory are watched
+  eleventyConfig.addWatchTarget("./src/css/");
+
   // === PASSTHROUGH COPY ===
   // Copy site-specific assets to _site
   eleventyConfig.addPassthroughCopy("site/assets/js/");
