@@ -22,10 +22,8 @@ export default function (eleventyConfig) {
   });
 
   // === PASSTHROUGH COPY ===
-  // Copy the Roux framework styles to _site
-  eleventyConfig.addPassthroughCopy("src/css/");
   // Copy site-specific assets to _site
-  eleventyConfig.addPassthroughCopy("site/assets/");
+  eleventyConfig.addPassthroughCopy("site/assets/js/");
   // meta icons
   eleventyConfig.addPassthroughCopy("site/*.ico");
   eleventyConfig.addPassthroughCopy("site/*.svg");
@@ -33,34 +31,11 @@ export default function (eleventyConfig) {
   // metadata
   eleventyConfig.addPassthroughCopy("site/robots.txt");
 
-  // minify CSS with LightningCSS
-  // Process Roux framework CSS, site-specific CSS, and component preview CSS
-  eleventyConfig.addPlugin(lightningcssPlugin, [
-    {
-      src: "src/css/app.css",
-      lightningcssOptions: {
-        minify: true,
-        sourceMap: true,
-        targets: "defaults",
-      },
-    },
-    {
-      src: "site/assets/css/site.css",
-      lightningcssOptions: {
-        minify: true,
-        sourceMap: true,
-        targets: "defaults",
-      },
-    },
-    {
-      src: "site/assets/css/component-preview.css",
-      lightningcssOptions: {
-        minify: true,
-        sourceMap: true,
-        targets: "defaults",
-      },
-    },
-  ]);
+  // bundle and minify CSS with LightningCSS
+  // process CSS files in site/assets/css
+  eleventyConfig.addPlugin(lightningcssPlugin, {
+    sourceMap: true,
+  });
 
   // syntax highlighting for code blocks
   eleventyConfig.addPlugin(syntaxHighlight, { preAttributes: { tabindex: 0 } });
