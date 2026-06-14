@@ -21,6 +21,7 @@ summary {
   align-self: start;
   cursor: pointer;
   display: flex;
+  font-size: var(--font-size--section-title);
   font-weight: var(--font-weight--bold);
   gap: var(--space--x-small);
   list-style: none;
