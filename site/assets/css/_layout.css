@@ -1,0 +1,14 @@
+:root {
+  color-scheme: only light;
+}
+
+main,
+header,
+footer {
+  max-width: var(--container--base);
+}
+
+.github-stars {
+  height: 1.5rem;
+  width: auto;
+}

@@ -1,0 +1,16 @@
+- main "Basic Typography":
+    - heading "First-level heading" [level=1]
+    - heading "Second-level heading" [level=2]
+    - heading "Third-level heading" [level=3]
+    - heading "Fourth-level heading" [level=4]
+    - paragraph:
+        - text: A paragraph right here. Lorem ipsum dolor sit amet,
+        - strong: consectetur adipiscing elit.
+        - text: Sed lectus nunc,
+        - link "faucibus at tempus in, mattis eu tellus":
+            - /url: "#"
+            - text: ""
+            - emphasis: eu tellus
+        - text: . Quisque non neque vitae arcu aliquam scelerisque vitae id mauris. Suspendisse potenti.
+    - separator
+    - paragraph: Small text here that is legalese.

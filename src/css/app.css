@@ -12,14 +12,25 @@
 @import "base/_buttons.css" layer(base);
 @import "base/_disclosures.css" layer(base);
 @import "base/_forms.css" layer(base);
+@import "base/_layout.css" layer(base);
 @import "base/_lists.css" layer(base);
 @import "base/_media.css" layer(base);
+@import "base/_modal.css" layer(base);
 @import "base/_tables.css" layer(base);
 @import "base/_typography.css" layer(base);
 
 /* Components */
 /* Import components from the component folder here in ABC order */
 /* For example: @import "components/_card.css" layer(components); */
+@import "components/_alert.css" layer(components);
+@import "components/_badge.css" layer(components);
+@import "components/_loading-indicator.css" layer(components);
+@import "components/_page-footer.css" layer(components);
+@import "components/_page-header.css" layer(components);
+@import "components/_page-nav.css" layer(components);
+@import "components/_pagination.css" layer(components);
+@import "components/_search.css" layer(components);
 
 /* Utilities */
 @import "utilities/_hide-visually.css" layer(utilities);
+@import "utilities/_sizing.css" layer(utilities);

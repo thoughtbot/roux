@@ -1,0 +1,29 @@
+- main "Nav with page gaps and metadata":
+    - navigation "Nav with page gaps and metadata - Pages":
+        - list:
+            - listitem:
+                - link "Previous":
+                    - /url: "#"
+            - listitem:
+                - link "1":
+                    - /url: "#"
+            - listitem:
+                - separator: …
+            - listitem:
+                - link "7":
+                    - /url: "#"
+            - listitem:
+                - link "8":
+                    - /url: "#"
+            - listitem:
+                - link "9":
+                    - /url: "#"
+            - listitem:
+                - separator: …
+            - listitem:
+                - link /\d+/:
+                    - /url: "#"
+            - listitem:
+                - link "Next":
+                    - /url: "#"
+        - text: ""

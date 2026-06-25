@@ -1,0 +1,66 @@
+/* source: https://www.w3.org/WAI/ARIA/apg/patterns/tabs/examples/tabs-automatic/ */
+
+/* 
+This software or document includes material copied from or derived from https://www.w3.org/WAI/ARIA/apg/patterns/tabs/examples/tabs-automatic/. Copyright © 2025 World Wide Web Consortium. https://www.w3.org/copyright/software-license-2023/
+*/
+
+.component-example {
+  --tabpanel-padding: var(--space--x-small);
+  --tabpanel-border: var(--border--base);
+  --tabpanel-radius: var(--border-radius--small);
+  --tabpanel-background: var(--color--background-base);
+}
+
+[role="tablist"] {
+  min-width: 100%;
+  display: none;
+}
+
+[role="tablist"].tabs-automatic--active {
+  display: block;
+}
+
+[role="tab"],
+[role="tab"]:focus-visible,
+[role="tab"]:hover {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  top: var(--border-width--base);
+  margin: 0;
+  padding: var(--space--x-small) var(--space--small);
+  border: var(--tabpanel-border);
+  border-radius: var(--tabpanel-radius) var(--tabpanel-radius) 0 0;
+  background: hsl(from var(--tabpanel-background) h s calc(l - 10));
+  overflow: hidden;
+}
+
+[role="tab"][aria-selected="true"] {
+  background: var(--tabpanel-background);
+  border-bottom: var(--border-width--base) solid var(--tabpanel-background);
+}
+[role="tab"][aria-selected="true"]::before {
+  content: "◉";
+}
+[role="tab"][aria-selected="false"]::before {
+  content: "◎";
+}
+
+[role="tabpanel"] {
+  min-height: 10em;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+  padding: var(--tabpanel-padding);
+  border-radius: 0 var(--tabpanel-radius) var(--tabpanel-radius);
+  border: var(--tabpanel-border);
+  background: var(--tabpanel-background);
+}
+
+[role="tabpanel"] + [role="tabpanel"]:not(.tabs-automatic--active) {
+  margin-top: var(--space--small);
+}
+
+[role="tabpanel"].is-hidden {
+  display: none;
+}

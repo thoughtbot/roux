@@ -1,0 +1,40 @@
+- main "Overflow Scroll":
+    - table "Monthly spending with overflow container for smaller viewports":
+        - caption: Monthly spending with overflow container for smaller viewports
+        - rowgroup:
+            - row "Category Planned Actual Difference":
+                - columnheader "Category"
+                - columnheader "Planned"
+                - columnheader "Actual"
+                - columnheader "Difference"
+        - rowgroup:
+            - row /Rent\/Mortgage \$\d+,\d+ \$\d+,\d+ \$0/:
+                - cell "Rent/Mortgage"
+                - cell /\$\d+,\d+/
+                - cell /\$\d+,\d+/
+                - cell "$0"
+            - row /Utilities \$\d+ \$\d+ -\$\d+/:
+                - cell "Utilities"
+                - cell /\$\d+/
+                - cell /\$\d+/
+                - cell /-\$\d+/
+            - row /Groceries \$\d+ \$\d+ \+\$\d+/:
+                - cell "Groceries"
+                - cell /\$\d+/
+                - cell /\$\d+/
+                - cell /\+\$\d+/
+            - row /Transportation \$\d+ \$\d+ -\$\d+/:
+                - cell "Transportation"
+                - cell /\$\d+/
+                - cell /\$\d+/
+                - cell /-\$\d+/
+            - row /Entertainment \$\d+ \$\d+ \+\$\d+/:
+                - cell "Entertainment"
+                - cell /\$\d+/
+                - cell /\$\d+/
+                - cell /\+\$\d+/
+            - row /Miscellaneous \$\d+ \$\d+ -\$\d+/:
+                - cell "Miscellaneous"
+                - cell /\$\d+/
+                - cell /\$\d+/
+                - cell /-\$\d+/

@@ -1,0 +1,19 @@
+- main "Pagy series nav with limited slots":
+    - navigation "Pagy series nav with limited slots - Pages":
+        - list:
+            - listitem:
+                - link "Previous":
+                    - /url: /path?example=123&page=2
+                    - text: ""
+            - listitem:
+                - link "2":
+                    - /url: /path?example=123&page=2
+            - listitem:
+                - link "3" [disabled]
+            - listitem:
+                - link "4":
+                    - /url: /path?example=123&page=4
+            - listitem:
+                - link "Next":
+                    - /url: /path?example=123&page=4
+                    - text: ""

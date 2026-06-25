@@ -15,7 +15,8 @@ table {
   padding-inline: var(--space--small);
 }
 
-:where(tfoot) td, caption {
+:where(tfoot) td,
+caption {
   font-weight: var(--font-weight--bold);
   padding-block: var(--space--xx-small);
   padding-inline: var(--space--small);

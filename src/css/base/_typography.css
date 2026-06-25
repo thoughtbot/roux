@@ -11,13 +11,7 @@ body {
   line-height: var(--line-height--base);
 }
 
-:where(
-  h1,
-  h2,
-  h3,
-  h4,
-  strong
-) {
+:where(h1, h2, h3, h4, strong) {
   font-weight: var(--font-weight--bold);
 }
 
@@ -28,8 +22,9 @@ h1 {
 
 a {
   color: var(--color--link);
-  transition: var(--transition-duration--base) color var(--transition-timing--base);
-  
+  transition: var(--transition-duration--base) color
+    var(--transition-timing--base);
+
   &:hover {
     color: var(--color--link-hover);
   }
@@ -53,6 +48,21 @@ legend {
 hr {
   border: var(--border--light);
   width: 100%;
+}
+
+blockquote {
+  font-style: var(--font-style--italic);
+  display: block;
+  margin-block-start: var(--space--base);
+  margin-block-end: var(--space--base);
+  margin-inline-start: var(--space--large);
+  margin-inline-end: var(--space--large);
+}
+blockquote + figcaption {
+  margin-block-start: var(--space--base);
+  margin-block-end: var(--space--base);
+  margin-inline-start: var(--space--large);
+  margin-inline-end: var(--space--large);
 }
 
 table {

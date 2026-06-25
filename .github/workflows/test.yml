@@ -1,0 +1,86 @@
+name: Test
+
+on:
+  push:
+
+jobs:
+  html-validate:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build-site
+
+      - name: Validate HTML
+        run: npm run test:html
+
+  a11y:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Run a11y tests
+        run: npm run test:a11y
+
+  snapshots:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Set up snapshot cache
+        id: cache
+        uses: actions/cache@v5
+        with:
+          key: cache/${{github.repository}}/${{github.ref}}
+          restore-keys: cache/${{github.repository}}/refs/heads/main
+          path: |
+            tests/snapshots/**/*.png
+            tests/snapshots/**/*.aria.yml
+
+      - name: Initialize snapshots
+        if: ${{steps.cache.outputs.cache-hit != 'true'}}
+        run: npm run update-snapshots
+
+      - name: Run snapshot tests
+        run: npm run test:snapshots
+        continue-on-error: true

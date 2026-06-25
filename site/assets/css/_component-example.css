@@ -1,0 +1,33 @@
+.component-example {
+  /* expand beyond parent width for readability */
+  width: calc(100vw - var(--space--page-margin-inline) * 2);
+  max-width: 70rem;
+}
+
+.component-example [role="tabpanel"] {
+  resize: both;
+  overflow: auto;
+  height: 340px;
+}
+.component-example--tall [role="tabpanel"] {
+  height: 540px;
+}
+
+.component-example__preview-frame {
+  border: var(--border--base);
+  border-radius: var(--border-radius--small);
+  height: 100%;
+}
+
+.component-example__code {
+  border: var(--border--base);
+  border-radius: var(--border-radius--small);
+  display: flex;
+  overflow: auto;
+  height: 100%;
+}
+
+.component-example pre[class*="language-"] {
+  margin: 0;
+  min-width: 100%;
+}

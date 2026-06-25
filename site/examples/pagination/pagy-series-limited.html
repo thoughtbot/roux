@@ -1,0 +1,45 @@
+---
+title: Pagy series nav with limited slots
+---
+
+<nav aria-label="{{ title }} - Pages">
+  <ul class="pagy series-nav">
+    <li>
+      <a
+        href="/path?example=123&page=2"
+        class="pagination-previous"
+        rel="prev"
+        aria-label="Previous"
+        >←</a
+      >
+    </li>
+    <li>
+      <a href="/path?example=123&page=2" class="pagination-link" rel="prev"
+        >2</a
+      >
+    </li>
+    <li>
+      <a
+        role="link"
+        class="pagination-link is-current"
+        aria-current="page"
+        aria-disabled="true"
+        >3</a
+      >
+    </li>
+    <li>
+      <a href="/path?example=123&page=4" class="pagination-link" rel="next"
+        >4</a
+      >
+    </li>
+    <li>
+      <a
+        href="/path?example=123&page=4"
+        class="pagination-next"
+        rel="next"
+        aria-label="Next"
+        >→</a
+      >
+    </li>
+  </ul>
+</nav>

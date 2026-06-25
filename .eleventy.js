@@ -1,0 +1,66 @@
+import lightningcssPlugin from "@11tyrocks/eleventy-plugin-lightningcss";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import markdownItDirective from "markdown-it-directive";
+import previewMarkdownDirective from "./11tyconfig/previewMarkdownDirective.js";
+
+export default function (eleventyConfig) {
+  const now = String(Date.now());
+  eleventyConfig.addShortcode("version", function () {
+    return now;
+  });
+
+  // === IGNORES ===
+  eleventyConfig.ignores.add("site/README.md");
+
+  // === COLLECTIONS ===
+  eleventyConfig.addCollection("component", function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob("site/component-library/**/*")
+      .sort((a, b) => {
+        return a.data.title.localeCompare(b.data.title);
+      });
+  });
+
+  // === WATCH TARGETS ===
+  // watch core Roux CSS files for changes so that Eleventy rebuilds the site
+  // normally only files in the site/ directory are watched
+  eleventyConfig.addWatchTarget("./src/css/");
+
+  // === PASSTHROUGH COPY ===
+  // Copy site-specific assets to _site
+  eleventyConfig.addPassthroughCopy("site/assets/js/");
+  // meta icons
+  eleventyConfig.addPassthroughCopy("site/*.ico");
+  eleventyConfig.addPassthroughCopy("site/*.svg");
+  eleventyConfig.addPassthroughCopy("site/*.png");
+  // metadata
+  eleventyConfig.addPassthroughCopy("site/robots.txt");
+
+  // bundle and minify CSS with LightningCSS
+  // process CSS files in site/assets/css
+  eleventyConfig.addPlugin(lightningcssPlugin, {
+    sourceMap: true,
+  });
+
+  // syntax highlighting for code blocks
+  eleventyConfig.addPlugin(syntaxHighlight, { preAttributes: { tabindex: 0 } });
+
+  // Configure markdown-it with directive support
+  eleventyConfig.amendLibrary("md", (mdLib) => {
+    mdLib.use(markdownItDirective).use(previewMarkdownDirective);
+    return mdLib;
+  });
+
+  const config = {
+    dir: {
+      input: "site",
+      output: "_site",
+    },
+  };
+
+  // support .md and .njk template engines in same files
+  config.markdownTemplateEngine = "njk";
+  config.htmlTemplateEngine = "njk";
+
+  return config;
+}

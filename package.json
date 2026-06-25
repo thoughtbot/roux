@@ -1,7 +1,7 @@
 {
   "name": "roux",
   "version": "0.2.2",
-  "description": "A boilerplate of pre-defined native CSS styling",
+  "description": "A boilerplate of pre-defined native CSS styling & HTML components",
   "type": "module",
   "homepage": "https://github.com/thoughtbot/roux",
   "main": "index.js",
@@ -9,7 +9,17 @@
     "roux": "./bin/init.js"
   },
   "scripts": {
-    "build": "lightningcss --minify --bundle --targets \">= 0.25%\" src/css/app.css -o dist/app.css"
+    "build": "lightningcss --minify --bundle --targets \">= 0.25%\" src/css/app.css -o dist/app.css",
+    "start": "npx @11ty/eleventy --serve --port 9090",
+    "clean": "rm -rf _site",
+    "dev": "npm run clean && npm run start",
+    "build-site": "npx @11ty/eleventy",
+    "deploy": "npm run clean && SITE_ENV=production npm run build-site",
+    "format": "prettier --write .",
+    "test:a11y": "playwright test tests/a11y/pages.spec.ts",
+    "test:snapshots": "playwright test tests/a11y/snapshots.spec.ts",
+    "test:html": "npm run build-site && html-validate '_site/**/*.html'",
+    "update-snapshots": "npx playwright test tests/a11y/snapshots.spec.ts --update-snapshots"
   },
   "repository": {
     "type": "git",
@@ -21,6 +31,19 @@
     "url": "https://github.com/thoughtbot/roux/issues"
   },
   "devDependencies": {
-    "lightningcss-cli": "^1.30.1"
+    "@11ty/eleventy": "^3.1.2",
+    "@11tyrocks/eleventy-plugin-lightningcss": "^1.5.0",
+    "@axe-core/playwright": "^4.10.0",
+    "@playwright/test": "^1.60.0",
+    "gray-matter": "^4.0.3",
+    "html-validate": "^10.13.1",
+    "lightningcss-cli": "^1.30.1",
+    "markdown-it-directive": "^2.0.6",
+    "prettier": "^3.8.1",
+    "prettier-plugin-jinja-template": "^2.1.0",
+    "serve": "^14.0.0"
+  },
+  "dependencies": {
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2"
   }
 }

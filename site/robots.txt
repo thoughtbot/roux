@@ -1,0 +1,7 @@
+# Robots.txt for Roux CSS & Components
+# https://roux.thoughtbot.dev
+
+User-agent: *
+Allow: /
+
+Sitemap: https://roux.thoughtbot.dev/sitemap.xml

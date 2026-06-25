@@ -1,0 +1,23 @@
+- main "Page Header with Navigation and Skip Navigation Link":
+    - link "Skip to main content":
+        - /url: "#main"
+    - link "thoughtbot":
+        - /url: /
+        - img "thoughtbot"
+    - navigation "Main menu":
+        - list:
+            - listitem:
+                - link "Link 1":
+                    - /url: "#"
+            - listitem:
+                - link "Link 2":
+                    - /url: "#"
+            - listitem:
+                - link "Link 3":
+                    - /url: "#"
+            - listitem:
+                - link "Link 4":
+                    - /url: "#"
+    - button "Sign In"
+    - link "Join":
+        - /url: "#"

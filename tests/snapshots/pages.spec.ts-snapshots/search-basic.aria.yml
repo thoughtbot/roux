@@ -1,0 +1,5 @@
+- main "Basic Search":
+    - search "Site-wide":
+        - text: Search this site
+        - searchbox "Search this site"
+        - button "Search"

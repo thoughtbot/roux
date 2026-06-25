@@ -1,0 +1,37 @@
+- main "Basic Form":
+    - text: "* asterisks denote required fields"
+    - group "Personal information":
+        - text: Personal information First Name*
+        - textbox "First Name*"
+        - text: ""
+        - textbox "Last Name*"
+        - text: ""
+        - textbox "Your email*"
+        - text: ""
+        - textbox "Your birthday*"
+    - group "Do you like ice cream?*":
+        - text: ""
+        - radio "Yes"
+        - text: ""
+        - radio "No"
+        - text: ""
+    - group "What kinds of ice cream do you like?*":
+        - text: ""
+        - checkbox "Vanilla"
+        - text: ""
+        - checkbox "Chocolate"
+        - text: ""
+        - checkbox "Strawberry"
+        - text: ""
+        - checkbox "Nothing (I don't like ice cream)"
+        - text: ""
+    - checkbox "I accept the Terms of Service"
+    - text: I accept the Terms of Service Explain your answers
+    - textbox "Explain your answers"
+    - text: Favorite color*
+    - combobox "Favorite color*"
+    - text: Your browser
+    - combobox "Your browser"
+    - text: Range Input
+    - slider "Range Input"
+    - button "Submit"

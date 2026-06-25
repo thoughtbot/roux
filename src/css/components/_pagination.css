@@ -1,0 +1,72 @@
+:where(.pagination) .pagination__page[aria-current="page"] {
+  font-weight: bold;
+}
+
+/* PAGY SERIES NAV */
+
+.pagy.series-nav {
+  display: flex;
+}
+:where(.pagy.series-nav) a {
+  padding: var(--space--xx-small);
+}
+
+:where(.pagy.series-nav) a[aria-current="page"] {
+  font-weight: bold;
+}
+
+/* PAGY INPUT NAV */
+
+.pagy.input-nav {
+  display: flex;
+  gap: var(--space--x-small);
+  align-items: center;
+}
+
+.pagy.input-nav label {
+  display: flex;
+  flex-direction: row;
+  font-weight: normal;
+  align-items: center;
+}
+
+/* FANCY PAGINATION */
+
+.pagination--fancy {
+  display: grid;
+  grid-template-areas:
+    "pagelist"
+    "meta";
+  gap: var(--space--small);
+}
+
+:where(.pagination--fancy) .pagination__meta {
+  grid-area: meta;
+  text-align: center;
+}
+
+:where(.pagination--fancy) .pagination__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  grid-area: pagelist;
+  justify-content: center;
+  gap: var(--space--x-small);
+}
+
+:where(.pagination--fancy) .pagination__page a,
+:where(.pagination--fancy) .pagination__space,
+:where(.pagination--fancy) .pagination__control--prev a,
+:where(.pagination--fancy) .pagination__control--next a {
+  padding: var(--space--xx-small);
+  display: block;
+}
+
+:where(.pagination--fancy) .pagination__page a {
+  border: var(--border--base);
+  padding: var(--space--xx-small) var(--space--small);
+}
+
+:where(.pagination--fancy) .pagination__page:has([aria-current="page"]) a {
+  outline: var(--border-width--thick) solid var(--color--primary-light);
+}

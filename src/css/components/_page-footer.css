@@ -1,0 +1,25 @@
+.page-footer {
+  display: grid;
+  grid-template-areas:
+    "copyright"
+    "nav";
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: var(--space--small) var(--space--medium);
+}
+
+.page-copyright {
+  grid-area: copyright;
+  font-size: var(--font-size--small);
+}
+
+.page-footer .footer-nav {
+  grid-area: nav;
+}
+
+@media (min-width: 600px) {
+  .page-footer {
+    grid-template-areas: "copyright nav";
+    grid-template-columns: 1fr auto;
+  }
+}

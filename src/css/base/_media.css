@@ -1,12 +1,4 @@
-:where(
-  audio,
-  canvas,
-  iframe,
-  img,
-  figure,
-  picture,
-  video
-) {
+:where(audio, canvas, iframe, img, figure, picture, video) {
   display: block;
   height: auto;
   margin: 0;

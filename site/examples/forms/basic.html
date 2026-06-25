@@ -1,0 +1,150 @@
+---
+title: Basic Form
+---
+
+<form>
+  <small>* asterisks denote required fields</small>
+  <fieldset>
+    <legend>Personal information</legend>
+    <label>
+      <span>First Name</span>
+      <input
+        id="first-name"
+        type="text"
+        name="first-name"
+        autocapitalize="off"
+        autocorrect="off"
+        spellcheck="false"
+        required
+        autocomplete="given-name"
+      />
+    </label>
+    <label>
+      <span>Last Name</span>
+      <input
+        id="last-name"
+        type="text"
+        name="last-name"
+        autocapitalize="off"
+        autocorrect="off"
+        spellcheck="false"
+        required
+        autocomplete="family-name"
+      />
+    </label>
+    <label>
+      <span>Your email</span>
+      <input
+        id="email"
+        type="email"
+        name="email"
+        autocapitalize="off"
+        autocorrect="off"
+        spellcheck="false"
+        required
+        autocomplete="email"
+      />
+    </label>
+    <label>
+      <span>Your birthday</span>
+      <input
+        id="birthday"
+        type="date"
+        name="birthday"
+        required
+        autocomplete="bday"
+      />
+    </label>
+  </fieldset>
+  <fieldset class="fieldset-required">
+    <legend>Do you like ice cream?</legend>
+    <label>
+      <input
+        id="icecream-yes"
+        type="radio"
+        value="Yes"
+        name="icecream"
+        required
+      />
+      Yes
+    </label>
+    <label>
+      <input id="icecream-no" type="radio" value="No" name="icecream" />
+      No
+    </label>
+  </fieldset>
+  <fieldset class="fieldset-required">
+    <legend>What kinds of ice cream do you like?</legend>
+    <label>
+      <input id="vanilla" type="checkbox" value="Vanilla" name="flavors[]" />
+      Vanilla
+    </label>
+    <label>
+      <input
+        id="chocolate"
+        type="checkbox"
+        value="Chocolate"
+        name="flavors[]"
+      />
+      Chocolate
+    </label>
+    <label>
+      <input
+        id="strawberry"
+        type="checkbox"
+        value="Strawberry"
+        name="flavors[]"
+      />
+      Strawberry
+    </label>
+    <label>
+      <input id="nothing" type="checkbox" value="nothing" name="flavors[]" />
+      Nothing (I don't like ice cream)
+    </label>
+  </fieldset>
+  <label>
+    <input id="terms" type="checkbox" name="termsAgreement" />
+    I accept the Terms of Service
+  </label>
+  <label>
+    <span>Explain your answers</span>
+    <textarea id="explain" dir="auto" rows="5" name="explain"></textarea>
+  </label>
+  <label>
+    <span>Favorite color</span>
+    <select id="favorite-color" name="favorite-color" required>
+      <optgroup label="Primary colors">
+        <option value="red">🟥 Red</option>
+        <option value="yellow">🟨 Yellow</option>
+        <option value="blue">🟦 Blue</option>
+      </optgroup>
+      <optgroup label="Secondary colors">
+        <option value="orange">🟧 Orange</option>
+        <option value="green">🟩 Green</option>
+        <option value="purple">🟪 Purple</option>
+      </optgroup>
+    </select>
+  </label>
+  <label>
+    <span>Your browser</span>
+    <input
+      list="browsers"
+      id="myBrowser"
+      name="myBrowser"
+      autocomplete="off"
+      type="text"
+    />
+    <datalist id="browsers">
+      <option value="Chrome"></option>
+      <option value="Firefox"></option>
+      <option value="Opera"></option>
+      <option value="Safari"></option>
+      <option value="Microsoft Edge"></option>
+    </datalist>
+  </label>
+  <label>
+    <span>Range Input</span>
+    <input id="input-range" name="range" type="range" />
+  </label>
+  <button type="submit" class="button button--primary">Submit</button>
+</form>
