@@ -1,5 +1,9 @@
 # Roux Changelog
 
+## Unreleased
+
+- Fix the text color when hovering on primary buttons ([#26](https://github.com/thoughtbot/roux/pull/26))
+
 ## 0.3.0
 
 - Add new component styles ([#17](https://github.com/thoughtbot/roux/pull/17))
