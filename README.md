@@ -166,7 +166,7 @@ Open `css/base/_variables.css` to customize your project. This is where all your
 
 ### Fonts
 
-Open `css/base/_fonts.css` to add your custom fonts. This is a dependency file since other base files may need it to render a font. Currently it's commented out since it's all based on your font files you want to use, but the structure is there. You may declare multiple font files in here. The example in there shows a variable font file with a range of weights so you don't have to define each individual weight.
+Open `css/base/_fonts.css` to add your custom fonts. This is a dependency file since other base files may need it to render a font. Currently it's commented out since it's all based on your font files you want to use, but the structure is there — fill in the `src` path for your own font file. You may declare multiple font files in here. The example in there shows a variable font file with a range of weights so you don't have to define each individual weight.
 
 #### Tips
 
