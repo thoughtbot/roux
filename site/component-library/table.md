@@ -27,3 +27,9 @@ This example uses `.table--striped` for alternating row backgrounds that improve
 Wrapping a table in `.table-outer-wrapper` and `.table-inner-wrapper` allows tables to scroll horizontally on smaller viewports, ensuring content remains accessible without breaking the layout.
 
 ::preview{file="tables/overflow.html" id="example_overflow" tall="true"}::
+
+### Minimal Table
+
+A table doesn't need a `<thead>` or `<tfoot>` to get the standard rounded-corner treatment.
+
+::preview{file="tables/minimal.html" id="example_minimal"}::

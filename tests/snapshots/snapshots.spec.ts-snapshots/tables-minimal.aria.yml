@@ -1,0 +1,13 @@
+- main "Minimal Table":
+  - table "Monthly spending":
+    - caption: Monthly spending
+    - rowgroup:
+      - row /January \$\d+/:
+        - cell "January"
+        - cell /\$\d+/
+      - row /February \$\d+/:
+        - cell "February"
+        - cell /\$\d+/
+      - row /March \$\d+/:
+        - cell "March"
+        - cell /\$\d+/
