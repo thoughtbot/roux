@@ -117,7 +117,7 @@ css/
 
 1. `reset/_normalize.css` comes first in our imports as that overrides some of our browser defaults. We're working on top of the reset. You can add in any more browser resets into that folder and import it. **[More on reset](#reset)**
 2. `base/_variables.css` is one of the outliers of our base files as it stores all of our [custom properties]. This comes before all of the other base files since it's a dependency. You don't have to change any of these values if you don't want to. However, you'll likely want to at least adjust the colors. **[More on variables](#variables)**
-3. `base/_fonts.css` is the other outlier as files like `_typography.css` may rely on it. It's empty by default since it needs an actual font file to work and you may want to remove it if importing a font in a different way. **[More on fonts](#fonts)**
+3. `base/_fonts.css` is the other outlier as files like `_typography.css` may rely on it. It's commented out for now since it needs an actual font file to work and you may want to remove it if importing a font in a different way. **[More on fonts](#fonts)**
 4. The rest of the base files make use of many of the custom properties and are not dependent on each other. They're currently in ABC order. **[More on base files](#base)**
 5. The `components` folder is where you'll put your component-based styles (e.g. `components/_card.css`). Ensure the import list is in ABC order for readability.
 6. Utilities are last! Right now there's only one utility. Add in any other global utilities you might have that can be applied as a class. You can prepend them with `.u-[utility-name]` and give them their own CSS file. **[More on utilities](#utilities)**
@@ -166,7 +166,7 @@ Open `css/base/_variables.css` to customize your project. This is where all your
 
 ### Fonts
 
-Open `css/base/_fonts.css` to add your custom fonts. This is a dependency file since other base files may need it to render a font. It ships empty since it's all based on your font files you want to use, but the example below shows a variable font file with a range of weights so you don't have to define each individual weight. You may declare multiple font files in here.
+Open `css/base/_fonts.css` to add your custom fonts. This is a dependency file since other base files may need it to render a font. Currently it's commented out since it's all based on your font files you want to use, but the structure is there — fill in the `src` path for your own font file. You may declare multiple font files in here. The example in there shows a variable font file with a range of weights so you don't have to define each individual weight.
 
 #### Tips
 
