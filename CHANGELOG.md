@@ -3,7 +3,7 @@
 ## Unreleased
 
 - Fix the text color when hovering on primary buttons ([#26](https://github.com/thoughtbot/roux/pull/26))
-- Fix `<th scope="row">` styling in table bodies and footers so row headers no longer look like column headers ([#16](https://github.com/thoughtbot/roux/issues/16))
+- Fix `<th scope="row">` styling in table bodies and footers so row headers no longer look like column headers ([#34](https://github.com/thoughtbot/roux/pull/34))
 
 ## 0.3.0
 
