@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Fix the text color when hovering on primary buttons ([#26](https://github.com/thoughtbot/roux/pull/26))
+- Remove the commented-out `@font-face` example's `url(...)` from `base/_fonts.css` to stop Propshaft from warning about an unresolved font asset ([#32](https://github.com/thoughtbot/roux/issues/32))
 
 ## 0.3.0
 

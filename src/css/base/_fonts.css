@@ -1,7 +1,5 @@
-/*@font-face {
-  font-display: swap ;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 100 900;
-  src: url("./fonts/InterVariable.woff2") format("woff2");
-}*/
+/* Add your custom fonts here with @font-face. See the "Fonts" section of the
+   README for a full example. Avoid leaving a commented-out url(...) in this
+   file -- some asset pipelines (e.g. Rails' Propshaft) scan raw CSS text for
+   url(...) references and will warn about unresolved paths even inside
+   comments. */
