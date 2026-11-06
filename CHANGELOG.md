@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Fix the text color when hovering on primary buttons ([#26](https://github.com/thoughtbot/roux/pull/26))
+- Fix keyboard focus-visible outline not rendering on text inputs, `select`, and `textarea` due to a specificity conflict ([#14](https://github.com/thoughtbot/roux/issues/14))
 
 ## 0.3.0
 
