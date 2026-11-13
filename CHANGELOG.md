@@ -4,6 +4,8 @@
 
 - Fix the text color when hovering on primary buttons ([#26](https://github.com/thoughtbot/roux/pull/26))
 - Fix keyboard focus-visible outline not rendering on text inputs, `select`, and `textarea` due to a specificity conflict ([#14](https://github.com/thoughtbot/roux/issues/14))
+- Fix `<th scope="row">` styling in table bodies and footers so row headers no longer look like column headers ([#34](https://github.com/thoughtbot/roux/pull/34))
+- Remove the commented-out `@font-face` example's `url(...)` from `base/_fonts.css` to stop Propshaft from warning about an unresolved font asset ([#37](https://github.com/thoughtbot/roux/pull/37))
 
 ## 0.3.0
 

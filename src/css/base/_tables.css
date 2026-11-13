@@ -15,7 +15,7 @@ table {
   padding-inline: var(--space--small);
 }
 
-:where(tfoot) td,
+:where(tfoot) :where(th, td),
 caption {
   font-weight: var(--font-weight--bold);
   padding-block: var(--space--xx-small);
@@ -28,26 +28,33 @@ caption {
 }
 
 th {
-  background-color: var(--color--background-light);
-  border-top: var(--border--light);
-  font-size: var(--font-size--small);
   font-weight: var(--font-weight--bold);
   text-align: start;
 }
 
-tr:first-child th:first-child {
+thead th {
+  background-color: var(--color--background-light);
+  border-top: var(--border--light);
+  font-size: var(--font-size--small);
+}
+
+tbody:not(thead ~ tbody) tr:first-child :where(th, td) {
+  border-top: var(--border--light);
+}
+
+:is(thead, tbody:not(thead ~ tbody)) tr:first-child :where(th, td):first-child {
   border-top-left-radius: var(--border-radius--base);
 }
 
-tr:first-child th:last-child {
+:is(thead, tbody:not(thead ~ tbody)) tr:first-child :where(th, td):last-child {
   border-top-right-radius: var(--border-radius--base);
 }
 
-tr:last-child td:first-child {
+tbody tr:last-child :where(th, td):first-child {
   border-bottom-left-radius: var(--border-radius--base);
 }
 
-tr:last-child td:last-child {
+tbody tr:last-child :where(th, td):last-child {
   border-bottom-right-radius: var(--border-radius--base);
 }
 
