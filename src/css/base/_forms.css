@@ -36,6 +36,11 @@ form {
     outline: var(--border-width--base) solid var(--color--primary-base);
   }
 
+  &:focus-visible {
+    outline: var(--border-width--thick) solid var(--color--focus);
+    outline-offset: 2px;
+  }
+
   &[readonly] {
     border-color: transparent;
     padding-inline-start: 0;
@@ -70,11 +75,6 @@ form {
   color: var(--color--text);
   padding-block: var(--space--small);
   padding-inline: var(--space--small);
-
-  &:focus-visible {
-    outline: var(--border-width--thick) solid var(--color--focus);
-    outline-offset: 2px;
-  }
 }
 
 label:has(
