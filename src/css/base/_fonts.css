@@ -1,7 +1,12 @@
-/*@font-face {
-  font-display: swap ;
+/* Add your custom fonts here with @font-face. See the "Fonts" section of the
+   README for a full example. */
+
+/*
+@font-face {
+  font-display: swap;
   font-family: "Inter";
   font-style: normal;
   font-weight: 100 900;
-  src: url("./fonts/InterVariable.woff2") format("woff2");
-}*/
+  src: add the path to your font file here;
+}
+*/
